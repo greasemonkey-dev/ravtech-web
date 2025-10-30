@@ -18,7 +18,7 @@ const Scroller = ({ logos = DEFAULT_LOGOS, reverse = false }) => {
       className="group flex overflow-hidden py-2 flex-row max-w-full"
       style={{
         '--gap': '3rem',
-        '--duration': '5s',
+        '--duration': '30s',
         maskImage: 'linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0))',
       }}
     >
@@ -31,7 +31,7 @@ const Scroller = ({ logos = DEFAULT_LOGOS, reverse = false }) => {
           <img
             src={src}
             alt={`logo-${i}`}
-            className="w-28 h-12 object-contain filter grayscale contrast-90 opacity-90"
+            className="w-20 h-10 object-contain filter grayscale contrast-90 opacity-90"
             loading="lazy"
             draggable={false}
           />
