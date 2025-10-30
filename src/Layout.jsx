@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Menu, X, Facebook, Linkedin } from "lucide-react";
@@ -23,6 +23,20 @@ const navigationItems = [
 export default function Layout({ children }) {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+
+  // Add favicon to document head
+  useEffect(() => {
+    const favicon = document.querySelector("link[rel='icon']");
+    if (favicon) {
+      favicon.href = "https://ravtech.co.il/wp-content/uploads/2017/12/favicon.ico";
+    } else {
+      const link = document.createElement("link");
+      link.rel = "icon";
+      link.type = "image/x-icon";
+      link.href = "https://ravtech.co.il/wp-content/uploads/2017/12/favicon.ico";
+      document.head.appendChild(link);
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
