@@ -32,7 +32,11 @@ export default function Layout({ children }) {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to={createPageUrl("Home")} className="flex items-center">
-              <span className="text-2xl font-bold text-black">RavTech</span>
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/034b0b1d4_logo.png" 
+                alt="RavTech Logo" 
+                className="h-10"
+              />
             </Link>
 
             {/* Desktop Navigation */}
