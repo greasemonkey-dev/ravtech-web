@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { BrandScroller } from "../components/BrandScroller";
 import {
   Code,
   Users,
@@ -23,16 +24,6 @@ export default function HomePage() {
     "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200",
     "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200",
     "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200",
-  ];
-
-  const partnerLogos = [
-    "EMC",
-    "Knowmail",
-    "Behalf",
-    "Tal Solutions",
-    "Perfecto",
-    "TSG",
-    "Celltick",
   ];
 
   const services = [
@@ -177,35 +168,16 @@ export default function HomePage() {
       {/* Brand Scroller */}
       <section className="py-12 overflow-hidden bg-white border-y border-gray-100">
         <div className="relative">
-          <div className="flex animate-scroll">
-            {[...partnerLogos, ...partnerLogos, ...partnerLogos].map(
-              (logo, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 mx-12 text-2xl font-semibold text-gray-400 hover:text-black transition-colors duration-300"
-                >
-                  {logo}
-                </div>
-              )
-            )}
-          </div>
+          <BrandScroller
+            logos={[
+              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-2.png",
+              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-5.png",
+              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-3.png",
+              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-4.png",
+              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png",
+            ]}
+          />
         </div>
-        <style jsx>{`
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-33.33%);
-            }
-          }
-          .animate-scroll {
-            animation: scroll 30s linear infinite;
-          }
-          .animate-scroll:hover {
-            animation-play-state: paused;
-          }
-        `}</style>
       </section>
 
       {/* Services Section */}
