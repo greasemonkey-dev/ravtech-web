@@ -3,6 +3,7 @@ import AccelerateStartups from './pages/AccelerateStartups';
 import Services from './pages/Services';
 import Solutions from './pages/Solutions';
 import Projects from './pages/Projects';
+import CaseStudies from './pages/CaseStudies';
 import Layout from './Layout.jsx';
 
 
@@ -12,6 +13,7 @@ export const PAGES = {
     "Services": Services,
     "Solutions": Solutions,
     "Projects": Projects,
+    "CaseStudies": CaseStudies,
 }
 
 export const pagesConfig = {
