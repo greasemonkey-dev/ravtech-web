@@ -42,103 +42,110 @@ export default function Layout({ children }) {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-200 transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <Link to={createPageUrl("Home")} className="flex items-center">
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/034b0b1d4_logo.png" 
-                alt="RavTech Logo" 
-                className="h-10"
-              />
-            </Link>
+<header className="sticky top-0 z-50 bg-white border-b border-gray-200 transition-all duration-300 hover:shadow-md">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center h-16">
+      {/* Logo */}
+      <Link to={createPageUrl("Home")} className="flex items-center">
+        <img 
+          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/034b0b1d4_logo.png" 
+          alt="RavTech Logo" 
+          className="h-10 transition-transform duration-300 hover:scale-105"
+        />
+      </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.title}
-                  to={item.url}
-                  className={`text-sm font-medium transition-all duration-200 hover:text-black relative group ${
-                    location.pathname === item.url ? "text-black" : "text-gray-600"
-                  }`}
-                >
-                  {item.title}
-                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-200 group-hover:w-full ${
-                    location.pathname === item.url ? "w-full" : ""
-                  }`} />
-                </Link>
-              ))}
-            </nav>
+      {/* Desktop Navigation */}
+      <nav className="hidden lg:flex items-center space-x-8">
+        {navigationItems.map((item) => (
+          <Link
+            key={item.title}
+            to={item.url}
+            className={`text-sm font-medium relative group transition-all duration-300 ${
+              location.pathname === item.url
+                ? "text-black"
+                : "text-gray-700 hover:text-gray-900"
+            }`}
+          >
+            <span className="transition-transform duration-300 group-hover:-translate-y-0.5">
+              {item.title}
+            </span>
+            <span
+              className={`absolute -bottom-1 left-0 w-0 h-[2px] bg-gray-900 rounded-full transition-all duration-300 group-hover:w-full ${
+                location.pathname === item.url ? "w-full" : ""
+              }`}
+            />
+          </Link>
+        ))}
+      </nav>
 
-            {/* Social Icons - Desktop */}
-            <div className="hidden lg:flex items-center space-x-4">
+      {/* Social Icons - Desktop */}
+      <div className="hidden lg:flex items-center space-x-4">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+        >
+          <Facebook className="w-5 h-5 transition-transform duration-300 hover:scale-110" />
+        </a>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-700 hover:text-blue-700 transition-colors duration-300"
+        >
+          <Linkedin className="w-5 h-5 transition-transform duration-300 hover:scale-110" />
+        </a>
+      </div>
+
+      {/* Mobile Menu Button */}
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        <SheetTrigger asChild className="lg:hidden">
+          <Button variant="ghost" size="icon">
+            <Menu className="h-6 w-6" />
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+          <nav className="flex flex-col space-y-6 mt-8">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.title}
+                to={item.url}
+                onClick={() => setIsOpen(false)}
+                className={`text-lg font-medium transition-all duration-300 ${
+                  location.pathname === item.url
+                    ? "text-black"
+                    : "text-gray-700 hover:text-gray-900"
+                }`}
+              >
+                {item.title}
+              </Link>
+            ))}
+            <div className="flex items-center space-x-4 pt-8 border-t border-gray-200">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-black transition-colors"
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-300"
               >
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-6 h-6" />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-black transition-colors"
+                className="text-gray-700 hover:text-blue-700 transition-colors duration-300"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-6 h-6" />
               </a>
             </div>
+          </nav>
+        </SheetContent>
+      </Sheet>
+    </div>
+  </div>
+</header>
 
-            {/* Mobile Menu Button */}
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild className="lg:hidden">
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                <nav className="flex flex-col space-y-6 mt-8">
-                  {navigationItems.map((item) => (
-                    <Link
-                      key={item.title}
-                      to={item.url}
-                      onClick={() => setIsOpen(false)}
-                      className={`text-lg font-medium transition-colors ${
-                        location.pathname === item.url
-                          ? "text-black"
-                          : "text-gray-600 hover:text-black"
-                      }`}
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
-                  <div className="flex items-center space-x-4 pt-8 border-t">
-                    <a
-                      href="https://facebook.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-[#CCE7FA] transition-colors"
-                    >
-                      <Facebook className="w-6 h-6" />
-                    </a>
-                    <a
-                      href="https://linkedin.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-[#CCE7FA] transition-colors"
-                    >
-                      <Linkedin className="w-6 h-6" />
-                    </a>
-                  </div>
-                </nav>
-              </SheetContent>
-            </Sheet>
-          </div>
-        </div>
-      </header>
 
       {/* Main Content */}
       <main>{children}</main>
