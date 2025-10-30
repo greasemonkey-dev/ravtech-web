@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -59,12 +60,12 @@ export default function Layout({ children }) {
                 <Link
                   key={item.title}
                   to={item.url}
-                  className={`text-sm font-medium transition-all duration-200 hover:text-[#CCE7FA] relative group ${
+                  className={`text-sm font-medium transition-all duration-200 hover:text-black relative group ${
                     location.pathname === item.url ? "text-black" : "text-gray-600"
                   }`}
                 >
                   {item.title}
-                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-[#CCE7FA] transition-all duration-200 group-hover:w-full ${
+                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-200 group-hover:w-full ${
                     location.pathname === item.url ? "w-full" : ""
                   }`} />
                 </Link>
@@ -77,7 +78,7 @@ export default function Layout({ children }) {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-[#CCE7FA] transition-colors"
+                className="text-gray-600 hover:text-black transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
@@ -85,7 +86,7 @@ export default function Layout({ children }) {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-[#CCE7FA] transition-colors"
+                className="text-gray-600 hover:text-black transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
