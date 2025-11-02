@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -75,6 +76,51 @@ export default function AboutPage() {
       title: "Global Recognition",
       description: "Achieved partnerships with NICE, Wix, and other industry leaders",
     },
+  ];
+
+  const teamMembers = [
+    {
+      name: "Benny Levin",
+      role: "Active Chairman",
+      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/e117972f4_BennyLevin.jpg",
+      bio: "Benny Levin co-founded NICE Systems, where he served as President, Director, Chairman and CEO. Benny also served as Chairman of the Board of dbMotion. Since retiring from most of his business activities, Benny dedicates himself to a wide array of social and philanthropic activities. He serves as Vice Chairman of IVN, and as Active Chairman of Ben Yakir and Kedma youth villages. Benny served in the IDF Intelligence Corps, retiring with the rank of Lieutenant Colonel. He has a bachelor's and master's degrees in Electrical Engineering from the Technion."
+    },
+    {
+      name: "Shmil Levy",
+      role: "Board Member",
+      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/e5dca31e4_Sequoia-Shmil_Levy-1-300x300.jpg",
+      bio: "Co-Founder, and Managing Partner of Sequoia Capital Israel venture capital fund 2001-today. Before his role at Sequoia Capital, Shmil held various important positions as a high-tech entrepreneur, including VP R&D of Lannet from 1992-1996 and CEO of Lannet from 1996-1998 and serving as President of division of Lucent Worldwide for Communications Systems from 1998-2000. Beyond his business activities, since 2018, Mr. Levy has been donating his time and fortune to social investments activities in the domain of incorporating ultra-Orthodox Jews in High Tech. As part of it Mr. Levy is active board member of Ravtech and JBH and co-founded Kodcode- and 'Mego' program that deals with training and placement of ultra-Orthodox men in the Israeli high-tech sector. Mr. Shmil Levy holds a degree in Computer Engineering from Ben Gurion University."
+    },
+    {
+      name: "Idan Nimni",
+      role: "CEO",
+      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/141f00e37_Idan_Nimni.jpg",
+      bio: "With over 20 years of experience in Cybersecurity, Idan has taken various leading positions in both Professional Services and Product Management in deep technology companies. Idan is a dynamic leader with a proven track record of team building, business execution and innovation. Holds a B.Sc in Management Engineering, and MBA from Tel Aviv University."
+    },
+    {
+      name: "Michael Shurman",
+      role: "CTO",
+      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/87a29782d_Michael_Shurman.png",
+      bio: "For the last 25 years Michael has served as an executive in Hi-Tech companies. Before joining Ravtech, Michael was a CTO in Israeli R&D center of Huawei Technologies, Michael was a Founder, CTO & Executive VP of R&D & VP of Product management of Allot Communications Ltd. (Nasdaq: ALLT). Michael holds B.Sc. Computer Science & Statistics, Hebrew University, Jerusalem and MA in Philosophy from Tel Aviv University."
+    },
+    {
+      name: "Israel Kobler",
+      role: "VP R&D",
+      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/18b1b3a4b_Israel_Kobler.png",
+      bio: "With 10 years of experience in software product/services development, architecture & management, Israel is a senior manager in the company who oversees and leads all R&D and innovation areas. In addition, he is responsible for overseeing the delivery of services carried out by development teams across the company, recruiting new employees to the development team (programmers, designers, etc.), creating schedules and deadlines, approve budgets regarding development, and in general he responsible for implementing the company's development processes and methodologies."
+    },
+    {
+      name: "Yariv Levanon",
+      role: "VP Sales & Business Development",
+      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/5e3a5e902_Yariv-Levanon-LinkedIn-Pic-300x300.jpg",
+      bio: "With over 20 years of International Hi-Tech experience in Telecommunications, Consulting, Security & Finance Yariv successfully Led Global Business Ventures ($$m) Established Key Strategic Joint Partnerships as well as Founded Business Centers for Excellence & Digital Innovation. Yariv holds an M.B.A. from The University of Manchester in the field of Business Management & Marketing."
+    },
+    {
+      name: "Chani Smoler",
+      role: "CFO",
+      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/7011c474d_chani_smoler.jpg",
+      bio: "Chani is a licensed CPA and holds a BA in Accounting and Information Systems from the Jerusalem College of Technology. Chani is in charge of all Financial aspects of the company and holds a unique role serving as a special advisor to the board of directors. Prior to working at Ravtech, Chani worked for over 5 years as the finance manager at Gvahim, a subsidiary of the Rashi Foundation, and 6 years at Wexler Kodntz'ik Enoch Co. CPA office."
+    }
   ];
 
   return (
@@ -261,6 +307,50 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
+            Our Team
+          </h2>
+          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {teamMembers.map((member, index) => (
+              <Card
+                key={index}
+                className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300 group overflow-hidden"
+              >
+                <CardContent className="p-0">
+                  {/* Image */}
+                  <div className="relative h-80 overflow-hidden bg-gray-100">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold text-black mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-[#CCE7FA] font-semibold mb-4 text-lg">
+                      {member.role}
+                    </p>
+                    <p className="text-gray-600 leading-relaxed text-sm line-clamp-6">
+                      {member.bio}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
