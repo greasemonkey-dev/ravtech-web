@@ -243,17 +243,7 @@ export default function HomePage() {
           </div>
         </div>
         
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="flex flex-col items-center gap-2 cursor-pointer opacity-60 hover:opacity-100 transition-opacity" onClick={() => {
-            document.querySelector('#carousel-section')?.scrollIntoView({ behavior: 'smooth' });
-          }}>
-            <span className="text-sm text-gray-500 font-medium">Scroll to explore</span>
-            <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center p-2">
-              <div className="w-1.5 h-3 bg-gray-400 rounded-full animate-scroll-down" />
-            </div>
-          </div>
-        </div>
+        
       </section>
 
       {/* Image Carousel */}
