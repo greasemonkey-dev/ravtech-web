@@ -115,22 +115,89 @@ export default function HomePage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white -z-10" />
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-6 animate-fade-in">
-            ACHIEVE WHAT YOU ENVISION
+      <section className="relative min-h-[95vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-cyan-50 -z-10" />
+        
+        {/* Geometric Shapes */}
+        <div className="absolute top-20 right-10 w-72 h-72 bg-[#CCE7FA] rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob" />
+        <div className="absolute top-40 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000" />
+        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000" />
+        
+        {/* Floating Elements */}
+        <div className="absolute top-1/4 left-10 w-4 h-4 bg-[#CCE7FA] rounded-full animate-float" />
+        <div className="absolute top-1/3 right-20 w-6 h-6 bg-blue-300 rounded-full animate-float animation-delay-1000" />
+        <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-cyan-300 rounded-full animate-float animation-delay-2000" />
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          {/* Badge */}
+          <div className="inline-flex items-center px-6 py-3 mb-8 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-gray-100 animate-fade-in">
+            <span className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse" />
+            <span className="text-sm font-medium text-gray-700">Trusted by Leading Companies Worldwide</span>
+          </div>
+          
+          {/* Main Heading */}
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 mb-8 animate-fade-in leading-tight">
+            ACHIEVE WHAT<br />YOU ENVISION
           </h1>
-          <p className="text-2xl sm:text-3xl text-gray-600 mb-12 font-light">
-            END-TO-END PROJECTS
+          
+          {/* Subheading with accent */}
+          <div className="flex items-center justify-center gap-4 mb-6 animate-fade-in">
+            <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#CCE7FA]" />
+            <p className="text-2xl sm:text-3xl lg:text-4xl text-gray-600 font-light tracking-wide">
+              END-TO-END PROJECTS
+            </p>
+            <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#CCE7FA]" />
+          </div>
+          
+          {/* Description */}
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in">
+            Transform your ideas into reality with our expert development teams. 
+            From concept to deployment, we deliver excellence.
           </p>
-          <Button
-            onClick={scrollToContact}
-            className="bg-[#CCE7FA] text-black hover:bg-[#B8D9F0] text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
-          >
-            Get Started
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
+            <Button
+              onClick={scrollToContact}
+              className="bg-black text-white hover:bg-gray-800 text-lg px-10 py-7 rounded-full transition-all duration-300 hover:scale-105 shadow-2xl group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button
+              variant="outline"
+              className="border-2 border-gray-300 hover:border-black text-gray-800 hover:bg-black hover:text-white text-lg px-10 py-7 rounded-full transition-all duration-300 hover:scale-105"
+              onClick={() => {
+                document.querySelector('#services-section')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Learn More
+            </Button>
+          </div>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto mt-20 animate-fade-in">
+            <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-4xl font-bold text-black mb-1">200+</div>
+              <div className="text-sm text-gray-600">Expert Developers</div>
+            </div>
+            <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-4xl font-bold text-black mb-1">87+</div>
+              <div className="text-sm text-gray-600">Happy Clients</div>
+            </div>
+            <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-4xl font-bold text-black mb-1">150+</div>
+              <div className="text-sm text-gray-600">Projects Delivered</div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-scroll-down" />
+          </div>
         </div>
       </section>
 
@@ -185,7 +252,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section id="services-section" className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             Services
