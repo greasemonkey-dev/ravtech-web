@@ -148,19 +148,6 @@ export default function HomePage() {
         </div>
         
         <div className="max-w-7xl mx-auto text-center relative z-10 py-20">
-          {/* Animated Badge */}
-          <div className="inline-flex items-center px-6 py-3 mb-8 bg-white/90 backdrop-blur-xl rounded-full shadow-xl border border-gray-100/50 animate-fade-in hover:scale-105 transition-transform duration-300">
-            <div className="flex items-center gap-3">
-              <div className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-              </div>
-              <span className="text-sm font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-                Trusted by 87+ Leading Companies Worldwide
-              </span>
-            </div>
-          </div>
-          
           {/* Main Heading with Enhanced Gradient */}
           <h1 className="relative mb-8 animate-fade-in">
             <span className="block text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-extrabold leading-tight">
