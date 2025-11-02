@@ -130,12 +130,6 @@ export default function HomePage() {
         <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-cyan-300 rounded-full animate-float animation-delay-2000" />
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 mb-8 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-gray-100 animate-fade-in">
-            <span className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse" />
-            <span className="text-sm font-medium text-gray-700">Trusted by Leading Companies Worldwide</span>
-          </div>
-          
           {/* Main Heading */}
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 mb-8 animate-fade-in leading-tight">
             ACHIEVE WHAT<br />YOU ENVISION
