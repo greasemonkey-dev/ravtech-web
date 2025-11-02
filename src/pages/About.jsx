@@ -312,45 +312,105 @@ export default function AboutPage() {
       </section>
 
       {/* Our Team */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
-            Our Team
-          </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
+      <section className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-20 right-10 w-96 h-96 bg-[#CCE7FA] rounded-full blur-3xl opacity-20" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-20" />
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Header */}
+          <div className="mb-20">
+            <div className="flex items-baseline gap-4 mb-6">
+              <h2 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-black">
+                MEET
+              </h2>
+            </div>
+            <div className="flex items-baseline gap-4">
+              <h2 className="text-6xl sm:text-7xl lg:text-8xl font-light text-gray-400 italic">
+                OUR
+              </h2>
+            </div>
+            <div className="flex items-baseline gap-4">
+              <h2 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-black">
+                TEAM
+              </h2>
+            </div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {/* Team Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
-              <Card
+              <Link
                 key={index}
-                className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300 group overflow-hidden"
+                to={`${createPageUrl("TeamMemberDetail")}?id=${member.name.toLowerCase().replace(/\s+/g, '-')}`}
+                className="group cursor-pointer"
               >
-                <CardContent className="p-0">
-                  {/* Image */}
-                  <div className="relative h-80 overflow-hidden bg-gray-100">
+                <div className="relative overflow-hidden rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                  {/* Image Container with Overlay Effect */}
+                  <div className="relative h-[450px] overflow-hidden">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    {/* Floating accent */}
+                    <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#CCE7FA] rounded-full blur-2xl opacity-0 group-hover:opacity-60 transition-all duration-500" />
                   </div>
 
                   {/* Content */}
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-black mb-1">
-                      {member.name}
-                    </h3>
-                    <p className="text-[#CCE7FA] font-semibold mb-4 text-lg">
-                      {member.role}
-                    </p>
-                    <p className="text-gray-600 leading-relaxed text-sm line-clamp-6">
-                      {member.bio}
-                    </p>
+                  <div className="relative p-8 bg-gradient-to-b from-white to-gray-50 group-hover:bg-white transition-colors duration-300">
+                    {/* Accent Line */}
+                    <div className="absolute top-0 left-0 w-0 h-1 bg-[#CCE7FA] group-hover:w-full transition-all duration-500" />
+                    
+                    <div className="space-y-3">
+                      <h3 className="text-2xl font-bold text-black group-hover:text-[#CCE7FA] transition-colors duration-300">
+                        {member.name}
+                      </h3>
+                      
+                      <div className="flex items-center gap-3">
+                        <div className="h-px w-8 bg-[#CCE7FA]" />
+                        <p className="text-sm font-semibold text-gray-600 uppercase tracking-wider">
+                          {member.role}
+                        </p>
+                      </div>
+
+                      <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 pt-2">
+                        {member.bio}
+                      </p>
+
+                      {/* Read More Indicator */}
+                      <div className="flex items-center gap-2 pt-4 text-sm font-semibold text-[#CCE7FA] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span>View Full Profile</span>
+                        <svg
+                          className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                          />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </Link>
             ))}
+          </div>
+
+          {/* Bottom text */}
+          <div className="text-center mt-20">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Our leadership team brings decades of combined experience from the world's leading technology companies, 
+              united by a shared mission to create exceptional software while driving social impact.
+            </p>
           </div>
         </div>
       </section>
