@@ -115,81 +115,177 @@ export default function HomePage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Text Content */}
-            <div className="space-y-8 text-left">
-              <div>
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-black leading-tight mb-6">
-                  ACHIEVE WHAT<br />YOU ENVISION
-                </h1>
-                <p className="text-xl sm:text-2xl text-gray-800 font-light tracking-wide">
-                  END-TO-END PROJECTS_
-                </p>
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50/30 to-white">
+        {/* Animated Background Grid */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(204, 231, 250, 0.15) 1px, transparent 0)`,
+            backgroundSize: '48px 48px'
+          }} />
+        </div>
+        
+        {/* Animated Gradient Orbs */}
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute top-[10%] left-[10%] w-[500px] h-[500px] rounded-full bg-gradient-to-br from-blue-200/40 to-cyan-200/40 blur-3xl animate-float opacity-60" />
+          <div className="absolute bottom-[10%] right-[10%] w-[600px] h-[600px] rounded-full bg-gradient-to-tl from-[#CCE7FA]/50 to-blue-100/40 blur-3xl animate-pulse opacity-50" style={{ animationDuration: '8s' }} />
+          <div className="absolute top-[40%] right-[20%] w-[400px] h-[400px] rounded-full bg-gradient-to-br from-cyan-100/30 to-blue-50/30 blur-3xl animate-bounce opacity-40" style={{ animationDuration: '10s' }} />
+        </div>
+        
+        {/* Floating Particles */}
+        <div className="absolute inset-0 -z-10">
+          {[...Array(15)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-blue-400/40 rounded-full animate-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${5 + Math.random() * 10}s`
+              }}
+            />
+          ))}
+        </div>
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10 py-20">
+          {/* Animated Badge */}
+          <div className="inline-flex items-center px-6 py-3 mb-8 bg-white/90 backdrop-blur-xl rounded-full shadow-xl border border-gray-100/50 animate-fade-in hover:scale-105 transition-transform duration-300">
+            <div className="flex items-center gap-3">
+              <div className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
               </div>
-              
-              <Button
-                onClick={scrollToContact}
-                className="bg-black text-white hover:bg-gray-900 text-base px-8 py-6 rounded-full transition-all duration-300 hover:scale-105 shadow-lg group"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <span className="text-sm font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                Trusted by 87+ Leading Companies Worldwide
+              </span>
             </div>
-
-            {/* Right Column - Laptop Mockup */}
-            <div className="relative">
-              <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-2xl">
-                {/* Navigation Arrows */}
-                <button
-                  onClick={() => setCurrentImageIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length)}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all z-10"
-                >
-                  <ArrowRight className="w-5 h-5 rotate-180" />
-                </button>
-                <button
-                  onClick={() => setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length)}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all z-10"
-                >
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-
-                {/* Laptop Screen */}
-                <div className="bg-gray-900 rounded-lg overflow-hidden border-4 border-gray-700 shadow-xl">
-                  <div className="aspect-video relative">
-                    {carouselImages.map((image, index) => (
-                      <div
-                        key={index}
-                        className={`absolute inset-0 transition-opacity duration-700 ${
-                          index === currentImageIndex ? "opacity-100" : "opacity-0"
-                        }`}
-                      >
-                        <img
-                          src={image}
-                          alt={`Dashboard ${index + 1}`}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
+          </div>
+          
+          {/* Main Heading with Enhanced Gradient */}
+          <h1 className="relative mb-8 animate-fade-in">
+            <span className="block text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-extrabold leading-tight">
+              <span className="relative inline-block">
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s' }}>
+                  ACHIEVE WHAT
+                </span>
+                <span className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                  ACHIEVE WHAT
+                </span>
+              </span>
+              <br />
+              <span className="relative inline-block mt-2">
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }}>
+                  YOU ENVISION
+                </span>
+                <span className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                  YOU ENVISION
+                </span>
+              </span>
+            </span>
+          </h1>
+          
+          {/* Enhanced Subheading */}
+          <div className="flex items-center justify-center gap-6 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="h-px w-12 sm:w-20 bg-gradient-to-r from-transparent via-[#CCE7FA] to-[#CCE7FA]" />
+            <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-light tracking-wide bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 bg-clip-text text-transparent">
+              END-TO-END PROJECTS
+            </p>
+            <div className="h-px w-12 sm:w-20 bg-gradient-to-l from-transparent via-[#CCE7FA] to-[#CCE7FA]" />
+          </div>
+          
+          {/* Description with Better Typography */}
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed animate-fade-in font-light" style={{ animationDelay: '0.4s' }}>
+            Transform your ideas into reality with our expert development teams.<br className="hidden sm:block" />
+            <span className="text-gray-500">From concept to deployment, we deliver excellence.</span>
+          </p>
+          
+          {/* Enhanced CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in mb-16" style={{ animationDelay: '0.6s' }}>
+            <Button
+              onClick={scrollToContact}
+              className="group relative bg-black text-white hover:bg-gray-900 text-lg px-12 py-7 rounded-full transition-all duration-500 hover:scale-105 shadow-2xl hover:shadow-black/30 overflow-hidden"
+            >
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <span className="relative flex items-center gap-2">
+                Get Started
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+              </span>
+            </Button>
+            <Button
+              variant="outline"
+              className="border-2 border-gray-300 hover:border-black text-gray-800 hover:bg-black hover:text-white text-lg px-12 py-7 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-white/80 shadow-lg hover:shadow-xl"
+              onClick={() => {
+                document.querySelector('#services-section')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Explore Services
+            </Button>
+          </div>
+          
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.8s' }}>
+            {[
+              { value: '200+', label: 'Developers' },
+              { value: '87+', label: 'Clients' },
+              { value: '150+', label: 'Projects' },
+              { value: '4.2Y', label: 'Avg Retention' }
+            ].map((stat, index) => (
+              <div 
+                key={index}
+                className="group p-6 bg-white/60 backdrop-blur-xl rounded-2xl border border-gray-100/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-default"
+              >
+                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-br from-gray-900 to-gray-600 bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300">
+                  {stat.value}
                 </div>
-
-                {/* Carousel Dots */}
-                <div className="flex justify-center space-x-2 mt-6">
-                  {carouselImages.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`transition-all duration-300 rounded-full ${
-                        index === currentImageIndex
-                          ? "bg-white w-8 h-2"
-                          : "bg-white/40 w-2 h-2 hover:bg-white/60"
-                      }`}
-                    />
-                  ))}
-                </div>
+                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
               </div>
+            ))}
+          </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="flex flex-col items-center gap-2 cursor-pointer opacity-60 hover:opacity-100 transition-opacity" onClick={() => {
+            document.querySelector('#carousel-section')?.scrollIntoView({ behavior: 'smooth' });
+          }}>
+            <span className="text-sm text-gray-500 font-medium">Scroll to explore</span>
+            <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center p-2">
+              <div className="w-1.5 h-3 bg-gray-400 rounded-full animate-scroll-down" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Carousel */}
+      <section id="carousel-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+            {carouselImages.map((image, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                  index === currentImageIndex ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                <img
+                  src={image}
+                  alt={`Project ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {carouselImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentImageIndex
+                      ? "bg-white w-8"
+                      : "bg-white/50 hover:bg-white/75"
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>
