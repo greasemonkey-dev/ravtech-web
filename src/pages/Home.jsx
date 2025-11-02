@@ -115,97 +115,81 @@ export default function HomePage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[95vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-cyan-50 -z-10" />
-        
-        {/* Geometric Shapes */}
-        <div className="absolute top-20 right-10 w-72 h-72 bg-[#CCE7FA] rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob" />
-        <div className="absolute top-40 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000" />
-        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000" />
-        
-        {/* Floating Elements */}
-        <div className="absolute top-1/4 left-10 w-4 h-4 bg-[#CCE7FA] rounded-full animate-float" />
-        <div className="absolute top-1/3 right-20 w-6 h-6 bg-blue-300 rounded-full animate-float animation-delay-1000" />
-        <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-cyan-300 rounded-full animate-float animation-delay-2000" />
-        
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          {/* Main Heading */}
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 mb-8 animate-fade-in leading-tight">
-            ACHIEVE WHAT<br />YOU ENVISION
-          </h1>
-          
-          {/* Subheading with accent */}
-          <div className="flex items-center justify-center gap-4 mb-6 animate-fade-in">
-            <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#CCE7FA]" />
-            <p className="text-2xl sm:text-3xl lg:text-4xl text-gray-600 font-light tracking-wide">
-              END-TO-END PROJECTS
-            </p>
-            <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#CCE7FA]" />
-          </div>
-          
-          {/* Description */}
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in">
-            Transform your ideas into reality with our expert development teams. 
-            From concept to deployment, we deliver excellence.
-          </p>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
-            <Button
-              onClick={scrollToContact}
-              className="bg-black text-white hover:bg-gray-800 text-lg px-10 py-7 rounded-full transition-all duration-300 hover:scale-105 shadow-2xl group"
-            >
-              Get Started
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              variant="outline"
-              className="border-2 border-gray-300 hover:border-black text-gray-800 hover:bg-black hover:text-white text-lg px-10 py-7 rounded-full transition-all duration-300 hover:scale-105"
-              onClick={() => {
-                document.querySelector('#services-section')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              Learn More
-            </Button>
-          </div>
-          
-          
-        </div>
-        
-        
-      </section>
-
-      {/* Image Carousel */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-            {carouselImages.map((image, index) => (
-              <div
-                key={index}
-                className={`absolute inset-0 transition-opacity duration-1000 ${
-                  index === currentImageIndex ? "opacity-100" : "opacity-0"
-                }`}
-              >
-                <img
-                  src={image}
-                  alt={`Project ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
+      <section className="relative min-h-[90vh] flex items-center px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Text Content */}
+            <div className="space-y-8 text-left">
+              <div>
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-black leading-tight mb-6">
+                  ACHIEVE WHAT<br />YOU ENVISION
+                </h1>
+                <p className="text-xl sm:text-2xl text-gray-800 font-light tracking-wide">
+                  END-TO-END PROJECTS_
+                </p>
               </div>
-            ))}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {carouselImages.map((_, index) => (
+              
+              <Button
+                onClick={scrollToContact}
+                className="bg-black text-white hover:bg-gray-900 text-base px-8 py-6 rounded-full transition-all duration-300 hover:scale-105 shadow-lg group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+
+            {/* Right Column - Laptop Mockup */}
+            <div className="relative">
+              <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-2xl">
+                {/* Navigation Arrows */}
                 <button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentImageIndex
-                      ? "bg-white w-8"
-                      : "bg-white/50 hover:bg-white/75"
-                  }`}
-                />
-              ))}
+                  onClick={() => setCurrentImageIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length)}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all z-10"
+                >
+                  <ArrowRight className="w-5 h-5 rotate-180" />
+                </button>
+                <button
+                  onClick={() => setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length)}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all z-10"
+                >
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+
+                {/* Laptop Screen */}
+                <div className="bg-gray-900 rounded-lg overflow-hidden border-4 border-gray-700 shadow-xl">
+                  <div className="aspect-video relative">
+                    {carouselImages.map((image, index) => (
+                      <div
+                        key={index}
+                        className={`absolute inset-0 transition-opacity duration-700 ${
+                          index === currentImageIndex ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
+                        <img
+                          src={image}
+                          alt={`Dashboard ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Carousel Dots */}
+                <div className="flex justify-center space-x-2 mt-6">
+                  {carouselImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`transition-all duration-300 rounded-full ${
+                        index === currentImageIndex
+                          ? "bg-white w-8 h-2"
+                          : "bg-white/40 w-2 h-2 hover:bg-white/60"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
