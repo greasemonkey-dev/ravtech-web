@@ -170,21 +170,7 @@ export default function HomePage() {
             </Button>
           </div>
           
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto mt-20 animate-fade-in">
-            <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-4xl font-bold text-black mb-1">200+</div>
-              <div className="text-sm text-gray-600">Expert Developers</div>
-            </div>
-            <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-4xl font-bold text-black mb-1">87+</div>
-              <div className="text-sm text-gray-600">Happy Clients</div>
-            </div>
-            <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-4xl font-bold text-black mb-1">150+</div>
-              <div className="text-sm text-gray-600">Projects Delivered</div>
-            </div>
-          </div>
+          
         </div>
         
         {/* Scroll Indicator */}
