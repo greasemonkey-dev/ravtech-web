@@ -173,6 +173,7 @@ export default function HomePage() {
           
         </div>
         
+        
       </section>
 
       {/* Image Carousel */}
