@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -133,15 +134,15 @@ export default function ContactPage() {
       {/* Contact Form & Office Info - FIXED SECTION */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div>
+            <div className="flex flex-col">
               <h2 className="text-4xl font-bold text-black mb-6">Send Us a Message</h2>
               <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
 
-              <Card className="border-none shadow-xl bg-white">
-                <CardContent className="p-8">
-                  <form onSubmit={handleSubmit} className="space-y-6">
+              <Card className="border-none shadow-xl bg-white flex-1">
+                <CardContent className="p-8 h-full flex flex-col">
+                  <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
                     <div>
                       <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
                         Full Name *
@@ -230,11 +231,11 @@ export default function ContactPage() {
             </div>
 
             {/* Office Info */}
-            <div>
+            <div className="flex flex-col">
               <h2 className="text-4xl font-bold text-black mb-6">Visit Our Offices</h2>
               <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
 
-              <div className="space-y-6">
+              <div className="space-y-6 flex-1 flex flex-col justify-between">
                 {offices.map((office, index) => {
                   const Icon = office.icon;
                   return (
