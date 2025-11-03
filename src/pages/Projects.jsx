@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -41,18 +42,16 @@ export default function ProjectsPage() {
   ];
 
   const additionalClients = [
-    "EMC",
-    "Knowmail",
-    "Behalf",
-    "Tal Solutions",
-    "Perfecto",
-    "TSG",
-    "Celltick",
-    "NICE",
-    "Venn",
-    "CONNACT",
-    "AMDOCS",
-    "Wix",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/e71eaf936_1.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/01c442b0e_2.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/88bed56a5_3.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/44b798fd9_4.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/c3e29b9d8_5.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/9aed3be95_6.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/03160abe8_7.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/c3f122cce_8.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/237b30c5a_9.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/d5733920e_10.png",
   ];
 
   return (
@@ -145,16 +144,19 @@ export default function ProjectsPage() {
           </h2>
           <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {additionalClients.map((client, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 items-center justify-items-center">
+            {additionalClients.map((logoUrl, index) => (
               <Card
                 key={index}
-                className="border-none shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white"
+                className="border-none shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white w-full h-32 flex items-center justify-center"
               >
-                <CardContent className="p-8 text-center">
-                  <div className="text-2xl font-bold text-gray-300 group-hover:text-black transition-colors">
-                    {client}
-                  </div>
+                <CardContent className="p-6 flex items-center justify-center w-full h-full">
+                  <img
+                    src={logoUrl}
+                    alt={`Client ${index + 1}`}
+                    className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+                    loading="lazy"
+                  />
                 </CardContent>
               </Card>
             ))}
