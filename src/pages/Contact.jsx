@@ -132,7 +132,7 @@ export default function ContactPage() {
 
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
   <div className="max-w-7xl mx-auto">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
       {/* Contact Form */}
       <div className="flex flex-col h-full">
         <h2 className="text-4xl font-bold text-black mb-6">Send Us a Message</h2>
