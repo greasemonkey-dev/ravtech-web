@@ -22,11 +22,11 @@ export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const carouselImages = [
-    "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200",
-    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200",
-    "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200",
-    "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200",
-    "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/898ccb04f_1-2f906417.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/0aa06519c_2-2f906417.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/f02dc6943_3-2f906417.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/1e893c4ad_Group-4-copy-2-3.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/bff94e611_services-banner.png",
   ];
 
   const services = [
