@@ -25,6 +25,11 @@ export default function Layout({ children }) {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   // Add favicon to document head
   useEffect(() => {
     const favicon = document.querySelector("link[rel='icon']");
