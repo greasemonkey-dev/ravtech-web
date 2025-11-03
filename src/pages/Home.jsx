@@ -1,5 +1,7 @@
 
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { BrandScroller } from "../components/BrandScroller";
@@ -188,16 +190,17 @@ export default function HomePage() {
           
           {/* Enhanced CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in mb-16" style={{ animationDelay: '0.6s' }}>
-            <Button
-              onClick={scrollToContact}
-              className="group relative bg-black text-white hover:bg-gray-900 text-lg px-12 py-7 rounded-full transition-all duration-500 hover:scale-105 shadow-2xl hover:shadow-black/30 overflow-hidden"
-            >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <span className="relative flex items-center gap-2">
-                Get Started
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-              </span>
-            </Button>
+            <Link to={createPageUrl("Contact")}>
+              <Button
+                className="group relative bg-black text-white hover:bg-gray-900 text-lg px-12 py-7 rounded-full transition-all duration-500 hover:scale-105 shadow-2xl hover:shadow-black/30 overflow-hidden"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <span className="relative flex items-center gap-2">
+                  Get Started
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                </span>
+              </Button>
+            </Link>
             <Button
               variant="outline"
               className="border-2 border-gray-300 hover:border-black text-gray-800 hover:bg-black hover:text-white text-lg px-12 py-7 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-white/80 shadow-lg hover:shadow-xl"
