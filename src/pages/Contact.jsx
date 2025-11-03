@@ -130,212 +130,171 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Main Contact Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-4xl font-bold text-black mb-6">
-                Send Us a Message
-              </h2>
-              <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
+  <div className="max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+      {/* Contact Form */}
+      <div className="flex flex-col h-full">
+        <h2 className="text-4xl font-bold text-black mb-6">Send Us a Message</h2>
+        <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
 
-              <Card className="border-none shadow-xl bg-white">
-                <CardContent className="p-8">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                      <label
-                        htmlFor="fullName"
-                        className="block text-sm font-medium text-gray-700 mb-2"
-                      >
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="fullName"
-                        name="fullName"
-                        required
-                        value={formData.fullName}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
-                        placeholder="John Doe"
-                      />
-                    </div>
+        <Card className="border-none shadow-xl bg-white flex-grow">
+          <CardContent className="p-8 flex flex-col justify-between h-full">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  required
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
+                  placeholder="John Doe"
+                />
+              </div>
 
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-gray-700 mb-2"
-                      >
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
-                        placeholder="john@company.com"
-                      />
-                    </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
+                  placeholder="john@company.com"
+                />
+              </div>
 
-                    <div>
-                      <label
-                        htmlFor="phone"
-                        className="block text-sm font-medium text-gray-700 mb-2"
-                      >
-                        Phone
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
-                        placeholder="+972 50 123 4567"
-                      />
-                    </div>
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
+                  placeholder="+972 50 123 4567"
+                />
+              </div>
 
-                    <div>
-                      <label
-                        htmlFor="company"
-                        className="block text-sm font-medium text-gray-700 mb-2"
-                      >
-                        Company
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
-                        placeholder="Your Company Name"
-                      />
-                    </div>
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
+                  placeholder="Your Company Name"
+                />
+              </div>
 
-                    <div>
-                      <label
-                        htmlFor="message"
-                        className="block text-sm font-medium text-gray-700 mb-2"
-                      >
-                        Message *
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        required
-                        rows="6"
-                        value={formData.message}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none"
-                        placeholder="Tell us about your project or inquiry..."
-                      />
-                    </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="6"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none"
+                  placeholder="Tell us about your project or inquiry..."
+                />
+              </div>
 
-                    <Button
-                      type="submit"
-                      className="w-full bg-black text-white hover:bg-gray-800 py-6 text-lg"
-                    >
-                      <Send className="w-5 h-5 mr-2" />
-                      Send Message
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
+              <Button type="submit" className="w-full bg-black text-white hover:bg-gray-800 py-6 text-lg">
+                <Send className="w-5 h-5 mr-2" />
+                Send Message
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
+      </div>
 
-            {/* Office Locations & Info */}
-            <div>
-              <h2 className="text-4xl font-bold text-black mb-6">
-                Visit Our Offices
-              </h2>
-              <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
+      {/* Office Info */}
+      <div className="flex flex-col justify-between h-full">
+        <div>
+          <h2 className="text-4xl font-bold text-black mb-6">Visit Our Offices</h2>
+          <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
 
-              <div className="space-y-6">
-                {offices.map((office, index) => {
-                  const Icon = office.icon;
-                  return (
-                    <Card
-                      key={index}
-                      className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300"
-                    >
-                      <CardContent className="p-8">
-                        <div className="flex items-start">
-                          <div className="w-12 h-12 bg-[#CCE7FA] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                            <Icon className="w-6 h-6 text-black" />
-                          </div>
-                          <div>
-                            <h3 className="text-xl font-semibold text-black mb-2">
-                              {office.name}
-                            </h3>
-                            <p className="text-gray-700 flex items-start">
-                              <MapPin className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                              {office.address}
-                            </p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-
-                {/* Business Hours */}
-                <Card className="border-none shadow-lg bg-white">
+          <div className="space-y-6">
+            {offices.map((office, index) => {
+              const Icon = office.icon;
+              return (
+                <Card key={index} className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300">
                   <CardContent className="p-8">
                     <div className="flex items-start">
                       <div className="w-12 h-12 bg-[#CCE7FA] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                        <Clock className="w-6 h-6 text-black" />
+                        <Icon className="w-6 h-6 text-black" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-black mb-3">
-                          Business Hours
-                        </h3>
-                        <div className="space-y-2 text-gray-700">
-                          <p>Sunday - Thursday: 9:00 AM - 6:00 PM</p>
-                          <p>Friday: 9:00 AM - 2:00 PM</p>
-                          <p>Saturday: Closed</p>
-                        </div>
+                        <h3 className="text-xl font-semibold text-black mb-2">{office.name}</h3>
+                        <p className="text-gray-700 flex items-start">
+                          <MapPin className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
+                          {office.address}
+                        </p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
+              );
+            })}
 
-                {/* Social Media */}
-                <Card className="border-none shadow-lg bg-white">
-                  <CardContent className="p-8">
-                    <h3 className="text-xl font-semibold text-black mb-4">
-                      Follow Us
-                    </h3>
-                    <div className="flex space-x-4">
-                      <a
-                        href="https://facebook.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-12 h-12 bg-[#CCE7FA] rounded-lg flex items-center justify-center hover:bg-[#B8D9F0] transition-colors"
-                      >
-                        <Facebook className="w-6 h-6 text-black" />
-                      </a>
-                      <a
-                        href="https://linkedin.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-12 h-12 bg-[#CCE7FA] rounded-lg flex items-center justify-center hover:bg-[#B8D9F0] transition-colors"
-                      >
-                        <Linkedin className="w-6 h-6 text-black" />
-                      </a>
+            <Card className="border-none shadow-lg bg-white">
+              <CardContent className="p-8">
+                <div className="flex items-start">
+                  <div className="w-12 h-12 bg-[#CCE7FA] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    <Clock className="w-6 h-6 text-black" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-black mb-3">Business Hours</h3>
+                    <div className="space-y-2 text-gray-700">
+                      <p>Sunday - Thursday: 9:00 AM - 6:00 PM</p>
+                      <p>Friday: 9:00 AM - 2:00 PM</p>
+                      <p>Saturday: Closed</p>
                     </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg bg-white">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold text-black mb-4">Follow Us</h3>
+                <div className="flex space-x-4">
+                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#CCE7FA] rounded-lg flex items-center justify-center hover:bg-[#B8D9F0] transition-colors">
+                    <Facebook className="w-6 h-6 text-black" />
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#CCE7FA] rounded-lg flex items-center justify-center hover:bg-[#B8D9F0] transition-colors">
+                    <Linkedin className="w-6 h-6 text-black" />
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Map Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
