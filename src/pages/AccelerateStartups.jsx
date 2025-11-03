@@ -239,16 +239,16 @@ export default function AccelerateStartupsPage() {
               return (
                 <Card
                   key={index}
-                  className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300"
+                  className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300 flex flex-col"
                 >
-                  <CardContent className="p-8 text-center">
+                  <CardContent className="p-8 text-center flex flex-col flex-1">
                     <div className="w-20 h-20 bg-[#CCE7FA] rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-10 h-10 text-black" />
                     </div>
                     <div className="text-5xl font-bold text-black mb-4">
                       {feature.value}
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-4 flex-1">
                       {feature.title}
                     </h3>
                     <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto">
