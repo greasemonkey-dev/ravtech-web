@@ -47,6 +47,17 @@ export default function Layout({ children }) {
 
   return (
     <div className="min-h-screen bg-white">
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+          
+          .heading-custom {
+            font-family: 'Montserrat', sans-serif;
+            color: #0373BA;
+          }
+        `}
+      </style>
+
       {/* Header */}
 <header className="sticky top-0 z-50 bg-white border-b border-gray-200 transition-all duration-300 hover:shadow-md">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,7 +65,7 @@ export default function Layout({ children }) {
       {/* Logo */}
       <Link to={createPageUrl("Home")} className="flex items-center">
         <img 
-          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/034b0b1d4_logo.png" 
+          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/44f4fb0d2_logo.png" 
           alt="RavTech Logo" 
           className="h-10 transition-transform duration-300 hover:scale-105"
         />
@@ -66,13 +77,13 @@ export default function Layout({ children }) {
           <Link
             key={item.title}
             to={item.url}
-            className={`text-sm font-medium relative group transition-all duration-300 ${
+            className={`text-base font-semibold tracking-wide relative group transition-all duration-300 ${
               location.pathname === item.url
                 ? "text-black"
                 : "text-gray-700 hover:text-gray-900"
             }`}
           >
-            <span className="transition-transform duration-300 group-hover:-translate-y-0.5">
+            <span className="transition-transform duration-300 group-hover:-translate-y-0.5 inline-block">
               {item.title}
             </span>
             <span
@@ -92,7 +103,7 @@ export default function Layout({ children }) {
           rel="noopener noreferrer"
           className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
         >
-          <LinkedInIcon className="w-5 h-5 transition-transform duration-300 hover:scale-110" />
+          <LinkedInIcon className="w-10 h-10 transition-transform duration-300 hover:scale-110" />
         </a>
       </div>
 
@@ -146,7 +157,7 @@ export default function Layout({ children }) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             {/* Quick Links */}
             <div>
-              <h3 className="text-sm font-semibold text-black uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-4 heading-custom">
                 Quick Links
               </h3>
               <ul className="space-y-3">
@@ -187,7 +198,7 @@ export default function Layout({ children }) {
 
             {/* Company */}
             <div>
-              <h3 className="text-sm font-semibold text-black uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-4 heading-custom">
                 Company
               </h3>
               <ul className="space-y-3">
@@ -220,7 +231,7 @@ export default function Layout({ children }) {
 
             {/* Contact Info */}
             <div>
-              <h3 className="text-sm font-semibold text-black uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-4 heading-custom">
                 Contact
               </h3>
               <div className="space-y-3 text-sm text-gray-600">
@@ -249,7 +260,7 @@ export default function Layout({ children }) {
 
             {/* Contact Form */}
             <div>
-              <h3 className="text-sm font-semibold text-black uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-4 heading-custom">
                 Quick Contact
               </h3>
               <form className="space-y-3" onSubmit={(e) => {
@@ -298,7 +309,7 @@ export default function Layout({ children }) {
                   rel="noopener noreferrer"
                   className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
                 >
-                  <LinkedInIcon className="w-5 h-5" />
+                  <LinkedInIcon className="w-10 h-10" />
                 </a>
               </div>
             </div>
