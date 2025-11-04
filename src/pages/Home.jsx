@@ -114,6 +114,18 @@ export default function HomePage() {
 
   return (
     <div className="bg-white">
+      <style>
+        {`
+          @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+          }
+          .animate-cursor {
+            animation: blink 1s infinite;
+          }
+        `}
+      </style>
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50/30 to-white">
         {/* Animated Background Grid */}
