@@ -246,7 +246,7 @@ export default function HomePage() {
                 <img
                   src={image}
                   alt={`Project ${index + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale"
                 />
               </div>
             ))}
