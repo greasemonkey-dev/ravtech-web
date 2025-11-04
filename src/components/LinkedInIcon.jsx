@@ -1,6 +1,6 @@
 import React from "react";
 
-export const LinkedInIcon = ({ className = "w-5 h-5" }) => {
+export const LinkedInIcon = ({ className = "w-8 h-8" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
