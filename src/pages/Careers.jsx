@@ -205,17 +205,10 @@ export default function CareersPage() {
     <div className="bg-white">
       {/* Hero Section */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#D2EAFB' }}>
-        {/* Decorative grid pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="grid grid-cols-12 grid-rows-12 h-full w-full">
-            {Array.from({ length: 144 }).map((_, i) => (
-              <div key={i} className="border" style={{ borderColor: '#0373BA' }} />
-            ))}
-          </div>
-        </div>
-        {/* Decorative accent squares */}
-        <div className="absolute top-10 right-20 w-20 h-20 opacity-20" style={{ backgroundColor: '#0373BA' }} />
-        <div className="absolute bottom-20 left-16 w-16 h-16 opacity-15 rotate-45" style={{ backgroundColor: '#0373BA' }} />
+        {/* Decorative circles */}
+        <div className="absolute top-10 right-10 w-64 h-64 rounded-full opacity-20" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
+        <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full opacity-10" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
+        <div className="absolute top-1/2 left-1/2 w-48 h-48 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-5" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
