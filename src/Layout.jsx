@@ -2,13 +2,14 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { Menu, X, Linkedin } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { LinkedInIcon } from "@/components/LinkedInIcon";
 
 const navigationItems = [
   { title: "Accelerate Startups", url: createPageUrl("AccelerateStartups") },
@@ -91,7 +92,7 @@ export default function Layout({ children }) {
           rel="noopener noreferrer"
           className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
         >
-          <Linkedin className="w-5 h-5 transition-transform duration-300 hover:scale-110" />
+          <LinkedInIcon className="w-5 h-5 transition-transform duration-300 hover:scale-110" />
         </a>
       </div>
 
@@ -125,7 +126,7 @@ export default function Layout({ children }) {
                 rel="noopener noreferrer"
                 className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
               >
-                <Linkedin className="w-6 h-6" />
+                <LinkedInIcon className="w-6 h-6" />
               </a>
             </div>
           </nav>
@@ -297,7 +298,7 @@ export default function Layout({ children }) {
                   rel="noopener noreferrer"
                   className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <LinkedInIcon className="w-5 h-5" />
                 </a>
               </div>
             </div>

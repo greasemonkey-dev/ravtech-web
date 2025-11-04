@@ -6,11 +6,11 @@ import {
   Phone,
   Mail,
   MapPin,
-  Linkedin, // Removed Facebook
   Send,
   Building,
   Clock,
 } from "lucide-react";
+import { LinkedInIcon } from "../components/LinkedInIcon";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -279,9 +279,8 @@ export default function ContactPage() {
                   <CardContent className="p-8">
                     <h3 className="text-xl font-semibold text-black mb-4">Follow Us</h3>
                     <div className="flex space-x-4">
-                      {/* LinkedIn link updated */}
                       <a href="https://www.linkedin.com/company/ravtech" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#0A66C2] rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity">
-                        <Linkedin className="w-6 h-6 text-white" />
+                        <LinkedInIcon className="w-6 h-6 text-white" />
                       </a>
                     </div>
                   </CardContent>
