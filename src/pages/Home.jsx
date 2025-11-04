@@ -175,7 +175,7 @@ export default function HomePage() {
           <div className="flex items-center justify-center gap-6 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="h-px w-12 sm:w-20 bg-gradient-to-r from-transparent via-[#CCE7FA] to-[#CCE7FA]" />
             <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-light tracking-wide bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 bg-clip-text text-transparent">
-              END-TO-END PROJECTS
+              END-TO-END PROJECTS<span className="animate-cursor">_</span>
             </p>
             <div className="h-px w-12 sm:w-20 bg-gradient-to-l from-transparent via-[#CCE7FA] to-[#CCE7FA]" />
           </div>
