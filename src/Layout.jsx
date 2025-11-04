@@ -66,13 +66,13 @@ export default function Layout({ children }) {
           <Link
             key={item.title}
             to={item.url}
-            className={`text-sm font-medium relative group transition-all duration-300 ${
+            className={`text-base font-semibold tracking-wide relative group transition-all duration-300 ${
               location.pathname === item.url
                 ? "text-black"
                 : "text-gray-700 hover:text-gray-900"
             }`}
           >
-            <span className="transition-transform duration-300 group-hover:-translate-y-0.5">
+            <span className="transition-transform duration-300 group-hover:-translate-y-0.5 inline-block">
               {item.title}
             </span>
             <span
