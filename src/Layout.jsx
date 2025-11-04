@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { Menu, X, Facebook, Linkedin } from "lucide-react";
+import { Menu, X, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -86,18 +86,10 @@ export default function Layout({ children }) {
       {/* Social Icons - Desktop */}
       <div className="hidden lg:flex items-center space-x-4">
         <a
-          href="https://facebook.com"
+          href="https://www.linkedin.com/company/ravtech"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-        >
-          <Facebook className="w-5 h-5 transition-transform duration-300 hover:scale-110" />
-        </a>
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-700 hover:text-blue-700 transition-colors duration-300"
+          className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
         >
           <Linkedin className="w-5 h-5 transition-transform duration-300 hover:scale-110" />
         </a>
@@ -128,18 +120,10 @@ export default function Layout({ children }) {
             ))}
             <div className="flex items-center space-x-4 pt-8 border-t border-gray-200">
               <a
-                href="https://facebook.com"
+                href="https://www.linkedin.com/company/ravtech"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-              >
-                <Facebook className="w-6 h-6" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-700 hover:text-blue-700 transition-colors duration-300"
+                className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
@@ -308,18 +292,10 @@ export default function Layout({ children }) {
               </p>
               <div className="flex items-center space-x-6">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.linkedin.com/company/ravtech"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-[#CCE7FA] transition-colors"
-                >
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-[#CCE7FA] transition-colors"
+                  className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
