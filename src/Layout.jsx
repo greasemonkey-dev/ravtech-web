@@ -65,7 +65,7 @@ export default function Layout({ children }) {
       {/* Logo */}
       <Link to={createPageUrl("Home")} className="flex items-center">
         <img 
-          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/034b0b1d3_logo.png" 
+          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/44f4fb0d2_logo.png" 
           alt="RavTech Logo" 
           className="h-10 transition-transform duration-300 hover:scale-105"
         />
