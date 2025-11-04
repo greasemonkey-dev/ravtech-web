@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -203,19 +204,21 @@ export default function CareersPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#CCE7FA] to-[#E5F4FF] -z-10" />
-        <div
-          className="absolute inset-0 opacity-10 -z-10"
-          style={{
-            backgroundImage:
-              'url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200")',
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-8">
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#D2EAFB' }}>
+        {/* Decorative grid pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="grid grid-cols-12 grid-rows-12 h-full w-full">
+            {Array.from({ length: 144 }).map((_, i) => (
+              <div key={i} className="border" style={{ borderColor: '#0373BA' }} />
+            ))}
+          </div>
+        </div>
+        {/* Decorative accent squares */}
+        <div className="absolute top-10 right-20 w-20 h-20 opacity-20" style={{ backgroundColor: '#0373BA' }} />
+        <div className="absolute bottom-20 left-16 w-16 h-16 opacity-15 rotate-45" style={{ backgroundColor: '#0373BA' }} />
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
             Careers
           </h1>
           <p className="text-2xl text-gray-800 leading-relaxed mb-6">

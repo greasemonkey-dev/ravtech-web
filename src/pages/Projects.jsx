@@ -57,9 +57,15 @@ export default function ProjectsPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-8">
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#D2EAFB' }}>
+        {/* Decorative lines and shapes */}
+        <div className="absolute top-0 left-0 w-full h-2 opacity-30" style={{ background: 'linear-gradient(90deg, transparent, #0373BA, transparent)' }} />
+        <div className="absolute bottom-0 right-0 w-full h-2 opacity-30" style={{ background: 'linear-gradient(90deg, transparent, #0373BA, transparent)' }} />
+        <div className="absolute top-1/4 right-10 w-3 h-64 opacity-15" style={{ backgroundColor: '#0373BA' }} />
+        <div className="absolute bottom-1/4 left-10 w-3 h-48 opacity-15" style={{ backgroundColor: '#0373BA' }} />
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
             OUR PROJECTS
           </h1>
           <p className="text-xl text-gray-700 leading-relaxed">

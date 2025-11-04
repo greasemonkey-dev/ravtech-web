@@ -180,10 +180,14 @@ export default function AccelerateStartupsPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#CCE7FA] to-[#E5F4FF] -z-10" />
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-6">
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#D2EAFB' }}>
+        {/* Decorative triangles */}
+        <div className="absolute top-10 right-10 w-32 h-32 opacity-15" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)', backgroundColor: '#0373BA' }} />
+        <div className="absolute bottom-20 left-20 w-24 h-24 opacity-10 rotate-180" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)', backgroundColor: '#0373BA' }} />
+        <div className="absolute top-1/2 right-1/4 w-16 h-16 opacity-20" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)', backgroundColor: '#0373BA' }} />
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
             Accelerate your Startup!
           </h1>
           <p className="text-2xl sm:text-3xl text-gray-800 mb-8 font-medium">
