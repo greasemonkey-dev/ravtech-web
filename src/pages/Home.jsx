@@ -123,115 +123,153 @@ export default function HomePage() {
           .animate-cursor {
             animation: blink 1s infinite;
           }
+          @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+          }
+          .animate-float {
+            animation: float 6s ease-in-out infinite;
+          }
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+          }
         `}
       </style>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-50">
-        {/* Animated Background Grid */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(204, 231, 250, 0.15) 1px, transparent 0)`,
-            backgroundSize: '48px 48px'
-          }} />
+      <section className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute top-20 right-20 w-96 h-96 bg-[#CCE7FA] rounded-full opacity-20 blur-3xl animate-float" />
+          <div className="absolute bottom-40 left-20 w-80 h-80 bg-[#E5F4FF] rounded-full opacity-30 blur-3xl" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-br from-[#CCE7FA] to-transparent rounded-full opacity-10 blur-2xl" style={{ animationDelay: '4s' }} />
         </div>
         
-        <div className="max-w-7xl mx-auto w-full py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="max-w-7xl mx-auto w-full py-12 lg:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Left Column - Text Content */}
-            <div className="space-y-8">
+            <div className="space-y-6 lg:space-y-8 animate-fadeInUp">
               {/* Main Heading */}
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight">
-                <span className="relative inline-block">
-                  <span className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
-                    ACHIEVE WHAT
-                  </span>
-                </span>
-                <br />
-                <span className="relative inline-block mt-2">
-                  <span className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
-                    YOU ENVISION
-                  </span>
-                </span>
-              </h1>
-              
-              {/* Subheading */}
               <div className="space-y-4">
-                <div className="inline-block">
-                  <p className="text-xl sm:text-2xl font-light tracking-wide text-gray-700">
-                    END-TO-END PROJECTS<span className="text-slate-900 rounded-none animate-cursor">_</span>
-                  </p>
-                  <div className="w-full h-0.5 bg-gray-300 mt-2" />
+                <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black leading-none tracking-tight">
+                  <span className="block bg-gradient-to-r from-black via-gray-800 to-black bg-clip-text text-transparent">
+                    ACHIEVE
+                  </span>
+                  <span className="block bg-gradient-to-r from-black via-gray-800 to-black bg-clip-text text-transparent">
+                    WHAT YOU
+                  </span>
+                  <span className="block bg-gradient-to-r from-[#0373BA] to-[#0A66C2] bg-clip-text text-transparent">
+                    ENVISION
+                  </span>
+                </h1>
+              </div>
+              
+              {/* Subheading with animated underline */}
+              <div className="space-y-3">
+                <p className="text-xl sm:text-2xl lg:text-3xl font-light text-gray-700 tracking-wide">
+                  END-TO-END PROJECTS<span className="animate-cursor text-[#0373BA]">_</span>
+                </p>
+                <div className="relative h-1 w-64 bg-gradient-to-r from-[#CCE7FA] via-[#0373BA] to-transparent rounded-full overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent animate-pulse" />
                 </div>
               </div>
               
+              {/* Description */}
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl">
+                Transform your ideas into reality with our expert development team. We deliver cutting-edge solutions that drive growth and innovation.
+              </p>
+              
               {/* CTA Button */}
-              <div>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link to={createPageUrl("Contact")}>
-                  <Button className="group bg-black text-white hover:bg-gray-900 text-lg px-10 py-7 rounded-full transition-all duration-300 hover:scale-105 shadow-xl">
+                  <Button className="group bg-gradient-to-r from-black to-gray-900 text-white hover:from-gray-900 hover:to-black text-lg px-10 py-7 rounded-full transition-all duration-500 hover:scale-105 hover:shadow-2xl shadow-xl">
                     Get Started
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                  </Button>
+                </Link>
+                <Link to={createPageUrl("Services")}>
+                  <Button variant="outline" className="text-lg px-10 py-7 rounded-full border-2 border-black hover:bg-black hover:text-white transition-all duration-300 hover:scale-105">
+                    Learn More
                   </Button>
                 </Link>
               </div>
-            </div>
 
-            {/* Right Column - Image Carousel */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
-                <div className="relative aspect-video">
-                  {carouselImages.map((image, index) => (
-                    <div
-                      key={index}
-                      className={`absolute inset-0 transition-opacity duration-1000 ${
-                        index === currentImageIndex ? "opacity-100" : "opacity-0"
-                      }`}
-                    >
-                      <img
-                        src={image}
-                        alt={`Dashboard ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
+              {/* Quick Stats */}
+              <div className="flex flex-wrap gap-8 pt-6">
+                {[
+                  { value: '200+', label: 'Developers' },
+                  { value: '87+', label: 'Clients' },
+                  { value: '150+', label: 'Projects' }
+                ].map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-br from-[#0373BA] to-[#0A66C2] bg-clip-text text-transparent">
+                      {stat.value}
                     </div>
-                  ))}
-                </div>
-                
-                {/* Carousel Dots */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                  {carouselImages.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        index === currentImageIndex
-                          ? "bg-white w-8"
-                          : "bg-white/50 hover:bg-white/75"
-                      }`}
-                    />
-                  ))}
-                </div>
+                    <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
 
-          {/* Trust Indicators */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-20">
-            {[
-              { value: '200+', label: 'Developers' },
-              { value: '87+', label: 'Clients' },
-              { value: '150+', label: 'Projects' },
-              { value: '4.2Y', label: 'Avg Retention' }
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="text-center p-4 bg-white/60 backdrop-blur-xl rounded-xl border border-gray-100/50 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-br from-gray-900 to-gray-600 bg-clip-text text-transparent mb-1">
-                  {stat.value}
+            {/* Right Column - Image Carousel with Enhanced Design */}
+            <div className="relative animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+              {/* Decorative elements */}
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-[#CCE7FA] to-[#0373BA] rounded-3xl opacity-60 blur-xl" />
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[#0373BA] to-[#0A66C2] rounded-3xl opacity-40 blur-xl" />
+              
+              {/* Main carousel container */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 to-gray-50 p-2">
+                <div className="relative rounded-2xl overflow-hidden bg-white shadow-inner">
+                  <div className="relative aspect-video">
+                    {carouselImages.map((image, index) => (
+                      <div
+                        key={index}
+                        className={`absolute inset-0 transition-opacity duration-1000 ${
+                          index === currentImageIndex ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
+                        <img
+                          src={image}
+                          alt={`Dashboard ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Carousel Dots with improved design */}
+                  <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 bg-black/20 backdrop-blur-md rounded-full px-4 py-2">
+                    {carouselImages.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentImageIndex(index)}
+                        className={`transition-all duration-300 rounded-full ${
+                          index === currentImageIndex
+                            ? "bg-white w-8 h-3"
+                            : "bg-white/60 hover:bg-white/80 w-3 h-3"
+                        }`}
+                      />
+                    ))}
+                  </div>
                 </div>
-                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
               </div>
-            ))}
+
+              {/* Floating badge */}
+              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-[#0373BA] to-[#0A66C2] text-white px-6 py-3 rounded-2xl shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                <div className="text-sm font-bold">Trusted Partner</div>
+                <div className="text-xs opacity-90">Since 2013</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
