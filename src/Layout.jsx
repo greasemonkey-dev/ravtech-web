@@ -92,7 +92,7 @@ export default function Layout({ children }) {
           rel="noopener noreferrer"
           className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
         >
-          <LinkedInIcon className="w-8 h-8 transition-transform duration-300 hover:scale-110" />
+          <LinkedInIcon className="w-10 h-10 transition-transform duration-300 hover:scale-110" />
         </a>
       </div>
 
