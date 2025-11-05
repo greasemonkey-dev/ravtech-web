@@ -290,7 +290,7 @@ export default function Layout({ children }) {
                                     rel="noopener noreferrer"
                                     className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
                                 >
-                                    <LinkedInIcon className="w-10 h-10" />
+                                    <LinkedInIcon className="w-9 h-9" />
                                 </a>
                             </div>
                         </div>
