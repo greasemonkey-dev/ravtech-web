@@ -90,45 +90,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Methods */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {contactMethods.map((method, index) => {
-              const Icon = method.icon;
-              return (
-                <Card
-                  key={index}
-                  className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                >
-                  <CardContent className="p-8 text-center">
-                    <div className="w-16 h-16 bg-[#CCE7FA] rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Icon className="w-8 h-8 text-black" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-black mb-4">
-                      {method.title}
-                    </h3>
-                    {method.details.map((detail, idx) => (
-                      <div key={idx}>
-                        {method.action ? (
-                          <a
-                            href={method.action}
-                            className="text-gray-700 hover:text-[#CCE7FA] transition-colors text-lg"
-                          >
-                            {detail}
-                          </a>
-                        ) : (
-                          <p className="text-gray-700 text-lg">{detail}</p>
-                        )}
-                      </div>
-                    ))}
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+
 
       {/* Contact Form & Office Info */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
