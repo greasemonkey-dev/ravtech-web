@@ -7,18 +7,18 @@ import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
-  SheetTrigger } from
-"@/components/ui/sheet";
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { LinkedInIcon } from "@/components/LinkedInIcon";
 
 const navigationItems = [
-{ title: "Accelerate Startups", url: createPageUrl("AccelerateStartups") },
-{ title: "Services", url: createPageUrl("Services") },
-{ title: "Projects", url: createPageUrl("Projects") },
-{ title: "Careers", url: createPageUrl("Careers") },
-{ title: "About", url: createPageUrl("About") },
-{ title: "Contact Us", url: createPageUrl("Contact") }];
-
+  { title: "Accelerate Startups", url: createPageUrl("AccelerateStartups") },
+  { title: "Services", url: createPageUrl("Services") },
+  { title: "Projects", url: createPageUrl("Projects") },
+  { title: "Careers", url: createPageUrl("Careers") },
+  { title: "About", url: createPageUrl("About") },
+  { title: "Contact Us", url: createPageUrl("Contact") },
+];
 
 export default function Layout({ children }) {
   const location = useLocation();
@@ -57,50 +57,50 @@ export default function Layout({ children }) {
       </style>
 
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-200 transition-all duration-300 hover:shadow-md">
+<header className="sticky top-0 z-50 bg-white border-b border-gray-200 transition-all duration-300 hover:shadow-md">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex justify-between items-center h-16">
       {/* Logo */}
       <Link to={createPageUrl("Home")} className="flex items-center">
-        <img
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/44f4fb0d2_logo.png"
-                alt="RavTech Logo"
-                className="h-10 transition-transform duration-300 hover:scale-105" />
-
+        <img 
+          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/44f4fb0d2_logo.png" 
+          alt="RavTech Logo" 
+          className="h-10 transition-transform duration-300 hover:scale-105"
+        />
       </Link>
 
       {/* Desktop Navigation */}
       <nav className="hidden lg:flex items-center space-x-8">
-        {navigationItems.map((item) =>
-              <Link
-                key={item.title}
-                to={item.url}
-                className={`text-base font-semibold tracking-wide relative group transition-all duration-300 ${
-                location.pathname === item.url ?
-                "text-black" :
-                "text-gray-700 hover:text-gray-900"}`
-                }>
-
+        {navigationItems.map((item) => (
+          <Link
+            key={item.title}
+            to={item.url}
+            className={`text-base font-semibold tracking-wide relative group transition-all duration-300 ${
+              location.pathname === item.url
+                ? "text-black"
+                : "text-gray-700 hover:text-gray-900"
+            }`}
+          >
             <span className="transition-transform duration-300 group-hover:-translate-y-0.5 inline-block">
               {item.title}
             </span>
             <span
-                  className={`absolute -bottom-1 left-0 w-0 h-[2px] bg-gray-900 rounded-full transition-all duration-300 group-hover:w-full ${
-                  location.pathname === item.url ? "w-full" : ""}`
-                  } />
-
+              className={`absolute -bottom-1 left-0 w-0 h-[2px] bg-gray-900 rounded-full transition-all duration-300 group-hover:w-full ${
+                location.pathname === item.url ? "w-full" : ""
+              }`}
+            />
           </Link>
-              )}
+        ))}
       </nav>
 
       {/* Social Icons - Desktop */}
       <div className="hidden lg:flex items-center space-x-4">
         <a
-                href="https://www.linkedin.com/company/ravtech"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300">
-
+          href="https://www.linkedin.com/company/ravtech"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
+        >
           <LinkedInIcon className="w-10 h-10 transition-transform duration-300 hover:scale-110" />
         </a>
       </div>
@@ -114,27 +114,27 @@ export default function Layout({ children }) {
         </SheetTrigger>
         <SheetContent side="right" className="w-[300px] sm:w-[400px]">
           <nav className="flex flex-col space-y-6 mt-8">
-            {navigationItems.map((item) =>
-                  <Link
-                    key={item.title}
-                    to={item.url}
-                    onClick={() => setIsOpen(false)}
-                    className={`text-lg font-medium transition-all duration-300 ${
-                    location.pathname === item.url ?
-                    "text-black" :
-                    "text-gray-700 hover:text-gray-900"}`
-                    }>
-
+            {navigationItems.map((item) => (
+              <Link
+                key={item.title}
+                to={item.url}
+                onClick={() => setIsOpen(false)}
+                className={`text-lg font-medium transition-all duration-300 ${
+                  location.pathname === item.url
+                    ? "text-black"
+                    : "text-gray-700 hover:text-gray-900"
+                }`}
+              >
                 {item.title}
               </Link>
-                  )}
+            ))}
             <div className="flex items-center space-x-4 pt-8 border-t border-gray-200">
               <a
-                      href="https://www.linkedin.com/company/ravtech"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300">
-
+                href="https://www.linkedin.com/company/ravtech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
+              >
                 <LinkedInIcon className="w-6 h-6" />
               </a>
             </div>
@@ -143,7 +143,7 @@ export default function Layout({ children }) {
       </Sheet>
     </div>
   </div>
-      </header>
+</header>
 
 
       {/* Main Content */}
@@ -162,24 +162,24 @@ export default function Layout({ children }) {
                 <li>
                   <Link
                     to={createPageUrl("Home")}
-                    className="text-gray-600 hover:text-black transition-colors">
-
+                    className="text-gray-600 hover:text-black transition-colors"
+                  >
                     Home
                   </Link>
                 </li>
                 <li>
                   <Link
                     to={createPageUrl("Services")}
-                    className="text-gray-600 hover:text-black transition-colors">
-
+                    className="text-gray-600 hover:text-black transition-colors"
+                  >
                     Services
                   </Link>
                 </li>
                 <li>
                   <Link
                     to={createPageUrl("Projects")}
-                    className="text-gray-600 hover:text-black transition-colors">
-
+                    className="text-gray-600 hover:text-black transition-colors"
+                  >
                     Projects
                   </Link>
                 </li>
@@ -195,24 +195,24 @@ export default function Layout({ children }) {
                 <li>
                   <Link
                     to={createPageUrl("Careers")}
-                    className="text-gray-600 hover:text-black transition-colors">
-
+                    className="text-gray-600 hover:text-black transition-colors"
+                  >
                     Careers
                   </Link>
                 </li>
                 <li>
                   <Link
                     to={createPageUrl("About")}
-                    className="text-gray-600 hover:text-black transition-colors">
-
+                    className="text-gray-600 hover:text-black transition-colors"
+                  >
                     About
                   </Link>
                 </li>
                 <li>
                   <Link
                     to={createPageUrl("Contact")}
-                    className="text-gray-600 hover:text-black transition-colors">
-
+                    className="text-gray-600 hover:text-black transition-colors"
+                  >
                     Contact Us
                   </Link>
                 </li>
@@ -234,8 +234,8 @@ export default function Layout({ children }) {
                 <p>
                   <a
                     href="mailto:contact@ravtech.co.il"
-                    className="hover:text-black transition-colors">
-
+                    className="hover:text-black transition-colors"
+                  >
                     contact@ravtech.co.il
                   </a>
                 </p>
@@ -256,24 +256,24 @@ export default function Layout({ children }) {
                   type="text"
                   placeholder="Name"
                   required
-                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
-
+                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
+                />
                 <input
                   type="email"
                   placeholder="Email"
                   required
-                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
-
+                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
+                />
                 <textarea
                   placeholder="Message"
                   required
                   rows="3"
-                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none" />
-
+                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none"
+                />
                 <Button
-                  type="submit" className="bg-[#0373BA] text-slate-50 px-4 py-2 text-sm font-medium rounded-md inline-flex items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow h-9 w-full hover:bg-[#B8D9F0] transition-colors">
-
-
+                  type="submit"
+                  className="w-full bg-[#CCE7FA] text-black hover:bg-[#B8D9F0] transition-colors"
+                >
                   Submit
                 </Button>
               </form>
@@ -291,8 +291,8 @@ export default function Layout({ children }) {
                   href="https://www.linkedin.com/company/ravtech"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300">
-
+                  className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
+                >
                   <LinkedInIcon className="w-10 h-10" />
                 </a>
               </div>
@@ -300,6 +300,6 @@ export default function Layout({ children }) {
           </div>
         </div>
       </footer>
-    </div>);
-
+    </div>
+  );
 }
