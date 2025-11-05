@@ -140,7 +140,7 @@ export default function ServicesPage() {
             roadmaps, implementation, and integration, relying on the Kanban
             methodology in all project phases.{" "}
             <Link
-              to={createPageUrl("Projects")} className="text-[##0373BA] font-semibold hover:text-black transition-colors">Read about the Oriient end-to-end project.
+              to={createPageUrl("Projects")} className="text-[#0373BA] font-semibold hover:text-black transition-colors">Read about the Oriient end-to-end project.
 
 
 
