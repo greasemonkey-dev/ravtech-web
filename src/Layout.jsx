@@ -240,13 +240,7 @@ export default function Layout({ children }) {
                   21 Bar Kochva Street<br />
                   Bnei-Brak, Israel
                 </p>
-                <p>
-                  RAD Tower<br />
-                  16 Hartom Street<br />
-                  Jerusalem, Israel
-                </p>
                 <p>T. +972 3 800 3000</p>
-                <p>F. +972 79 5729710</p>
                 <p>
                   <a
                     href="mailto:contact@ravtech.co.il"
