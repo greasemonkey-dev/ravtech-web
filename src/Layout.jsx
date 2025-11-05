@@ -292,7 +292,7 @@ export default function Layout({ children }) {
 
           {/* Social Media & Copyright */}
           <div className="pt-8 border-t border-gray-200">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex flex-row justify-between items-center">
               <p className="text-sm text-gray-600">
                 © 2025 RavTech. All rights reserved.
               </p>
