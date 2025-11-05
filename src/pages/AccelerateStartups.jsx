@@ -299,6 +299,7 @@ export default function AccelerateStartupsPage() {
             </div>
           </div>
 
+        </div>
           <div className="text-center mt-12">
             <Button
               onClick={scrollToContact}
@@ -307,7 +308,6 @@ export default function AccelerateStartupsPage() {
               Schedule a Consultation Call
             </Button>
           </div>
-        </div>
       </section>
 
       {/* Why RavTech */}
