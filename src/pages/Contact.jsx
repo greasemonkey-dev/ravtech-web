@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -60,14 +61,14 @@ export default function ContactPage() {
       {/* Contact Form & Map */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact Form */}
-            <div>
+            <div className="flex flex-col h-full">
               <h2 className="text-4xl font-bold text-black mb-4">Let's Start a Conversation</h2>
               <p className="text-lg text-gray-600 mb-6">Share your project details and we'll get back to you within 24 hours</p>
               <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
 
-              <Card className="border-none shadow-xl bg-white">
+              <Card className="border-none shadow-xl bg-white flex-1">
                 <CardContent className="p-8">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
@@ -158,78 +159,80 @@ export default function ContactPage() {
             </div>
 
             {/* Office Location & Map */}
-            <div>
+            <div className="flex flex-col h-full">
               <h2 className="text-4xl font-bold text-black mb-4">Visit Our Office</h2>
               <p className="text-lg text-gray-600 mb-6">We'd love to meet you in person</p>
               <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
 
-              <Card className="border-none shadow-xl overflow-hidden bg-white mb-6">
-                <CardContent className="p-8">
-                  <div className="flex items-start mb-6">
-                    <div className="w-12 h-12 bg-[#CCE7FA] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-black" />
+              <div className="flex flex-col gap-6 flex-1">
+                <Card className="border-none shadow-xl overflow-hidden bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-start mb-6">
+                      <div className="w-12 h-12 bg-[#CCE7FA] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                        <MapPin className="w-6 h-6 text-black" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-black mb-2">Bnei Brak Office</h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          Concord Tower<br />
+                          21 Bar Kochva Street<br />
+                          Bnei-Brak, Israel
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-black mb-2">Bnei Brak Office</h3>
-                      <p className="text-gray-700 leading-relaxed">
-                        Concord Tower<br />
-                        21 Bar Kochva Street<br />
-                        Bnei-Brak, Israel
-                      </p>
+
+                    <div className="border-t border-gray-200 pt-6 mb-6">
+                      <h4 className="text-lg font-semibold text-black mb-3">Contact Details</h4>
+                      <div className="space-y-2 text-gray-700">
+                        <p>
+                          <span className="font-medium">Phone:</span>{" "}
+                          <a href="tel:+97238003000" className="hover:text-black transition-colors">
+                            +972 3 800 3000
+                          </a>
+                        </p>
+                        <p>
+                          <span className="font-medium">Fax:</span> +972 79 5729710
+                        </p>
+                        <p>
+                          <span className="font-medium">Email:</span>{" "}
+                          <a href="mailto:contact@ravtech.co.il" className="hover:text-black transition-colors">
+                            contact@ravtech.co.il
+                          </a>
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="border-t border-gray-200 pt-6 mb-6">
-                    <h4 className="text-lg font-semibold text-black mb-3">Contact Details</h4>
-                    <div className="space-y-2 text-gray-700">
-                      <p>
-                        <span className="font-medium">Phone:</span>{" "}
-                        <a href="tel:+97238003000" className="hover:text-black transition-colors">
-                          +972 3 800 3000
-                        </a>
-                      </p>
-                      <p>
-                        <span className="font-medium">Fax:</span> +972 79 5729710
-                      </p>
-                      <p>
-                        <span className="font-medium">Email:</span>{" "}
-                        <a href="mailto:contact@ravtech.co.il" className="hover:text-black transition-colors">
-                          contact@ravtech.co.il
-                        </a>
-                      </p>
+                    <div className="border-t border-gray-200 pt-6">
+                      <h4 className="text-lg font-semibold text-black mb-3">Follow Us</h4>
+                      <a 
+                        href="https://www.linkedin.com/company/ravtech" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="inline-flex items-center justify-center w-12 h-12 bg-[#0A66C2] rounded-lg hover:opacity-80 transition-opacity"
+                      >
+                        <LinkedInIcon className="w-6 h-6 text-white" />
+                      </a>
                     </div>
-                  </div>
+                  </CardContent>
+                </Card>
 
-                  <div className="border-t border-gray-200 pt-6">
-                    <h4 className="text-lg font-semibold text-black mb-3">Follow Us</h4>
-                    <a 
-                      href="https://www.linkedin.com/company/ravtech" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="inline-flex items-center justify-center w-12 h-12 bg-[#0A66C2] rounded-lg hover:opacity-80 transition-opacity"
-                    >
-                      <LinkedInIcon className="w-6 h-6 text-white" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Map */}
-              <Card className="border-none shadow-xl overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="aspect-video bg-gray-200">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.2958743843673!2d34.83447!3d32.08389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDA1JzAyLjAiTiAzNMKwNTAnMDQuMSJF!5e0!3m2!1sen!2sil!4v1234567890"
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      title="Bnei Brak Office Location"
-                    />
-                  </div>
-                </CardContent>
-              </Card>
+                {/* Map */}
+                <Card className="border-none shadow-xl overflow-hidden flex-1">
+                  <CardContent className="p-0 h-full">
+                    <div className="w-full h-full min-h-[300px] bg-gray-200">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.2958743843673!2d34.83447!3d32.08389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDA1JzAyLjAiTiAzNMKwNTAnMDQuMSJF!5e0!3m2!1sen!2sil!4v1234567890"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        title="Bnei Brak Office Location"
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
