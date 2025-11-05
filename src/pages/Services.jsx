@@ -539,7 +539,7 @@ export default function ServicesPage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center mb-6">
-            <Globe className="w-12 h-12 text-[#CCE7FA] mr-4" />
+            <Globe className="w-12 h-12 text-[#0373BA] mr-4" />
             <h2 className="text-4xl sm:text-5xl font-bold text-black">Web Development</h2>
           </div>
           <div className="bg-[#0373BA] mb-8 w-24 h-1" />
@@ -575,7 +575,7 @@ export default function ServicesPage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center mb-6">
-            <Radio className="w-12 h-12 text-[#CCE7FA] mr-4" />
+            <Radio className="w-12 h-12 text-[#0373BA] mr-4" />
             <h2 className="text-4xl sm:text-5xl font-bold text-black">IoT</h2>
           </div>
           <div className="bg-[#0373BA] mb-8 w-24 h-1" />
@@ -645,7 +645,7 @@ export default function ServicesPage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center mb-6">
-            <Settings className="w-12 h-12 text-[#CCE7FA] mr-4" />
+            <Settings className="w-12 h-12 text-[#0373BA] mr-4" />
             <h2 className="text-4xl sm:text-5xl font-bold text-black">DevOps</h2>
           </div>
           <div className="bg-[#0373BA] mb-8 w-24 h-1" />
