@@ -298,7 +298,7 @@ export default function CareersPage() {
                         key={idx}
                         className="flex items-start text-gray-700">
 
-                              <Target className="w-4 h-4 text-[#CCE7FA] mr-3 mt-1 flex-shrink-0" />
+                              <Target className="text-[#0373BA] mt-1 mr-3 lucide lucide-target w-4 h-4 flex-shrink-0" />
                               <span>{item}</span>
                             </li>
                       )}
@@ -318,7 +318,7 @@ export default function CareersPage() {
                         key={idx}
                         className="flex items-start text-gray-700">
 
-                              <div className="w-2 h-2 bg-[#CCE7FA] rounded-full mr-3 mt-2 flex-shrink-0" />
+                              <div className="bg-[#0373BA] mt-2 mr-3 rounded-full w-2 h-2 flex-shrink-0" />
                               <span>{item}</span>
                             </li>
                       )}
