@@ -56,53 +56,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Information Cards */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Phone */}
-            <Card className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 bg-[#CCE7FA] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-7 h-7 text-black" />
-                </div>
-                <h3 className="text-lg font-semibold text-black mb-2">Phone</h3>
-                <a href="tel:+97238003000" className="text-gray-700 hover:text-black transition-colors text-base">
-                  +972 3 800 3000
-                </a>
-              </CardContent>
-            </Card>
-
-            {/* Email */}
-            <Card className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 bg-[#CCE7FA] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-7 h-7 text-black" />
-                </div>
-                <h3 className="text-lg font-semibold text-black mb-2">Email</h3>
-                <a href="mailto:contact@ravtech.co.il" className="text-gray-700 hover:text-black transition-colors text-base">
-                  contact@ravtech.co.il
-                </a>
-              </CardContent>
-            </Card>
-
-            {/* Location */}
-            <Card className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 bg-[#CCE7FA] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-7 h-7 text-black" />
-                </div>
-                <h3 className="text-lg font-semibold text-black mb-2">Office</h3>
-                <p className="text-gray-700 text-sm">
-                  Concord Tower<br />
-                  21 Bar Kochva Street<br />
-                  Bnei-Brak, Israel
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Contact Form & Map */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
