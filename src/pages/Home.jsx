@@ -300,7 +300,7 @@ export default function HomePage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             Services
           </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
+          <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => {
@@ -334,7 +334,7 @@ export default function HomePage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             Real Life Success Stories
           </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
+          <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) =>
@@ -371,7 +371,7 @@ export default function HomePage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             Solutions
           </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
+          <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {solutions.map((solution, index) => {
@@ -402,7 +402,7 @@ export default function HomePage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             Some of Our Customers
           </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
+          <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 items-center justify-items-center">
             {customers.map((logoUrl, index) =>
