@@ -6,8 +6,8 @@ import {
   Phone,
   Mail,
   MapPin,
-  Send,
-} from "lucide-react";
+  Send } from
+"lucide-react";
 import { LinkedInIcon } from "../components/LinkedInIcon";
 
 export default function ContactPage() {
@@ -16,7 +16,7 @@ export default function ContactPage() {
     email: "",
     phone: "",
     company: "",
-    message: "",
+    message: ""
   });
 
   const handleSubmit = (e) => {
@@ -27,7 +27,7 @@ export default function ContactPage() {
       email: "",
       phone: "",
       company: "",
-      message: "",
+      message: ""
     });
   };
 
@@ -66,7 +66,7 @@ export default function ContactPage() {
             <div className="flex flex-col h-full">
               <h2 className="text-4xl font-bold text-black mb-4">Let's Start a Conversation</h2>
               <p className="text-lg text-gray-600 mb-6">Share your project details and we'll get back to you within 24 hours</p>
-              <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
+              <div className="bg-[#0373BA] mb-8 w-24 h-1" />
 
               <Card className="border-none shadow-xl bg-white flex-1">
                 <CardContent className="p-8">
@@ -83,8 +83,8 @@ export default function ContactPage() {
                         value={formData.fullName}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
-                        placeholder="John Doe"
-                      />
+                        placeholder="John Doe" />
+
                     </div>
 
                     <div>
@@ -99,8 +99,8 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
-                        placeholder="john@company.com"
-                      />
+                        placeholder="john@company.com" />
+
                     </div>
 
                     <div>
@@ -114,8 +114,8 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
-                        placeholder="+972 50 123 4567"
-                      />
+                        placeholder="+972 50 123 4567" />
+
                     </div>
 
                     <div>
@@ -129,8 +129,8 @@ export default function ContactPage() {
                         value={formData.company}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
-                        placeholder="Your Company Name"
-                      />
+                        placeholder="Your Company Name" />
+
                     </div>
 
                     <div>
@@ -145,8 +145,8 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none"
-                        placeholder="Tell us about your project or inquiry..."
-                      />
+                        placeholder="Tell us about your project or inquiry..." />
+
                     </div>
 
                     <Button type="submit" className="w-full bg-black text-white hover:bg-gray-800 py-6 text-lg">
@@ -162,7 +162,7 @@ export default function ContactPage() {
             <div className="flex flex-col h-full">
               <h2 className="text-4xl font-bold text-black mb-4">Visit Our Office</h2>
               <p className="text-lg text-gray-600 mb-6">We'd love to meet you in person</p>
-              <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
+              <div className="bg-[#0373BA] mb-8 w-24 h-1" />
 
               <div className="flex flex-col gap-6 flex-1">
                 <Card className="border-none shadow-xl overflow-hidden bg-white">
@@ -183,12 +183,12 @@ export default function ContactPage() {
 
                     <div className="border-t border-gray-200 pt-6">
                       <h4 className="text-lg font-semibold text-black mb-3">Follow Us</h4>
-                      <a 
-                        href="https://www.linkedin.com/company/ravtech" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="inline-flex items-center justify-center w-12 h-12 bg-[#CCE7FA] rounded-lg hover:opacity-80 transition-opacity"
-                      >
+                      <a
+                        href="https://www.linkedin.com/company/ravtech"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-12 h-12 bg-[#CCE7FA] rounded-lg hover:opacity-80 transition-opacity">
+
                         <LinkedInIcon className="w-6 h-6 text-black" />
                       </a>
                     </div>
@@ -206,8 +206,8 @@ export default function ContactPage() {
                         style={{ border: 0 }}
                         allowFullScreen
                         loading="lazy"
-                        title="Bnei Brak Office Location"
-                      />
+                        title="Bnei Brak Office Location" />
+
                     </div>
                   </CardContent>
                 </Card>
@@ -235,6 +235,6 @@ export default function ContactPage() {
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }
