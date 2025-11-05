@@ -453,11 +453,11 @@ export default function AccelerateStartupsPage() {
                   </h3>
                   <div className="space-y-4 flex-1">
                     <div className="flex items-start space-x-3">
-                      <MapPin className="w-5 h-5 text-[#CCE7FA] mt-1 flex-shrink-0" />
+                      <MapPin className="w-5 h-5 text-[#0373BA] mt-1 flex-shrink-0" />
                       <p className="text-gray-700">Bar Kochva 21, Bnei Brak</p>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Phone className="w-5 h-5 text-[#CCE7FA] flex-shrink-0" />
+                      <Phone className="w-5 h-5 text-[#0373BA] flex-shrink-0" />
                       <a
                         href="tel:058-7625162"
                         className="text-gray-700 hover:text-black"
@@ -466,7 +466,7 @@ export default function AccelerateStartupsPage() {
                       </a>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Mail className="w-5 h-5 text-[#CCE7FA] flex-shrink-0" />
+                      <Mail className="w-5 h-5 text-[#0373BA] flex-shrink-0" />
                       <a
                         href="mailto:etid@ravtech.co.il"
                         className="text-gray-700 hover:text-black"
