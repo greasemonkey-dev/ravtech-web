@@ -181,26 +181,7 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    <div className="border-t border-gray-200 pt-6 mb-6">
-                      <h4 className="text-lg font-semibold text-black mb-3">Contact Details</h4>
-                      <div className="space-y-2 text-gray-700">
-                        <p>
-                          <span className="font-medium">Phone:</span>{" "}
-                          <a href="tel:+97238003000" className="hover:text-black transition-colors">
-                            +972 3 800 3000
-                          </a>
-                        </p>
-                        <p>
-                          <span className="font-medium">Fax:</span> +972 79 5729710
-                        </p>
-                        <p>
-                          <span className="font-medium">Email:</span>{" "}
-                          <a href="mailto:contact@ravtech.co.il" className="hover:text-black transition-colors">
-                            contact@ravtech.co.il
-                          </a>
-                        </p>
-                      </div>
-                    </div>
+                    {/* Contact Details section removed as per instructions */}
 
                     <div className="border-t border-gray-200 pt-6">
                       <h4 className="text-lg font-semibold text-black mb-3">Follow Us</h4>
