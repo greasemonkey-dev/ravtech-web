@@ -18,91 +18,91 @@ import {
   GitBranch,
   TrendingUp,
   ClipboardList,
-  ArrowRight,
-} from "lucide-react";
+  ArrowRight } from
+"lucide-react";
 
 export default function ServicesPage() {
   const endToEndSteps = [
-    {
-      icon: FileText,
-      title: "Specs & Design",
-      description: "Requirements gathering and system design",
-    },
-    {
-      icon: Code2,
-      title: "Development",
-      description: "Full-stack development with modern technologies",
-    },
-    {
-      icon: Rocket,
-      title: "Delivery",
-      description: "Deployment and production launch",
-    },
-    {
-      icon: Wrench,
-      title: "Maintenance",
-      description: "Ongoing support and updates",
-    },
-  ];
+  {
+    icon: FileText,
+    title: "Specs & Design",
+    description: "Requirements gathering and system design"
+  },
+  {
+    icon: Code2,
+    title: "Development",
+    description: "Full-stack development with modern technologies"
+  },
+  {
+    icon: Rocket,
+    title: "Delivery",
+    description: "Deployment and production launch"
+  },
+  {
+    icon: Wrench,
+    title: "Maintenance",
+    description: "Ongoing support and updates"
+  }];
+
 
   const rdCapabilities = [
-    {
-      icon: Lightbulb,
-      title: "Feature",
-      description: "Develop new features for your product",
-    },
-    {
-      icon: Package,
-      title: "Product",
-      description: "Build complete product solutions",
-    },
-    {
-      icon: TestTube,
-      title: "QA Automation",
-      description: "Automated testing frameworks",
-    },
-    {
-      icon: UsersRound,
-      title: "R&D Team",
-      description: "Complete development teams",
-    },
-  ];
+  {
+    icon: Lightbulb,
+    title: "Feature",
+    description: "Develop new features for your product"
+  },
+  {
+    icon: Package,
+    title: "Product",
+    description: "Build complete product solutions"
+  },
+  {
+    icon: TestTube,
+    title: "QA Automation",
+    description: "Automated testing frameworks"
+  },
+  {
+    icon: UsersRound,
+    title: "R&D Team",
+    description: "Complete development teams"
+  }];
+
 
   const staffOptions = [
-    {
-      icon: User,
-      title: "Single Developer",
-      description: "Expert developer for specific skill needs",
-    },
-    {
-      icon: Users,
-      title: "Whole Team",
-      description: "Complete team for comprehensive project needs",
-    },
-  ];
+  {
+    icon: User,
+    title: "Single Developer",
+    description: "Expert developer for specific skill needs"
+  },
+  {
+    icon: Users,
+    title: "Whole Team",
+    description: "Complete team for comprehensive project needs"
+  }];
+
 
   const consultingAreas = [
-    {
-      icon: Lightbulb,
-      title: "New Technologies",
-      description: "Explore and adopt cutting-edge technologies",
-    },
-    {
-      icon: GitBranch,
-      title: "New Methodologies",
-      description: "Implement agile and modern development practices",
-    },
-    {
-      icon: TrendingUp,
-      title: "Scale Up",
-      description: "Grow your development capabilities",
-    },
-    {
-      icon: ClipboardList,
-      title: "Requirement Specification",
-      description: "Define and document project requirements",
-    },
-  ];
+  {
+    icon: Lightbulb,
+    title: "New Technologies",
+    description: "Explore and adopt cutting-edge technologies"
+  },
+  {
+    icon: GitBranch,
+    title: "New Methodologies",
+    description: "Implement agile and modern development practices"
+  },
+  {
+    icon: TrendingUp,
+    title: "Scale Up",
+    description: "Grow your development capabilities"
+  },
+  {
+    icon: ClipboardList,
+    title: "Requirement Specification",
+    description: "Define and document project requirements"
+  }];
+
 
   return (
     <div className="bg-white">
@@ -140,10 +140,10 @@ export default function ServicesPage() {
             roadmaps, implementation, and integration, relying on the Kanban
             methodology in all project phases.{" "}
             <Link
-              to={createPageUrl("Projects")}
-              className="text-[#CCE7FA] hover:text-black font-semibold transition-colors"
-            >
-              Read about the Oriient end-to-end project.
+              to={createPageUrl("Projects")} className="text-[#0373BA] font-semibold hover:text-black transition-colors">Read about the Oriient end-to-end project.
+
+
+
             </Link>
           </p>
 
@@ -157,8 +157,8 @@ export default function ServicesPage() {
                 return (
                   <Card
                     key={index}
-                    className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300 relative"
-                  >
+                    className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300 relative">
+
                     <CardContent className="p-8 text-center">
                       <div className="w-20 h-20 bg-[#CCE7FA] rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
                         <Icon className="w-10 h-10 text-black" />
@@ -169,14 +169,14 @@ export default function ServicesPage() {
                       <p className="text-gray-600 text-sm leading-relaxed">
                         {step.description}
                       </p>
-                      {index < endToEndSteps.length - 1 && (
-                        <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-1 bg-gray-200 -translate-y-1/2">
+                      {index < endToEndSteps.length - 1 &&
+                      <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-1 bg-gray-200 -translate-y-1/2">
                           <ArrowRight className="w-5 h-5 text-gray-400 absolute -top-2 right-0" />
                         </div>
-                      )}
+                      }
                     </CardContent>
-                  </Card>
-                );
+                  </Card>);
+
               })}
             </div>
           </div>
@@ -205,8 +205,8 @@ export default function ServicesPage() {
               return (
                 <Card
                   key={index}
-                  className="border-2 border-gray-200 hover:border-[#CCE7FA] shadow-md hover:shadow-xl transition-all duration-300 group bg-white"
-                >
+                  className="border-2 border-gray-200 hover:border-[#CCE7FA] shadow-md hover:shadow-xl transition-all duration-300 group bg-white">
+
                   <CardContent className="p-8 text-center">
                     <div className="w-20 h-20 bg-gray-100 group-hover:bg-[#CCE7FA] rounded-full flex items-center justify-center mx-auto mb-6 transition-colors duration-300">
                       <Icon className="w-10 h-10 text-black" />
@@ -218,8 +218,8 @@ export default function ServicesPage() {
                       {capability.description}
                     </p>
                   </CardContent>
-                </Card>
-              );
+                </Card>);
+
             })}
           </div>
         </div>
@@ -241,8 +241,8 @@ export default function ServicesPage() {
             team.{" "}
             <Link
               to={createPageUrl("Projects")}
-              className="text-[#CCE7FA] hover:text-black font-semibold transition-colors"
-            >
+              className="text-[#CCE7FA] hover:text-black font-semibold transition-colors">
+
               Read about the Check Point staff augmentation project.
             </Link>
           </p>
@@ -253,8 +253,8 @@ export default function ServicesPage() {
               return (
                 <Card
                   key={index}
-                  className="border-none shadow-xl bg-white hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-                >
+                  className="border-none shadow-xl bg-white hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+
                   <CardContent className="p-12 text-center">
                     <div className="w-24 h-24 bg-[#CCE7FA] rounded-full flex items-center justify-center mx-auto mb-8">
                       <Icon className="w-12 h-12 text-black" />
@@ -266,8 +266,8 @@ export default function ServicesPage() {
                       {option.description}
                     </p>
                   </CardContent>
-                </Card>
-              );
+                </Card>);
+
             })}
           </div>
         </div>
@@ -297,8 +297,8 @@ export default function ServicesPage() {
               return (
                 <Card
                   key={index}
-                  className="border-2 border-gray-200 hover:border-[#CCE7FA] shadow-md hover:shadow-xl transition-all duration-300 group bg-white"
-                >
+                  className="border-2 border-gray-200 hover:border-[#CCE7FA] shadow-md hover:shadow-xl transition-all duration-300 group bg-white">
+
                   <CardContent className="p-8 text-center">
                     <div className="w-20 h-20 bg-gray-100 group-hover:bg-[#CCE7FA] rounded-full flex items-center justify-center mx-auto mb-6 transition-colors duration-300">
                       <Icon className="w-10 h-10 text-black" />
@@ -310,8 +310,8 @@ export default function ServicesPage() {
                       {area.description}
                     </p>
                   </CardContent>
-                </Card>
-              );
+                </Card>);
+
             })}
           </div>
         </div>
@@ -333,6 +333,6 @@ export default function ServicesPage() {
           </Link>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }
