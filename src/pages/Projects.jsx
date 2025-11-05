@@ -124,7 +124,7 @@ export default function ProjectsPage() {
                     </p>
 
                     {/* CTA Button */}
-                    <Link to={createPageUrl("services#case-studies")}>
+                    <Link to={`${createPageUrl("Services")}#case-studies`}>
                       <Button
                         variant="outline"
                         className="w-full group/btn hover:bg-black hover:text-white transition-all duration-300">
@@ -237,7 +237,7 @@ export default function ProjectsPage() {
                 Contact Us
               </Button>
             </Link>
-            <Link to="/services#case-studies">
+            <Link to={`${createPageUrl("Services")}#case-studies`}>
               <Button
                 variant="outline"
                 className="text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 border-2 border-black hover:bg-black hover:text-white">
