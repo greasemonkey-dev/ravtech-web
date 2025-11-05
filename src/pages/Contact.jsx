@@ -189,7 +189,7 @@ export default function ContactPage() {
                         rel="noopener noreferrer" 
                         className="inline-flex items-center justify-center w-12 h-12 bg-[#CCE7FA] rounded-lg hover:opacity-80 transition-opacity"
                       >
-                        <LinkedInIcon className="w-6 h-6 text-[#0373BA]" />
+                        <LinkedInIcon className="w-6 h-6 text-black" />
                       </a>
                     </div>
                   </CardContent>
