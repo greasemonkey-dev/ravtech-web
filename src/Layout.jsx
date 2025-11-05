@@ -14,9 +14,7 @@ import { LinkedInIcon } from "@/components/LinkedInIcon";
 const navigationItems = [
   { title: "Accelerate Startups", url: createPageUrl("AccelerateStartups") },
   { title: "Services", url: createPageUrl("Services") },
-  { title: "Solutions", url: createPageUrl("Solutions") },
   { title: "Projects", url: createPageUrl("Projects") },
-  { title: "Case Studies", url: createPageUrl("CaseStudies") },
   { title: "Careers", url: createPageUrl("Careers") },
   { title: "About", url: createPageUrl("About") },
   { title: "Contact Us", url: createPageUrl("Contact") },
@@ -175,14 +173,6 @@ export default function Layout({ children }) {
                     className="text-gray-600 hover:text-black transition-colors"
                   >
                     Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={createPageUrl("Solutions")}
-                    className="text-gray-600 hover:text-black transition-colors"
-                  >
-                    Solutions
                   </Link>
                 </li>
                 <li>
