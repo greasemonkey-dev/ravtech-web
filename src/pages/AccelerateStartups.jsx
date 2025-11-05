@@ -6,8 +6,8 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+  AccordionTrigger } from
+"@/components/ui/accordion";
 import {
   Users,
   Calendar,
@@ -18,15 +18,15 @@ import {
   Check,
   Phone,
   Mail,
-  MapPin,
-} from "lucide-react";
+  MapPin } from
+"lucide-react";
 
 export default function AccelerateStartupsPage() {
   const [formData, setFormData] = useState({
     fullName: "",
     mobile: "",
     email: "",
-    message: "",
+    message: ""
   });
 
   const handleSubmit = (e) => {
@@ -44,138 +44,138 @@ export default function AccelerateStartupsPage() {
   };
 
   const features = [
-    {
-      icon: Users,
-      value: "4x",
-      title: "Fast and Professional Development Power",
-    },
-    {
-      icon: Calendar,
-      value: "21 Days",
-      title: "To deploy a professional development team",
-    },
-    {
-      icon: DollarSign,
-      value: "$23,000",
-      title: "Annual savings in development costs",
-    },
-  ];
+  {
+    icon: Users,
+    value: "4x",
+    title: "Fast and Professional Development Power"
+  },
+  {
+    icon: Calendar,
+    value: "21 Days",
+    title: "To deploy a professional development team"
+  },
+  {
+    icon: DollarSign,
+    value: "$23,000",
+    title: "Annual savings in development costs"
+  }];
+
 
   const processSteps = [
-    {
-      number: "1",
-      stage: "Stage A",
-      description:
-        "Initial meeting with Business Development Manager and expectation alignment",
-    },
-    {
-      number: "2",
-      stage: "Stage B",
-      description:
-        "In-depth technology meeting with VP R&D and tech stack review",
-    },
-    {
-      number: "3",
-      stage: "Stage C",
-      description:
-        "Full program presentation and success criteria definition with RavTech CEO",
-    },
-  ];
+  {
+    number: "1",
+    stage: "Stage A",
+    description:
+    "Initial meeting with Business Development Manager and expectation alignment"
+  },
+  {
+    number: "2",
+    stage: "Stage B",
+    description:
+    "In-depth technology meeting with VP R&D and tech stack review"
+  },
+  {
+    number: "3",
+    stage: "Stage C",
+    description:
+    "Full program presentation and success criteria definition with RavTech CEO"
+  }];
+
 
   const benefits = [
-    {
-      icon: TrendingUp,
-      title: "Real Investment",
-      description:
-        "We get under the hood with you - subsidizing development costs and deploying a professional team within 21 days",
-    },
-    {
-      icon: Award,
-      title: "Proven Expertise",
-      description:
-        "Rich experience working with companies like NICE and Wix, with an employee retention rate of 4.2 years",
-    },
-    {
-      icon: Handshake,
-      title: "Long-term Partnership",
-      description:
-        "Building a long-term relationship based on deep understanding of your business needs",
-    },
-  ];
+  {
+    icon: TrendingUp,
+    title: "Real Investment",
+    description:
+    "We get under the hood with you - subsidizing development costs and deploying a professional team within 21 days"
+  },
+  {
+    icon: Award,
+    title: "Proven Expertise",
+    description:
+    "Rich experience working with companies like NICE and Wix, with an employee retention rate of 4.2 years"
+  },
+  {
+    icon: Handshake,
+    title: "Long-term Partnership",
+    description:
+    "Building a long-term relationship based on deep understanding of your business needs"
+  }];
+
 
   const testimonials = [
-    {
-      title:
-        "The Secret of NICE: 66% Faster Recruitment, 25% Cost Savings, Employees Who Stay 5 Years",
-      videoUrl: "https://www.youtube.com/embed/hGYLaLXPpRA",
-    },
-    {
-      title:
-        "Venn's Secret to Success: With RavTech We Achieved 25% Cost Savings and 30% More Productivity",
-      videoUrl: "https://www.youtube.com/embed/jfbUpJE4AZ8",
-    },
-    {
-      title:
-        "The Secret of CONNACT: 25% Cost Savings, Fast Recruitment, and 30% More Productivity",
-      videoUrl: "https://www.youtube.com/embed/4A5tLhZHr6Y",
-    },
-    {
-      title:
-        "The Secret of AMDOCS: How Juniors and Strong Team Lead Deliver Strong Results and 30% Cost Savings",
-      videoUrl: "https://www.youtube.com/embed/9Jw6jOLt_JY",
-    },
-  ];
+  {
+    title:
+    "The Secret of NICE: 66% Faster Recruitment, 25% Cost Savings, Employees Who Stay 5 Years",
+    videoUrl: "https://www.youtube.com/embed/hGYLaLXPpRA"
+  },
+  {
+    title:
+    "Venn's Secret to Success: With RavTech We Achieved 25% Cost Savings and 30% More Productivity",
+    videoUrl: "https://www.youtube.com/embed/jfbUpJE4AZ8"
+  },
+  {
+    title:
+    "The Secret of CONNACT: 25% Cost Savings, Fast Recruitment, and 30% More Productivity",
+    videoUrl: "https://www.youtube.com/embed/4A5tLhZHr6Y"
+  },
+  {
+    title:
+    "The Secret of AMDOCS: How Juniors and Strong Team Lead Deliver Strong Results and 30% Cost Savings",
+    videoUrl: "https://www.youtube.com/embed/9Jw6jOLt_JY"
+  }];
+
 
   const faqs = [
-    {
-      question: "What are the threshold conditions for joining the program?",
-      answer:
-        "In the initial meeting we will examine your fit for the program according to the following parameters:\n\n• The fundraising stage the company is in and financial stability\n• A detailed business plan where you present development goals against the business plan and demonstrate significant growth potential according to the development power you will receive\n• Suitable technological content for the development power you will receive",
-    },
-    {
-      question: "What percentage of funding?",
-      answer:
-        "The funding percentages are approximately 70% in the first half year and between 20%-15% in the following half year",
-    },
-    {
-      question: "What is the team composition?",
-      answer:
-        "The development power assigned to you is an experienced team leader (HO) and four developers",
-    },
-    {
-      question: "Is this in exchange for equity?",
-      answer:
-        "No, we don't enter as partners, we partially fund the initial development cost to take you to the next business step",
-    },
-    {
-      question: "What percentage of employment for the team leader?",
-      answer: "The team leader + their team work full-time",
-    },
-    {
-      question: "Is this an hourly or global model?",
-      answer: "The team's work model is global",
-    },
-    {
-      question: "Where do the employees sit?",
-      answer:
-        "There is maximum flexibility and the prevailing approach is hybrid - meaning, part of the week in your offices, and part from RavTech offices",
-    },
-    {
-      question: "Is this only development? And in what areas?",
-      answer:
-        "The acceleration program focuses on R&D development only. Technological matching is made according to customer requirements",
-    },
-    {
-      question: "Who is the funding body?",
-      answer:
-        "The funding is based on RavTech's collaboration with the Innovation Authority and other government bodies",
-    },
-    {
-      question: "What are the relevant development areas?",
-      answer:
-        "Most developers at RavTech are FullStack. However, there is an option to direct to more specific development content in Frontend, Integration, Data Engineering areas",
-    },
-  ];
+  {
+    question: "What are the threshold conditions for joining the program?",
+    answer:
+    "In the initial meeting we will examine your fit for the program according to the following parameters:\n\n• The fundraising stage the company is in and financial stability\n• A detailed business plan where you present development goals against the business plan and demonstrate significant growth potential according to the development power you will receive\n• Suitable technological content for the development power you will receive"
+  },
+  {
+    question: "What percentage of funding?",
+    answer:
+    "The funding percentages are approximately 70% in the first half year and between 20%-15% in the following half year"
+  },
+  {
+    question: "What is the team composition?",
+    answer:
+    "The development power assigned to you is an experienced team leader (HO) and four developers"
+  },
+  {
+    question: "Is this in exchange for equity?",
+    answer:
+    "No, we don't enter as partners, we partially fund the initial development cost to take you to the next business step"
+  },
+  {
+    question: "What percentage of employment for the team leader?",
+    answer: "The team leader + their team work full-time"
+  },
+  {
+    question: "Is this an hourly or global model?",
+    answer: "The team's work model is global"
+  },
+  {
+    question: "Where do the employees sit?",
+    answer:
+    "There is maximum flexibility and the prevailing approach is hybrid - meaning, part of the week in your offices, and part from RavTech offices"
+  },
+  {
+    question: "Is this only development? And in what areas?",
+    answer:
+    "The acceleration program focuses on R&D development only. Technological matching is made according to customer requirements"
+  },
+  {
+    question: "Who is the funding body?",
+    answer:
+    "The funding is based on RavTech's collaboration with the Innovation Authority and other government bodies"
+  },
+  {
+    question: "What are the relevant development areas?",
+    answer:
+    "Most developers at RavTech are FullStack. However, there is an option to direct to more specific development content in Frontend, Integration, Data Engineering areas"
+  }];
+
 
   return (
     <div className="bg-white">
@@ -204,8 +204,8 @@ export default function AccelerateStartupsPage() {
           </p>
           <Button
             onClick={scrollToContact}
-            className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
-          >
+            className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">
+
             Schedule a Consultation Call
           </Button>
         </div>
@@ -235,7 +235,7 @@ export default function AccelerateStartupsPage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             What do you get in the acceleration program?
           </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
+          <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => {
@@ -243,8 +243,8 @@ export default function AccelerateStartupsPage() {
               return (
                 <Card
                   key={index}
-                  className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300 flex flex-col"
-                >
+                  className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300 flex flex-col">
+
                   <CardContent className="p-8 text-center flex flex-col flex-1">
                     <div className="w-20 h-20 bg-[#CCE7FA] rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-10 h-10 text-black" />
@@ -259,8 +259,8 @@ export default function AccelerateStartupsPage() {
                       <Check className="w-6 h-6 text-green-600" />
                     </div>
                   </CardContent>
-                </Card>
-              );
+                </Card>);
+
             })}
           </div>
         </div>
@@ -272,15 +272,15 @@ export default function AccelerateStartupsPage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             Program Acceptance Process
           </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
+          <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
          <div className="relative">
   {/* Timeline line */}
   <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#CCE7FA] -translate-y-1/2 -z-10" />
 
   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end md:items-stretch">
-    {processSteps.map((step, index) => (
-      <div key={index} className="relative flex flex-col justify-end">
+    {processSteps.map((step, index) =>
+              <div key={index} className="relative flex flex-col justify-end">
         <Card className="border-2 border-[#CCE7FA] shadow-lg bg-white h-full flex flex-col justify-between">
           <CardContent className="p-8 text-center flex flex-col justify-between h-full">
             <div>
@@ -297,16 +297,16 @@ export default function AccelerateStartupsPage() {
           </CardContent>
         </Card>
       </div>
-    ))}
+              )}
   </div>
-</div>
+          </div>
 
         </div>
           <div className="text-center mt-12">
             <Button
-              onClick={scrollToContact}
-              className="bg-[#CCE7FA] text-black hover:bg-[#B8D9F0] text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105"
-            >
+            onClick={scrollToContact}
+            className="bg-[#CCE7FA] text-black hover:bg-[#B8D9F0] text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105">
+
               Schedule a Consultation Call
             </Button>
           </div>
@@ -318,7 +318,7 @@ export default function AccelerateStartupsPage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             Why RavTech?
           </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-8" />
+          <div className="bg-[#0373BA] mb-8 mx-auto w-24 h-1" />
 
           <p className="text-lg text-gray-700 leading-relaxed text-center mb-16 max-w-4xl mx-auto">
             The program includes deploying a software development team tailored to
@@ -333,8 +333,8 @@ export default function AccelerateStartupsPage() {
               return (
                 <Card
                   key={index}
-                  className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300"
-                >
+                  className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300">
+
                   <CardContent className="p-8">
                     <div className="w-16 h-16 bg-[#CCE7FA] rounded-full flex items-center justify-center mb-6">
                       <Icon className="w-8 h-8 text-black" />
@@ -346,8 +346,8 @@ export default function AccelerateStartupsPage() {
                       {benefit.description}
                     </p>
                   </CardContent>
-                </Card>
-              );
+                </Card>);
+
             })}
           </div>
         </div>
@@ -377,30 +377,30 @@ export default function AccelerateStartupsPage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             Clients Speak
           </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
+          <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className="border-none shadow-lg overflow-hidden bg-white"
-              >
+            {testimonials.map((testimonial, index) =>
+            <Card
+              key={index}
+              className="border-none shadow-lg overflow-hidden bg-white">
+
                 <CardContent className="p-0">
                   <div className="aspect-video">
                     <iframe
-                      src={testimonial.videoUrl}
-                      title={testimonial.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    />
+                    src={testimonial.videoUrl}
+                    title={testimonial.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full" />
+
                   </div>
                   <div className="p-6">
                     <p className="text-sm text-gray-700">{testimonial.title}</p>
                   </div>
                 </CardContent>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -411,15 +411,15 @@ export default function AccelerateStartupsPage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             Frequently Asked Questions
           </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
+          <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
           <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="border border-gray-200 rounded-lg px-6 bg-white shadow-sm"
-              >
+            {faqs.map((faq, index) =>
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="border border-gray-200 rounded-lg px-6 bg-white shadow-sm">
+
                 <AccordionTrigger className="text-left text-lg font-semibold text-black hover:text-gray-700">
                   {faq.question}
                 </AccordionTrigger>
@@ -427,7 +427,7 @@ export default function AccelerateStartupsPage() {
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
-            ))}
+            )}
           </Accordion>
         </div>
       </section>
@@ -435,8 +435,8 @@ export default function AccelerateStartupsPage() {
       {/* Contact CTA */}
       <section
         id="contact-section"
-        className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#CCE7FA] to-[#E5F4FF]"
-      >
+        className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#CCE7FA] to-[#E5F4FF]">
+
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             For More Information and to Schedule a Consultation Call:
@@ -453,15 +453,15 @@ export default function AccelerateStartupsPage() {
                   </h3>
                   <div className="space-y-4 flex-1">
                     <div className="flex items-start space-x-3">
-                      <MapPin className="w-5 h-5 text-[#0373BA] mt-1 flex-shrink-0" />
+                      <MapPin className="text-[#0373BA] mt-1 lucide lucide-map-pin w-5 h-5 flex-shrink-0" />
                       <p className="text-gray-700">Bar Kochva 21, Bnei Brak</p>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone className="w-5 h-5 text-[#0373BA] flex-shrink-0" />
                       <a
                         href="tel:058-7625162"
-                        className="text-gray-700 hover:text-black"
-                      >
+                        className="text-gray-700 hover:text-black">
+
                         058-7625162
                       </a>
                     </div>
@@ -469,8 +469,8 @@ export default function AccelerateStartupsPage() {
                       <Mail className="w-5 h-5 text-[#0373BA] flex-shrink-0" />
                       <a
                         href="mailto:etid@ravtech.co.il"
-                        className="text-gray-700 hover:text-black"
-                      >
+                        className="text-gray-700 hover:text-black">
+
                         etid@ravtech.co.il
                       </a>
                     </div>
@@ -495,8 +495,8 @@ export default function AccelerateStartupsPage() {
                         required
                         value={formData.fullName}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
-                      />
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
+
                     </div>
                     <div>
                       <input
@@ -506,8 +506,8 @@ export default function AccelerateStartupsPage() {
                         required
                         value={formData.mobile}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
-                      />
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
+
                     </div>
                     <div>
                       <input
@@ -517,8 +517,8 @@ export default function AccelerateStartupsPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
-                      />
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
+
                     </div>
                     <div className="flex-1">
                       <textarea
@@ -527,13 +527,13 @@ export default function AccelerateStartupsPage() {
                         rows="4"
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full h-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none"
-                      />
+                        className="w-full h-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none" />
+
                     </div>
                     <Button
                       type="submit"
-                      className="w-full bg-black text-white hover:bg-gray-800 py-6 text-lg rounded-lg"
-                    >
+                      className="w-full bg-black text-white hover:bg-gray-800 py-6 text-lg rounded-lg">
+
                       Submit
                     </Button>
                   </form>
@@ -547,6 +547,6 @@ export default function AccelerateStartupsPage() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }
