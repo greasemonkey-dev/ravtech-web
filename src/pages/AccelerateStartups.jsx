@@ -278,7 +278,7 @@ export default function AccelerateStartupsPage() {
             {/* Timeline line */}
             <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#CCE7FA] -translate-y-1/2 -z-10" />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
               {processSteps.map((step, index) => (
                 <div key={index} className="relative">
                   <Card className="border-2 border-[#CCE7FA] shadow-lg bg-white">
