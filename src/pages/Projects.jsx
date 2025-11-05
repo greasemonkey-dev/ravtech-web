@@ -147,7 +147,7 @@ export default function ProjectsPage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             More Clients We've Worked With
           </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
+          <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 items-center justify-items-center">
             {additionalClients.map((logoUrl, index) =>
