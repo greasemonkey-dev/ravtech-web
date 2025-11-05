@@ -516,7 +516,7 @@ export default function ServicesPage() {
                 <Card key={index} className="border-none shadow-xl bg-white hover:shadow-2xl transition-all duration-300">
                   <CardContent className="p-8">
                     <div className="w-20 h-20 bg-[#CCE7FA] rounded-full flex items-center justify-center mb-6">
-                      <Icon className="w-10 h-10 text-black" />
+                      <Icon className="w-10 h-10 text-[#0373BA]" />
                     </div>
                     <h3 className="text-2xl font-semibold text-black mb-6">{platform.title}</h3>
                     <ul className="space-y-3">
