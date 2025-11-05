@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -7,8 +6,6 @@ import {
   Mail,
   MapPin,
   Send,
-  Building,
-  Clock,
 } from "lucide-react";
 import { LinkedInIcon } from "../components/LinkedInIcon";
 
@@ -37,41 +34,10 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const offices = [
-    {
-      name: "Bnei Brak Office",
-      address: "Concord Tower, 21 Bar Kochva Street, Bnei-Brak, Israel",
-      icon: Building,
-    },
-    // Removed Jerusalem Office
-  ];
-
-  const contactMethods = [
-    {
-      icon: Phone,
-      title: "Phone",
-      details: ["+972 3 800 3000"],
-      action: "tel:+97238003000",
-    },
-    {
-      icon: Phone,
-      title: "Fax",
-      details: ["+972 79 5729710"],
-      action: null,
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      details: ["contact@ravtech.co.il"],
-      action: "mailto:contact@ravtech.co.il",
-    },
-  ];
-
   return (
     <div className="bg-white">
       {/* Hero Section */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#D2EAFB' }}>
-        {/* Decorative circles */}
         <div className="absolute top-10 right-10 w-64 h-64 rounded-full opacity-20" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
         <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full opacity-10" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
         <div className="absolute top-1/2 left-1/2 w-48 h-48 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-5" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
@@ -90,21 +56,67 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Contact Information Cards */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Phone */}
+            <Card className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-6 text-center">
+                <div className="w-14 h-14 bg-[#CCE7FA] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-7 h-7 text-black" />
+                </div>
+                <h3 className="text-lg font-semibold text-black mb-2">Phone</h3>
+                <a href="tel:+97238003000" className="text-gray-700 hover:text-black transition-colors text-base">
+                  +972 3 800 3000
+                </a>
+              </CardContent>
+            </Card>
 
+            {/* Email */}
+            <Card className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-6 text-center">
+                <div className="w-14 h-14 bg-[#CCE7FA] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-7 h-7 text-black" />
+                </div>
+                <h3 className="text-lg font-semibold text-black mb-2">Email</h3>
+                <a href="mailto:contact@ravtech.co.il" className="text-gray-700 hover:text-black transition-colors text-base">
+                  contact@ravtech.co.il
+                </a>
+              </CardContent>
+            </Card>
 
-      {/* Contact Form & Office Info */}
+            {/* Location */}
+            <Card className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-6 text-center">
+                <div className="w-14 h-14 bg-[#CCE7FA] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-7 h-7 text-black" />
+                </div>
+                <h3 className="text-lg font-semibold text-black mb-2">Office</h3>
+                <p className="text-gray-700 text-sm">
+                  Concord Tower<br />
+                  21 Bar Kochva Street<br />
+                  Bnei-Brak, Israel
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form & Map */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="flex flex-col">
-              <h2 className="text-4xl font-bold text-black mb-6">Let's Start a Conversation</h2>
+            <div>
+              <h2 className="text-4xl font-bold text-black mb-4">Let's Start a Conversation</h2>
               <p className="text-lg text-gray-600 mb-6">Share your project details and we'll get back to you within 24 hours</p>
               <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
 
-              <Card className="border-none shadow-xl bg-white flex-1">
-                <CardContent className="p-8 h-full flex flex-col">
-                  <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
+              <Card className="border-none shadow-xl bg-white">
+                <CardContent className="p-8">
+                  <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
                       <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
                         Full Name *
@@ -192,101 +204,80 @@ export default function ContactPage() {
               </Card>
             </div>
 
-            {/* Office Info */}
-            <div className="flex flex-col">
-              <h2 className="text-4xl font-bold text-black mb-6">Visit Our Office</h2>
+            {/* Office Location & Map */}
+            <div>
+              <h2 className="text-4xl font-bold text-black mb-4">Visit Our Office</h2>
+              <p className="text-lg text-gray-600 mb-6">We'd love to meet you in person</p>
               <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
 
-              <div className="space-y-6 flex-1 flex flex-col justify-between">
-                {offices.map((office, index) => {
-                  const Icon = office.icon;
-                  return (
-                    <Card key={index} className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300">
-                      <CardContent className="p-8">
-                        <div className="flex items-start">
-                          <div className="w-12 h-12 bg-[#CCE7FA] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                            <Icon className="w-6 h-6 text-black" />
-                          </div>
-                          <div>
-                            <h3 className="text-xl font-semibold text-black mb-2">{office.name}</h3>
-                            <p className="text-gray-700 flex items-start">
-                              <MapPin className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                              {office.address}
-                            </p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-
-                <Card className="border-none shadow-lg bg-white">
-                  <CardContent className="p-8">
-                    <div className="flex items-start">
-                      <div className="w-12 h-12 bg-[#CCE7FA] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                        <Clock className="w-6 h-6 text-black" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold text-black mb-3">Business Hours</h3>
-                        <div className="space-y-2 text-gray-700">
-                          <p>Sunday - Thursday: 9:00 AM - 6:00 PM</p>
-                          <p>Friday: 9:00 AM - 2:00 PM</p>
-                          <p>Saturday: Closed</p>
-                        </div>
-                      </div>
+              <Card className="border-none shadow-xl overflow-hidden bg-white mb-6">
+                <CardContent className="p-8">
+                  <div className="flex items-start mb-6">
+                    <div className="w-12 h-12 bg-[#CCE7FA] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-black" />
                     </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-none shadow-lg bg-white">
-                  <CardContent className="p-8">
-                    <h3 className="text-xl font-semibold text-black mb-4">Follow Us</h3>
-                    <div className="flex space-x-4">
-                      <a href="https://www.linkedin.com/company/ravtech" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#0A66C2] rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity">
-                        <LinkedInIcon className="w-6 h-6 text-white" />
-                      </a>
+                    <div>
+                      <h3 className="text-xl font-semibold text-black mb-2">Bnei Brak Office</h3>
+                      <p className="text-gray-700 leading-relaxed">
+                        Concord Tower<br />
+                        21 Bar Kochva Street<br />
+                        Bnei-Brak, Israel
+                      </p>
                     </div>
-                  </CardContent>
-                </Card>
-              </div>
+                  </div>
+
+                  <div className="border-t border-gray-200 pt-6 mb-6">
+                    <h4 className="text-lg font-semibold text-black mb-3">Contact Details</h4>
+                    <div className="space-y-2 text-gray-700">
+                      <p>
+                        <span className="font-medium">Phone:</span>{" "}
+                        <a href="tel:+97238003000" className="hover:text-black transition-colors">
+                          +972 3 800 3000
+                        </a>
+                      </p>
+                      <p>
+                        <span className="font-medium">Fax:</span> +972 79 5729710
+                      </p>
+                      <p>
+                        <span className="font-medium">Email:</span>{" "}
+                        <a href="mailto:contact@ravtech.co.il" className="hover:text-black transition-colors">
+                          contact@ravtech.co.il
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-gray-200 pt-6">
+                    <h4 className="text-lg font-semibold text-black mb-3">Follow Us</h4>
+                    <a 
+                      href="https://www.linkedin.com/company/ravtech" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex items-center justify-center w-12 h-12 bg-[#0A66C2] rounded-lg hover:opacity-80 transition-opacity"
+                    >
+                      <LinkedInIcon className="w-6 h-6 text-white" />
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Map */}
+              <Card className="border-none shadow-xl overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="aspect-video bg-gray-200">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.2958743843673!2d34.83447!3d32.08389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDA1JzAyLjAiTiAzNMKwNTAnMDQuMSJF!5e0!3m2!1sen!2sil!4v1234567890"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      title="Bnei Brak Office Location"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
-            Find Us on the Map
-          </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-12" />
-
-          <div className="max-w-4xl mx-auto">
-            {/* Bnei Brak Map */}
-            <Card className="border-none shadow-xl overflow-hidden">
-              <CardContent className="p-0">
-                <div className="aspect-video bg-gray-200">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.2958743843673!2d34.83447!3d32.08389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDA1JzAyLjAiTiAzNMKwNTAnMDQuMSJF!5e0!3m2!1sen!2sil!4v1234567890"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    title="Bnei Brak Office Location"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-black mb-2">
-                    Bnei Brak Office
-                  </h3>
-                  <p className="text-gray-700">
-                    Concord Tower, 21 Bar Kochva Street
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
