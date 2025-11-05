@@ -274,30 +274,32 @@ export default function AccelerateStartupsPage() {
           </h2>
           <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
 
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#CCE7FA] -translate-y-1/2 -z-10" />
+         <div className="relative">
+  {/* Timeline line */}
+  <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#CCE7FA] -translate-y-1/2 -z-10" />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
-              {processSteps.map((step, index) => (
-                <div key={index} className="relative">
-                  <Card className="border-2 border-[#CCE7FA] shadow-lg bg-white">
-                    <CardContent className="p-8 text-center">
-                      <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
-                        {step.number}
-                      </div>
-                      <h3 className="text-2xl font-bold text-black mb-4">
-                        {step.stage}
-                      </h3>
-                      <p className="text-gray-700 leading-relaxed">
-                        {step.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end md:items-stretch">
+    {processSteps.map((step, index) => (
+      <div key={index} className="relative flex flex-col justify-end">
+        <Card className="border-2 border-[#CCE7FA] shadow-lg bg-white h-full flex flex-col justify-between">
+          <CardContent className="p-8 text-center flex flex-col justify-between h-full">
+            <div>
+              <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                {step.number}
+              </div>
+              <h3 className="text-2xl font-bold text-black mb-4">
+                {step.stage}
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                {step.description}
+              </p>
             </div>
-          </div>
+          </CardContent>
+        </Card>
+      </div>
+    ))}
+  </div>
+</div>
 
         </div>
           <div className="text-center mt-12">
