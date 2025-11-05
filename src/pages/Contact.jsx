@@ -186,10 +186,10 @@ export default function ContactPage() {
                       <a
                         href="https://www.linkedin.com/company/ravtech"
                         target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center w-12 h-12 bg-[#0A66C2] rounded-lg hover:opacity-80 transition-opacity">
+                        rel="noopener noreferrer" className="bg-[#CCE7FA] rounded-lg inline-flex items-center justify-center w-12 h-12 hover:opacity-80 transition-opacity">
 
-                        <LinkedInIcon className="w-6 h-6 text-white" />
+
+
                       </a>
                     </div>
                   </CardContent>
