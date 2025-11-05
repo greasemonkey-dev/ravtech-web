@@ -181,8 +181,6 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    {/* Contact Details section removed as per instructions */}
-
                     <div className="border-t border-gray-200 pt-6">
                       <h4 className="text-lg font-semibold text-black mb-3">Follow Us</h4>
                       <a 
@@ -229,23 +227,12 @@ export default function ContactPage() {
             Our team is ready to help you achieve your development goals. Let's
             build something amazing together.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+97238003000">
-              <Button className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Us Now
-              </Button>
-            </a>
-            <a href="mailto:contact@ravtech.co.il">
-              <Button
-                variant="outline"
-                className="text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 border-2 border-black hover:bg-black hover:text-white"
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                Email Us
-              </Button>
-            </a>
-          </div>
+          <a href="mailto:contact@ravtech.co.il">
+            <Button className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">
+              <Mail className="w-5 h-5 mr-2" />
+              Email Us
+            </Button>
+          </a>
         </div>
       </section>
     </div>
