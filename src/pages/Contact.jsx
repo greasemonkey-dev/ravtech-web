@@ -43,11 +43,7 @@ export default function ContactPage() {
       address: "Concord Tower, 21 Bar Kochva Street, Bnei-Brak, Israel",
       icon: Building,
     },
-    {
-      name: "Jerusalem Office",
-      address: "RAD Tower, 16 Hartom Street, Jerusalem, Israel",
-      icon: Building,
-    },
+    // Removed Jerusalem Office
   ];
 
   const contactMethods = [
@@ -134,13 +130,14 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form & Office Info - FIXED SECTION */}
+      {/* Contact Form & Office Info */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="flex flex-col">
-              <h2 className="text-4xl font-bold text-black mb-6">Send Us a Message</h2>
+              <h2 className="text-4xl font-bold text-black mb-6">Let's Start a Conversation</h2>
+              <p className="text-lg text-gray-600 mb-6">Share your project details and we'll get back to you within 24 hours</p>
               <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
 
               <Card className="border-none shadow-xl bg-white flex-1">
@@ -235,7 +232,7 @@ export default function ContactPage() {
 
             {/* Office Info */}
             <div className="flex flex-col">
-              <h2 className="text-4xl font-bold text-black mb-6">Visit Our Offices</h2>
+              <h2 className="text-4xl font-bold text-black mb-6">Visit Our Office</h2>
               <div className="w-24 h-1 bg-[#CCE7FA] mb-8" />
 
               <div className="space-y-6 flex-1 flex flex-col justify-between">
@@ -303,7 +300,7 @@ export default function ContactPage() {
           </h2>
           <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-12" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="max-w-4xl mx-auto">
             {/* Bnei Brak Map */}
             <Card className="border-none shadow-xl overflow-hidden">
               <CardContent className="p-0">
@@ -325,29 +322,6 @@ export default function ContactPage() {
                   <p className="text-gray-700">
                     Concord Tower, 21 Bar Kochva Street
                   </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Jerusalem Map */}
-            <Card className="border-none shadow-xl overflow-hidden">
-              <CardContent className="p-0">
-                <div className="aspect-video bg-gray-200">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.123456789!2d35.21234!3d31.78901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDQ3JzIwLjQiTiAzNcKwMTInNDQuNCJF!5e0!3m2!1sen!2sil!4v1234567890"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    title="Jerusalem Office Location"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-black mb-2">
-                    Jerusalem Office
-                  </h3>
-                  <p className="text-gray-700">RAD Tower, 16 Hartom Street</p>
                 </div>
               </CardContent>
             </Card>
