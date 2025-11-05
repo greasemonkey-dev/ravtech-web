@@ -45,7 +45,29 @@ import {
   Target } from
 "lucide-react";
 
+
+// I ADDAD
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+
 export default function ServicesPage() {
+
+
+
+// I ADDAD
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
+
   const endToEndSteps = [
   {
     icon: FileText,
