@@ -706,7 +706,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Case Studies Divider */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#CCE7FA] to-[#E5F4FF]">
+      <section id="case-studies" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#CCE7FA] to-[#E5F4FF]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">
             Real Clients, Real Results
