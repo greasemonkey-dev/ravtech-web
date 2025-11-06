@@ -441,7 +441,7 @@ export default function AccelerateStartupsPage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             For More Information and to Schedule a Consultation Call:
           </h2>
-          <div className="w-24 h-1 bg-black mx-auto mb-16" />
+          <div className="w-24 h-1 bg-[#0373BA] mx-auto mb-16" />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Details */}
@@ -474,7 +474,7 @@ export default function AccelerateStartupsPage() {
                         etid@ravtech.co.il
                       </a>
                     </div>
-                  </div>
+                  </CardContent>
                 </CardContent>
               </Card>
             </div>

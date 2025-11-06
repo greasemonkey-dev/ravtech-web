@@ -815,7 +815,7 @@ export default function ServicesPage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             Proven Impact Across All Clients
           </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
+          <div className="w-24 h-1 bg-[#0373BA] mx-auto mb-16" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="border-none shadow-lg bg-white">

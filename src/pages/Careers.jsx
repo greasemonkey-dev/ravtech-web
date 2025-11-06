@@ -228,7 +228,7 @@ export default function CareersPage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">
             Open Positions
           </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mb-12" />
+          <div className="w-24 h-1 bg-[#0373BA] mb-12" />
 
           <Accordion type="single" collapsible className="space-y-4">
             {jobOpenings.map((job, index) =>
@@ -381,7 +381,7 @@ export default function CareersPage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
             Why Join RavTech?
           </h2>
-          <div className="w-24 h-1 bg-[#CCE7FA] mx-auto mb-16" />
+          <div className="w-24 h-1 bg-[#0373BA] mx-auto mb-16" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
