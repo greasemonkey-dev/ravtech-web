@@ -461,7 +461,6 @@ export default function AccelerateStartupsPage() {
                       <a
                         href="tel:058-7625162"
                         className="text-gray-700 hover:text-black">
-
                         058-7625162
                       </a>
                     </div>
@@ -470,11 +469,10 @@ export default function AccelerateStartupsPage() {
                       <a
                         href="mailto:etid@ravtech.co.il"
                         className="text-gray-700 hover:text-black">
-
                         etid@ravtech.co.il
                       </a>
                     </div>
-                  </CardContent>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -496,7 +494,6 @@ export default function AccelerateStartupsPage() {
                         value={formData.fullName}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
-
                     </div>
                     <div>
                       <input
@@ -507,7 +504,6 @@ export default function AccelerateStartupsPage() {
                         value={formData.mobile}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
-
                     </div>
                     <div>
                       <input
@@ -518,7 +514,6 @@ export default function AccelerateStartupsPage() {
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
-
                     </div>
                     <div className="flex-1">
                       <textarea
@@ -528,12 +523,10 @@ export default function AccelerateStartupsPage() {
                         value={formData.message}
                         onChange={handleChange}
                         className="w-full h-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none" />
-
                     </div>
                     <Button
                       type="submit"
                       className="w-full bg-black text-white hover:bg-gray-800 py-6 text-lg rounded-lg">
-
                       Submit
                     </Button>
                   </form>
@@ -547,6 +540,6 @@ export default function AccelerateStartupsPage() {
           </div>
         </div>
       </section>
-    </div>);
-
+    </div>
+  );
 }
