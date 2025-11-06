@@ -138,60 +138,60 @@ export default function HomePage() {
       </style>
 
       {/* Hero Section - Compact & Visual */}
-      <section className="relative pt-20 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-white via-blue-50/20 to-gray-50">
+      <section className="relative pt-16 pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-white via-blue-50/20 to-gray-50">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(204, 231, 250, 0.1) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(3, 115, 186, 0.08) 1px, transparent 0)`,
             backgroundSize: '48px 48px'
           }} />
-          <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-gradient-to-br from-blue-200/30 to-cyan-200/30 blur-3xl animate-pulse opacity-50" style={{ animationDuration: '6s' }} />
-          <div className="absolute bottom-[5%] right-[5%] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-[#CCE7FA]/40 to-blue-100/30 blur-3xl" style={{ animation: 'float 8s ease-in-out infinite' }} />
+          <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-gradient-to-br from-[#0373BA]/20 to-cyan-200/20 blur-3xl animate-pulse opacity-50" style={{ animationDuration: '6s' }} />
+          <div className="absolute bottom-[5%] right-[5%] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-[#0373BA]/30 to-blue-100/20 blur-3xl" style={{ animation: 'float 8s ease-in-out infinite' }} />
         </div>
         
         <div className="max-w-7xl mx-auto">
           {/* Top Section: Title + Quick Stats */}
-          <div className="text-center mb-8">
-            <h1 className="relative mb-4 animate-slide-up">
-              <span className="block text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight">
+          <div className="text-center mb-6">
+            <h1 className="relative mb-3 animate-slide-up">
+              <span className="block text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
                 <span className="relative inline-block">
-                  <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent blur-xl opacity-40 animate-pulse" style={{ animationDuration: '3s' }}>
+                  <span className="absolute inset-0 bg-gradient-to-r from-[#0373BA] via-cyan-500 to-[#0373BA] bg-clip-text text-transparent blur-lg opacity-40 animate-pulse" style={{ animationDuration: '3s' }}>
                     ACHIEVE WHAT
                   </span>
-                  <span className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                  <span className="relative bg-gradient-to-r from-gray-900 via-[#0373BA] to-gray-900 bg-clip-text text-transparent">
                     ACHIEVE WHAT
                   </span>
                 </span>
                 <br />
                 <span className="relative inline-block mt-1">
-                  <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent blur-xl opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }}>
+                  <span className="absolute inset-0 bg-gradient-to-r from-[#0373BA] via-cyan-500 to-[#0373BA] bg-clip-text text-transparent blur-lg opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }}>
                     YOU ENVISION
                   </span>
-                  <span className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                  <span className="relative bg-gradient-to-r from-gray-900 via-[#0373BA] to-gray-900 bg-clip-text text-transparent">
                     YOU ENVISION
                   </span>
                 </span>
               </span>
             </h1>
             
-            <div className="flex items-center justify-center gap-4 mb-6 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <div className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent via-[#CCE7FA] to-[#CCE7FA]" />
-              <p className="text-xl sm:text-2xl lg:text-3xl font-light tracking-wide bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 bg-clip-text text-transparent">
-                END-TO-END PROJECTS<span className="text-slate-900 animate-cursor">_</span>
+            <div className="flex items-center justify-center gap-3 mb-5 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+              <div className="h-px w-10 sm:w-14 bg-gradient-to-r from-transparent via-[#0373BA] to-[#0373BA]" />
+              <p className="text-lg sm:text-xl lg:text-2xl font-light tracking-wide bg-gradient-to-r from-gray-700 via-[#0373BA] to-gray-700 bg-clip-text text-transparent">
+                END-TO-END PROJECTS<span className="text-[#0373BA] animate-cursor">_</span>
               </p>
-              <div className="h-px w-12 sm:w-16 bg-gradient-to-l from-transparent via-[#CCE7FA] to-[#CCE7FA]" />
+              <div className="h-px w-10 sm:w-14 bg-gradient-to-l from-transparent via-[#0373BA] to-[#0373BA]" />
             </div>
 
             {/* Mini Stats - Inline */}
-            <div className="flex flex-wrap justify-center gap-6 mb-8 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            <div className="flex flex-wrap justify-center gap-4 mb-5 animate-slide-up" style={{ animationDelay: '0.3s' }}>
               {[
                 { value: '200+', label: 'Developers' },
                 { value: '87+', label: 'Clients' },
                 { value: '150+', label: 'Projects' },
                 { value: '4.2Y', label: 'Retention' }
               ].map((stat, index) => (
-                <div key={index} className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-gray-100/50 shadow-sm hover:shadow-md transition-all duration-300">
-                  <div className="text-2xl font-bold bg-gradient-to-br from-gray-900 to-gray-600 bg-clip-text text-transparent">
+                <div key={index} className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-br from-white/80 to-[#0373BA]/5 backdrop-blur-sm rounded-full border border-[#0373BA]/20 shadow-sm hover:shadow-md hover:border-[#0373BA]/40 transition-all duration-300">
+                  <div className="text-xl font-bold bg-gradient-to-br from-[#0373BA] to-gray-900 bg-clip-text text-transparent">
                     {stat.value}
                   </div>
                   <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
@@ -200,19 +200,18 @@ export default function HomePage() {
             </div>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-5 animate-slide-up" style={{ animationDelay: '0.4s' }}>
               <Link to={createPageUrl("Contact")}>
-                <Button className="group relative bg-black text-white hover:bg-gray-900 text-base px-10 py-6 rounded-full transition-all duration-500 hover:scale-105 shadow-xl hover:shadow-black/30 overflow-hidden">
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <Button className="group relative bg-gradient-to-r from-[#0373BA] to-[#0373BA]/90 text-white hover:from-[#025a94] hover:to-[#0373BA] text-sm px-8 py-5 rounded-full transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-[#0373BA]/30 overflow-hidden">
                   <span className="relative flex items-center gap-2">
                     Get Started
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </Button>
               </Link>
               <Button
                 variant="outline"
-                className="border-2 border-gray-300 hover:border-black text-gray-800 hover:bg-black hover:text-white text-base px-10 py-6 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-white/80 shadow-md hover:shadow-lg"
+                className="border-2 border-[#0373BA]/30 hover:border-[#0373BA] text-gray-800 hover:bg-[#0373BA] hover:text-white text-sm px-8 py-5 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-white/80 shadow-md hover:shadow-lg"
                 onClick={() => {
                   document.querySelector('#services-section')?.scrollIntoView({ behavior: 'smooth' });
                 }}>
@@ -221,9 +220,26 @@ export default function HomePage() {
             </div>
           </div>
 
+          {/* Brand Scroller - Integrated at top */}
+          <div className="mb-5 animate-slide-up" style={{ animationDelay: '0.5s' }}>
+            <div className="text-center mb-3">
+              <p className="text-xs uppercase tracking-wider text-[#0373BA]/70 font-semibold">Trusted By Industry Leaders</p>
+            </div>
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl py-4 px-6 shadow-md border border-[#0373BA]/10">
+              <BrandScroller
+                logos={[
+                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-2.png",
+                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-5.png",
+                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-3.png",
+                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-4.png",
+                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png"
+                ]} />
+            </div>
+          </div>
+
           {/* Image Carousel - Prominent Display */}
-          <div className="relative animate-slide-up" style={{ animationDelay: '0.5s' }}>
-            <div className="relative h-[350px] sm:h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50">
+          <div className="relative animate-slide-up" style={{ animationDelay: '0.6s' }}>
+            <div className="relative h-[280px] sm:h-[380px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50 ring-2 ring-[#0373BA]/20">
               {carouselImages.map((image, index) => (
                 <div
                   key={index}
@@ -234,48 +250,31 @@ export default function HomePage() {
                     src={image}
                     alt={`Project ${index + 1}`}
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0373BA]/40 via-transparent to-transparent" />
                 </div>
               ))}
               
               {/* Carousel Controls */}
-              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
                 {carouselImages.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
                     className={`transition-all duration-300 rounded-full ${
                       index === currentImageIndex
-                        ? "bg-white w-10 h-3"
-                        : "bg-white/60 hover:bg-white/80 w-3 h-3"
+                        ? "bg-[#0373BA] w-8 h-2.5 shadow-lg"
+                        : "bg-white/60 hover:bg-white/80 w-2.5 h-2.5"
                     }`}
                   />
                 ))}
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg">
-                <p className="text-sm font-bold text-gray-900">Trusted by Industry Leaders</p>
+              <div className="absolute top-4 right-4 bg-gradient-to-br from-white/95 to-[#0373BA]/10 backdrop-blur-sm rounded-full px-5 py-2 shadow-lg border border-[#0373BA]/20">
+                <p className="text-xs font-bold bg-gradient-to-r from-[#0373BA] to-gray-900 bg-clip-text text-transparent">Real Results ✓</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Brand Scroller - Integrated Seamlessly */}
-      <section className="py-8 overflow-hidden bg-gradient-to-b from-gray-50 to-white border-y border-gray-100/50">
-        <div className="relative">
-          <div className="text-center mb-4">
-            <p className="text-xs uppercase tracking-wider text-gray-500 font-semibold">Trusted By</p>
-          </div>
-          <BrandScroller
-            logos={[
-              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-2.png",
-              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-5.png",
-              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-3.png",
-              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-4.png",
-              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png"
-            ]} />
         </div>
       </section>
 
