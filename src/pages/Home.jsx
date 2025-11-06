@@ -123,174 +123,159 @@ export default function HomePage() {
           .animate-cursor {
             animation: blink 1s infinite;
           }
+          @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+          }
+          @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+          }
         `}
       </style>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50/30 to-white">
-        {/* Animated Background Grid */}
+      {/* Hero Section - Compact & Visual */}
+      <section className="relative pt-20 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-white via-blue-50/20 to-gray-50">
+        {/* Animated Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(204, 231, 250, 0.15) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(204, 231, 250, 0.1) 1px, transparent 0)`,
             backgroundSize: '48px 48px'
           }} />
+          <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-gradient-to-br from-blue-200/30 to-cyan-200/30 blur-3xl animate-pulse opacity-50" style={{ animationDuration: '6s' }} />
+          <div className="absolute bottom-[5%] right-[5%] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-[#CCE7FA]/40 to-blue-100/30 blur-3xl" style={{ animation: 'float 8s ease-in-out infinite' }} />
         </div>
         
-        {/* Animated Gradient Orbs */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-[10%] left-[10%] w-[500px] h-[500px] rounded-full bg-gradient-to-br from-blue-200/40 to-cyan-200/40 blur-3xl animate-float opacity-60" />
-          <div className="absolute bottom-[10%] right-[10%] w-[600px] h-[600px] rounded-full bg-gradient-to-tl from-[#CCE7FA]/50 to-blue-100/40 blur-3xl animate-pulse opacity-50" style={{ animationDuration: '8s' }} />
-          <div className="absolute top-[40%] right-[20%] w-[400px] h-[400px] rounded-full bg-gradient-to-br from-cyan-100/30 to-blue-50/30 blur-3xl animate-bounce opacity-40" style={{ animationDuration: '10s' }} />
-        </div>
-        
-        {/* Floating Particles */}
-        <div className="absolute inset-0 -z-10">
-          {[...Array(15)].map((_, i) =>
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-blue-400/40 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 10}s`
-            }} />
-
-          )}
-        </div>
-        
-        <div className="max-w-7xl mx-auto text-center relative z-10 py-20">
-          {/* Main Heading with Enhanced Gradient */}
-          <h1 className="relative mb-8 animate-fade-in">
-            <span className="block text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-extrabold leading-tight">
-              <span className="relative inline-block">
-                <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s' }}>
-                  ACHIEVE WHAT
+        <div className="max-w-7xl mx-auto">
+          {/* Top Section: Title + Quick Stats */}
+          <div className="text-center mb-8">
+            <h1 className="relative mb-4 animate-slide-up">
+              <span className="block text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight">
+                <span className="relative inline-block">
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent blur-xl opacity-40 animate-pulse" style={{ animationDuration: '3s' }}>
+                    ACHIEVE WHAT
+                  </span>
+                  <span className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                    ACHIEVE WHAT
+                  </span>
                 </span>
-                <span className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
-                  ACHIEVE WHAT
+                <br />
+                <span className="relative inline-block mt-1">
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent blur-xl opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }}>
+                    YOU ENVISION
+                  </span>
+                  <span className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                    YOU ENVISION
+                  </span>
                 </span>
               </span>
-              <br />
-              <span className="relative inline-block mt-2">
-                <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }}>
-                  YOU ENVISION
-                </span>
-                <span className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
-                  YOU ENVISION
-                </span>
-              </span>
-            </span>
-          </h1>
-          
-          {/* Enhanced Subheading */}
-          <div className="flex items-center justify-center gap-6 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="h-px w-12 sm:w-20 bg-gradient-to-r from-transparent via-[#CCE7FA] to-[#CCE7FA]" />
-            <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-light tracking-wide bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 bg-clip-text text-transparent">
-              END-TO-END PROJECTS<span className="text-slate-900 rounded-none animate-cursor">_</span>
-            </p>
-            <div className="h-px w-12 sm:w-20 bg-gradient-to-l from-transparent via-[#CCE7FA] to-[#CCE7FA]" />
-          </div>
-          
-          {/* Description with Better Typography */}
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed animate-fade-in font-light" style={{ animationDelay: '0.4s' }}>
-            Transform your ideas into reality with our expert development teams.<br className="hidden sm:block" />
-            <span className="text-gray-500">From concept to deployment, we deliver excellence.</span>
-          </p>
-          
-          {/* Enhanced CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in mb-16" style={{ animationDelay: '0.6s' }}>
-            <Link to={createPageUrl("Contact")}>
-              <Button
-                className="group relative bg-black text-white hover:bg-gray-900 text-lg px-12 py-7 rounded-full transition-all duration-500 hover:scale-105 shadow-2xl hover:shadow-black/30 overflow-hidden">
+            </h1>
+            
+            <div className="flex items-center justify-center gap-4 mb-6 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+              <div className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent via-[#CCE7FA] to-[#CCE7FA]" />
+              <p className="text-xl sm:text-2xl lg:text-3xl font-light tracking-wide bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 bg-clip-text text-transparent">
+                END-TO-END PROJECTS<span className="text-slate-900 animate-cursor">_</span>
+              </p>
+              <div className="h-px w-12 sm:w-16 bg-gradient-to-l from-transparent via-[#CCE7FA] to-[#CCE7FA]" />
+            </div>
 
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <span className="relative flex items-center gap-2">
-                  Get Started
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-                </span>
-              </Button>
-            </Link>
-            <Button
-              variant="outline"
-              className="border-2 border-gray-300 hover:border-black text-gray-800 hover:bg-black hover:text-white text-lg px-12 py-7 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-white/80 shadow-lg hover:shadow-xl"
-              onClick={() => {
-                document.querySelector('#services-section')?.scrollIntoView({ behavior: 'smooth' });
-              }}>
-
-              Explore Services
-            </Button>
-          </div>
-          
-          {/* Trust Indicators */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.8s' }}>
-            {[
-            { value: '200+', label: 'Developers' },
-            { value: '87+', label: 'Clients' },
-            { value: '150+', label: 'Projects' },
-            { value: '4.2Y', label: 'Avg Retention' }].
-            map((stat, index) =>
-            <div
-              key={index}
-              className="group p-6 bg-white/60 backdrop-blur-xl rounded-2xl border border-gray-100/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-default">
-
-                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-br from-gray-900 to-gray-600 bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300">
-                  {stat.value}
+            {/* Mini Stats - Inline */}
+            <div className="flex flex-wrap justify-center gap-6 mb-8 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+              {[
+                { value: '200+', label: 'Developers' },
+                { value: '87+', label: 'Clients' },
+                { value: '150+', label: 'Projects' },
+                { value: '4.2Y', label: 'Retention' }
+              ].map((stat, index) => (
+                <div key={index} className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-gray-100/50 shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="text-2xl font-bold bg-gradient-to-br from-gray-900 to-gray-600 bg-clip-text text-transparent">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
                 </div>
-                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            )}
+              ))}
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+              <Link to={createPageUrl("Contact")}>
+                <Button className="group relative bg-black text-white hover:bg-gray-900 text-base px-10 py-6 rounded-full transition-all duration-500 hover:scale-105 shadow-xl hover:shadow-black/30 overflow-hidden">
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <span className="relative flex items-center gap-2">
+                    Get Started
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
+                  </span>
+                </Button>
+              </Link>
+              <Button
+                variant="outline"
+                className="border-2 border-gray-300 hover:border-black text-gray-800 hover:bg-black hover:text-white text-base px-10 py-6 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-white/80 shadow-md hover:shadow-lg"
+                onClick={() => {
+                  document.querySelector('#services-section')?.scrollIntoView({ behavior: 'smooth' });
+                }}>
+                Explore Services
+              </Button>
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* Image Carousel */}
-      <section id="carousel-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-            {carouselImages.map((image, index) =>
-            <div
-              key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentImageIndex ? "opacity-100" : "opacity-0"}`
-              }>
-
-                <img
-                src={image}
-                alt={`Project ${index + 1}`}
-                className="w-full h-full object-cover grayscale" />
-
+          {/* Image Carousel - Prominent Display */}
+          <div className="relative animate-slide-up" style={{ animationDelay: '0.5s' }}>
+            <div className="relative h-[350px] sm:h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50">
+              {carouselImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    index === currentImageIndex ? "opacity-100" : "opacity-0"
+                  }`}>
+                  <img
+                    src={image}
+                    alt={`Project ${index + 1}`}
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                </div>
+              ))}
+              
+              {/* Carousel Controls */}
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
+                {carouselImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`transition-all duration-300 rounded-full ${
+                      index === currentImageIndex
+                        ? "bg-white w-10 h-3"
+                        : "bg-white/60 hover:bg-white/80 w-3 h-3"
+                    }`}
+                  />
+                ))}
               </div>
-            )}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {carouselImages.map((_, index) =>
-              <button
-                key={index}
-                onClick={() => setCurrentImageIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentImageIndex ?
-                "bg-white w-8" :
-                "bg-white/50 hover:bg-white/75"}`
-                } />
 
-              )}
+              {/* Floating Badge */}
+              <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg">
+                <p className="text-sm font-bold text-gray-900">Trusted by Industry Leaders</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Brand Scroller */}
-      <section className="py-12 overflow-hidden bg-white border-y border-gray-100">
+      {/* Brand Scroller - Integrated Seamlessly */}
+      <section className="py-8 overflow-hidden bg-gradient-to-b from-gray-50 to-white border-y border-gray-100/50">
         <div className="relative">
+          <div className="text-center mb-4">
+            <p className="text-xs uppercase tracking-wider text-gray-500 font-semibold">Trusted By</p>
+          </div>
           <BrandScroller
             logos={[
-            "https://ravtech.co.il/wp-content/uploads/2025/03/logo-2.png",
-            "https://ravtech.co.il/wp-content/uploads/2025/03/logo-5.png",
-            "https://ravtech.co.il/wp-content/uploads/2025/03/logo-3.png",
-            "https://ravtech.co.il/wp-content/uploads/2025/03/logo-4.png",
-            "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png"]
-            } />
-
+              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-2.png",
+              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-5.png",
+              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-3.png",
+              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-4.png",
+              "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png"
+            ]} />
         </div>
       </section>
 
