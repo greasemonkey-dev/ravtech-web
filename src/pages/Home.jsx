@@ -222,9 +222,6 @@ export default function HomePage() {
 
           {/* Brand Scroller - Integrated at top */}
           <div className="mb-5 animate-slide-up" style={{ animationDelay: '0.5s' }}>
-            <div className="text-center mb-3">
-              <p className="text-xs uppercase tracking-wider text-[#0373BA]/70 font-semibold">Trusted By Industry Leaders</p>
-            </div>
             <div className="bg-white/60 backdrop-blur-sm rounded-2xl py-4 px-6 shadow-md border border-[#0373BA]/10">
               <BrandScroller
                 logos={[
