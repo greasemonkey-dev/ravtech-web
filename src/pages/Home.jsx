@@ -204,7 +204,7 @@ export default function HomePage() {
               <Link to={createPageUrl("Contact")}>
                 <Button className="group relative bg-gradient-to-r from-[#0373BA] to-[#0373BA]/90 text-white hover:from-[#025a94] hover:to-[#0373BA] text-sm px-8 py-5 rounded-full transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-[#0373BA]/30 overflow-hidden">
                   <span className="relative flex items-center gap-2">
-                    Get Started
+                    Contact Us Now
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </Button>
