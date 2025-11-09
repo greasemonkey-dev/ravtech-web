@@ -312,8 +312,8 @@ export default function HomePage() {
       {/* Video Testimonials */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">Success Stories
-
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
+            Real Life Success Stories
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
@@ -349,8 +349,8 @@ export default function HomePage() {
       {/* Solutions Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">Our Solutions
-
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
+            Solutions
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
@@ -380,8 +380,8 @@ export default function HomePage() {
       {/* Customers Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">Our Customers
-
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
+            Some of Our Customers
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
@@ -406,11 +406,11 @@ export default function HomePage() {
       {/* Social Impact Banner */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#CCE7FA]/20">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg sm:text-xl text-gray-800 leading-relaxed">
-            As a social impact business, we are supported by{" "}
-            <span className="font-semibold">IVN</span>, an impact investment
-            organization leading the development of Israel's social business
-            ecosystem
+          <p className="text-gray-800 text-xs font-light leading-relaxed sm:text-xl">As a social impact business, we are supported by IVN, an impact investment organization leading the development of Israel's social business ecosystem
+
+
+
+
           </p>
         </div>
       </section>
