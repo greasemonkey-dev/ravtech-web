@@ -185,18 +185,18 @@ export default function HomePage() {
             {/* Mini Stats - Inline */}
             <div className="flex flex-wrap justify-center gap-4 mb-5 animate-slide-up" style={{ animationDelay: '0.3s' }}>
               {[
-                { value: '200+', label: 'Developers' },
-                { value: '87+', label: 'Clients' },
-                { value: '150+', label: 'Projects' },
-                { value: '4.2Y', label: 'Retention' }
-              ].map((stat, index) => (
-                <div key={index} className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-br from-white/80 to-[#0373BA]/5 backdrop-blur-sm rounded-full border border-[#0373BA]/20 shadow-sm hover:shadow-md hover:border-[#0373BA]/40 transition-all duration-300">
+              { value: '200+', label: 'Developers' },
+              { value: '87+', label: 'Clients' },
+              { value: '150+', label: 'Projects' },
+              { value: '4.2Y', label: 'Retention' }].
+              map((stat, index) =>
+              <div key={index} className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-br from-white/80 to-[#0373BA]/5 backdrop-blur-sm rounded-full border border-[#0373BA]/20 shadow-sm hover:shadow-md hover:border-[#0373BA]/40 transition-all duration-300">
                   <div className="text-xl font-bold bg-gradient-to-br from-[#0373BA] to-gray-900 bg-clip-text text-transparent">
                     {stat.value}
                   </div>
                   <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
                 </div>
-              ))}
+              )}
             </div>
             
             {/* CTA Buttons */}
@@ -225,45 +225,45 @@ export default function HomePage() {
             <div className="bg-white/60 backdrop-blur-sm rounded-2xl py-4 px-6 shadow-md border border-[#0373BA]/10">
               <BrandScroller
                 logos={[
-                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-2.png",
-                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-5.png",
-                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-3.png",
-                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-4.png",
-                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png"
-                ]} />
+                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-2.png",
+                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-5.png",
+                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-3.png",
+                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-4.png",
+                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png"]
+                } />
             </div>
           </div>
 
           {/* Image Carousel - Prominent Display */}
           <div className="relative animate-slide-up" style={{ animationDelay: '0.6s' }}>
             <div className="relative h-[280px] sm:h-[380px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50 ring-2 ring-[#0373BA]/20">
-              {carouselImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentImageIndex ? "opacity-100" : "opacity-0"
-                  }`}>
+              {carouselImages.map((image, index) =>
+              <div
+                key={index}
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentImageIndex ? "opacity-100" : "opacity-0"}`
+                }>
                   <img
-                    src={image}
-                    alt={`Project ${index + 1}`}
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                  src={image}
+                  alt={`Project ${index + 1}`}
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0373BA]/40 via-transparent to-transparent" />
                 </div>
-              ))}
+              )}
               
               {/* Carousel Controls */}
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-                {carouselImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImageIndex(index)}
-                    className={`transition-all duration-300 rounded-full ${
-                      index === currentImageIndex
-                        ? "bg-[#0373BA] w-8 h-2.5 shadow-lg"
-                        : "bg-white/60 hover:bg-white/80 w-2.5 h-2.5"
-                    }`}
-                  />
-                ))}
+                {carouselImages.map((_, index) =>
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`transition-all duration-300 rounded-full ${
+                  index === currentImageIndex ?
+                  "bg-[#0373BA] w-8 h-2.5 shadow-lg" :
+                  "bg-white/60 hover:bg-white/80 w-2.5 h-2.5"}`
+                  } />
+
+                )}
               </div>
 
               {/* Floating Badge */}
@@ -278,8 +278,8 @@ export default function HomePage() {
       {/* Services Section */}
       <section id="services-section" className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
-            Services
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">Our Services
+
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
