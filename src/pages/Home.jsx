@@ -204,7 +204,7 @@ export default function HomePage() {
               <Link to={createPageUrl("Contact")}>
                 <Button className="group relative bg-gradient-to-r from-[#0373BA] to-[#0373BA]/90 text-white hover:from-[#025a94] hover:to-[#0373BA] text-sm px-8 py-5 rounded-full transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-[#0373BA]/30 overflow-hidden">
                   <span className="relative flex items-center gap-2">
-                    Contact Us Now
+                    Get Started
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </Button>
@@ -222,6 +222,9 @@ export default function HomePage() {
 
           {/* Brand Scroller - Integrated at top */}
           <div className="mb-5 animate-slide-up" style={{ animationDelay: '0.5s' }}>
+            <div className="text-center mb-3">
+              <p className="text-xs uppercase tracking-wider text-[#0373BA]/70 font-semibold">Trusted By Industry Leaders</p>
+            </div>
             <div className="bg-white/60 backdrop-blur-sm rounded-2xl py-4 px-6 shadow-md border border-[#0373BA]/10">
               <BrandScroller
                 logos={[
@@ -313,7 +316,7 @@ export default function HomePage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
-            Success Stories
+            Real Life Success Stories
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
@@ -381,7 +384,7 @@ export default function HomePage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
-            Our Customers
+            Some of Our Customers
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
