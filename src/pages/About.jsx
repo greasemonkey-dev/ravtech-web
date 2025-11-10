@@ -107,7 +107,7 @@ export default function AboutPage() {
   {
     name: "Chani Smoler",
     role: "CFO",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/7011c474d_chani_smoler.jpg",
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/fe7a00a60_Chani_Smoler.jpg",
     bio: "Chani is a licensed CPA and holds a BA in Accounting and Information Systems from the Jerusalem College of Technology. Chani is in charge of all Financial aspects of the company and holds a unique role serving as a special advisor to the board of directors. Prior to working at Ravtech, Chani worked for over 5 years as the finance manager at Gvahim, a subsidiary of the Rashi Foundation, and 6 years at Wexler Kodntz'ik Enoch Co. CPA office."
   }];
 
