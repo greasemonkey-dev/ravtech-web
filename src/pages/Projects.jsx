@@ -67,10 +67,10 @@ export default function ProjectsPage() {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
             OUR PROJECTS
           </h1>
-          <p className="text-xl text-gray-700 leading-relaxed">
-            See examples of the projects we implement in a wide range of
-            verticals and requirements, from startups through mid-sized companies
-            to global corporations.
+          <p className="text-xl text-gray-700 leading-relaxed">Explore projects we’ve delivered across diverse industries- from startups and mid-sized companies to global enterprises.
+
+
+
           </p>
         </div>
       </section>
