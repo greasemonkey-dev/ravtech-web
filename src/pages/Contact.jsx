@@ -64,7 +64,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact Form */}
             <div className="flex flex-col h-full">
-              <h2 className="text-4xl font-bold text-black mb-4">Let's Start a Conversation</h2>
+              <h2 className="text-4xl font-bold text-black mb-4">Ready to Get Started?</h2>
               <p className="text-lg text-gray-600 mb-6">Share your project details and we'll get back to you within 24 hours</p>
               <div className="bg-[#0373BA] mb-8 w-24 h-1" />
 
