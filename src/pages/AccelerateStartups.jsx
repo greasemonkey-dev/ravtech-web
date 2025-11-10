@@ -188,7 +188,7 @@ export default function AccelerateStartupsPage() {
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
-            ACCELERATE YOUR STARTUP!
+            Accelerate your Startup!
           </h1>
           <p className="text-2xl sm:text-3xl text-gray-800 mb-8 font-medium">
             An acceleration program that will help you meet your next business
@@ -374,7 +374,7 @@ export default function AccelerateStartupsPage() {
       {/* Client Testimonials */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">Hear It from Our Customers
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">Hear It from Our Clients
 
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
@@ -408,7 +408,7 @@ export default function AccelerateStartupsPage() {
       {/* FAQ */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">FAQ'
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">FAQ
 
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
@@ -443,61 +443,96 @@ export default function AccelerateStartupsPage() {
           </h2>
           <div className="w-24 h-1 bg-[#0373BA] mx-auto mb-16" />
 
-          <div className="max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Details */}
+            <div className="flex flex-col">
+              <Card className="border-none shadow-lg bg-white flex-1">
+                <CardContent className="p-8 h-full flex flex-col">
+                  <h3 className="text-2xl font-bold text-black mb-6">
+                    Contact Information
+                  </h3>
+                  <div className="space-y-4 flex-1">
+                    <div className="flex items-start space-x-3">
+                      <MapPin className="text-[#0373BA] mt-1 lucide lucide-map-pin w-5 h-5 flex-shrink-0" />
+                      <p className="text-gray-700">Bar Kochva 21, Bnei Brak</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Phone className="w-5 h-5 text-[#0373BA] flex-shrink-0" />
+                      <a
+                        href="tel:058-7625162"
+                        className="text-gray-700 hover:text-black">
+                        058-7625162
+                      </a>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Mail className="w-5 h-5 text-[#0373BA] flex-shrink-0" />
+                      <a
+                        href="mailto:etid@ravtech.co.il"
+                        className="text-gray-700 hover:text-black">
+                        etid@ravtech.co.il
+                      </a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
             {/* Contact Form */}
-            <Card className="border-none shadow-lg bg-white">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-black mb-6">
-                  Send Us a Message
-                </h3>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <input
-                      type="text"
-                      name="fullName"
-                      placeholder="Full Name *"
-                      required
-                      value={formData.fullName}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
-                  </div>
-                  <div>
-                    <input
-                      type="tel"
-                      name="mobile"
-                      placeholder="Mobile *"
-                      required
-                      value={formData.mobile}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
-                  </div>
-                  <div>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email *"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
-                  </div>
-                  <div>
-                    <textarea
-                      name="message"
-                      placeholder="Message Content"
-                      rows="4"
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none" />
-                  </div>
-                  <Button
-                    type="submit"
-                    className="w-full bg-black text-white hover:bg-gray-800 py-6 text-lg rounded-lg">
-                    Submit
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            <div className="flex flex-col">
+              <Card className="border-none shadow-lg bg-white flex-1">
+                <CardContent className="p-8 h-full flex flex-col">
+                  <h3 className="text-2xl font-bold text-black mb-6">
+                    Send Us a Message
+                  </h3>
+                  <form onSubmit={handleSubmit} className="space-y-4 flex-1 flex flex-col">
+                    <div>
+                      <input
+                        type="text"
+                        name="fullName"
+                        placeholder="Full Name *"
+                        required
+                        value={formData.fullName}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
+                    </div>
+                    <div>
+                      <input
+                        type="tel"
+                        name="mobile"
+                        placeholder="Mobile *"
+                        required
+                        value={formData.mobile}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
+                    </div>
+                    <div>
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email *"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
+                    </div>
+                    <div className="flex-1">
+                      <textarea
+                        name="message"
+                        placeholder="Message Content"
+                        rows="4"
+                        value={formData.message}
+                        onChange={handleChange}
+                        className="w-full h-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none" />
+                    </div>
+                    <Button
+                      type="submit"
+                      className="w-full bg-black text-white hover:bg-gray-800 py-6 text-lg rounded-lg">
+                      Submit
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           <div className="text-center mt-12">
