@@ -374,8 +374,8 @@ export default function AccelerateStartupsPage() {
       {/* Client Testimonials */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
-            Clients Speak
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">Success Stories
+
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
@@ -540,6 +540,6 @@ export default function AccelerateStartupsPage() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }
