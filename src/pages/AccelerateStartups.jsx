@@ -408,8 +408,8 @@ export default function AccelerateStartupsPage() {
       {/* FAQ */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
-            Frequently Asked Questions
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">FAQ'
+
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
