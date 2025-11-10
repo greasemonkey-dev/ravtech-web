@@ -187,8 +187,8 @@ export default function AccelerateStartupsPage() {
         <div className="absolute top-1/2 left-1/2 w-48 h-48 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-5" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
-            Accelerate your Startup!
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>ACCELERATE YOUR STARTUP 
+
           </h1>
           <p className="text-2xl sm:text-3xl text-gray-800 mb-8 font-medium">
             An acceleration program that will help you meet your next business
@@ -449,19 +449,19 @@ export default function AccelerateStartupsPage() {
               <Card className="border-none shadow-lg bg-white flex-1">
                 <CardContent className="p-8 h-full flex flex-col">
                   <h3 className="text-2xl font-bold text-black mb-6">
-
+                    Contact Information
                   </h3>
                   <div className="space-y-4 flex-1">
                     <div className="flex items-start space-x-3">
                       <MapPin className="text-[#0373BA] mt-1 lucide lucide-map-pin w-5 h-5 flex-shrink-0" />
-                      <p className="text-gray-700"></p>
+                      <p className="text-gray-700">Bar Kochva 21, Bnei Brak</p>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone className="w-5 h-5 text-[#0373BA] flex-shrink-0" />
                       <a
-                        href="tel:058-7625162" className="text-gray-700 hover:text-black">
-
-
+                        href="tel:058-7625162"
+                        className="text-gray-700 hover:text-black">
+                        058-7625162
                       </a>
                     </div>
                     <div className="flex items-center space-x-3">
