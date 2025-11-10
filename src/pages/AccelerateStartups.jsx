@@ -467,9 +467,9 @@ export default function AccelerateStartupsPage() {
                     <div className="flex items-center space-x-3">
                       <Mail className="w-5 h-5 text-[#0373BA] flex-shrink-0" />
                       <a
-                        href="mailto:etid@ravtech.co.il"
-                        className="text-gray-700 hover:text-black">
-                        etid@ravtech.co.il
+                        href="mailto:etid@ravtech.co.il" className="text-gray-700 hover:text-black">
+
+
                       </a>
                     </div>
                   </div>
