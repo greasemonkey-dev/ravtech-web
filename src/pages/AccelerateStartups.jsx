@@ -190,17 +190,17 @@ export default function AccelerateStartupsPage() {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
             Accelerate your Startup!
           </h1>
-          <p className="text-2xl sm:text-3xl text-gray-800 mb-8 font-medium">An acceleration programme to fast-track your next business goals.
-
-
+          <p className="text-2xl sm:text-3xl text-gray-800 mb-8 font-medium">
+            An acceleration program that will help you meet your next business
+            goals!
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-3xl mx-auto">This program is designed for early-stage startup companies that have raised Seed/Pre-Seed funding and are deep in the 'short blanket' stage, where additional software development power can make the difference with the next customer or investor. 
-The program focuses on companies that can demonstrate significant growth potential and rely on software as a key component of their product.
-
-
-
-
-
+          <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-3xl mx-auto">
+            This program is designed for early-stage startup companies that have
+            raised Seed/Pre-Seed funding and are deep in the 'short blanket'
+            stage, where additional software development power can make the
+            difference with the next customer or investor. The program focuses on
+            companies that can demonstrate significant growth potential and rely
+            on software as a key component of their product.
           </p>
           <Button
             onClick={scrollToContact}
@@ -214,11 +214,11 @@ The program focuses on companies that can demonstrate significant growth potenti
       {/* Program Benefits */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <p className="text-lg text-gray-700 leading-relaxed text-center mb-8">The program includes  a software development team tailored to your company's technology stack within 21 days from acceptance into the program, saving you exhausting Talent Acquisition efforts during the critical stages your company is in.
-
-
-
-
+          <p className="text-lg text-gray-700 leading-relaxed text-center mb-8">
+            The program includes deploying a software development team tailored to
+            your company's technology stack within 21 days from acceptance into
+            the program, saving you exhausting Talent Acquisition efforts during
+            the critical stages your company is in.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed text-center">
             The program saves tens of thousands of shekels per month and provides
@@ -320,7 +320,12 @@ The program focuses on companies that can demonstrate significant growth potenti
           </h2>
           <div className="bg-[#0373BA] mb-8 mx-auto w-24 h-1" />
 
-          {/* This paragraph was removed as per the instructions */}
+          <p className="text-lg text-gray-700 leading-relaxed text-center mb-16 max-w-4xl mx-auto">
+            The program includes deploying a software development team tailored to
+            your company's technology stack within 21 days from acceptance into
+            the program, saving you exhausting Talent Acquisition efforts during
+            the critical stages your company is in.
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => {
@@ -535,6 +540,6 @@ The program focuses on companies that can demonstrate significant growth potenti
           </div>
         </div>
       </section>
-    </div>);
-
+    </div>
+  );
 }
