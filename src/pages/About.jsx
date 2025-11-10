@@ -88,7 +88,7 @@ export default function AboutPage() {
   {
     name: "Shmil Levy",
     role: "Board Member",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/e5dca31e4_Sequoia-Shmil_Levy-1-300x300.jpg",
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/4f3eab6e4_Shmil_Levy.png", // Updated image URL
     bio: "Co-Founder, and Managing Partner of Sequoia Capital Israel venture capital fund 2001-today. Before his role at Sequoia Capital, Shmil held various important positions as a high-tech entrepreneur, including VP R&D of Lannet from 1992-1996 and CEO of Lannet from 1996-1998 and serving as President of division of Lucent Worldwide for Communications Systems from 1998-2000. Beyond his business activities, since 2018, Mr. Levy has been donating his time and fortune to social investments activities in the domain of incorporating ultra-Orthodox Jews in High Tech. As part of it Mr. Levy is active board member of Ravtech and JBH and co-founded Kodcode- and 'Mego' program that deals with training and placement of ultra-Orthodox men in the Israeli high-tech sector. Mr. Shmil Levy holds a degree in Computer Engineering from Ben Gurion University."
   },
   {
