@@ -214,11 +214,11 @@ The program focuses on companies that can demonstrate significant growth potenti
       {/* Program Benefits */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <p className="text-lg text-gray-700 leading-relaxed text-center mb-8">
-            The program includes deploying a software development team tailored to
-            your company's technology stack within 21 days from acceptance into
-            the program, saving you exhausting Talent Acquisition efforts during
-            the critical stages your company is in.
+          <p className="text-lg text-gray-700 leading-relaxed text-center mb-8">The program includes  a software development team tailored to your company's technology stack within 21 days from acceptance into the program, saving you exhausting Talent Acquisition efforts during the critical stages your company is in.
+
+
+
+
           </p>
           <p className="text-lg text-gray-700 leading-relaxed text-center">
             The program saves tens of thousands of shekels per month and provides
