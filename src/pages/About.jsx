@@ -98,12 +98,6 @@ export default function AboutPage() {
     bio: "Shmulik Moskowitz is the CEO of RavTech, bringing over 15 years of leadership experience across global technology and service organisations. Before joining RavTech, Shmulik served as SVP Sales for Israel and Eastern Europe at Qualitest, where he led large cross-regional teams, developed new markets and business units, and drove end-to-end delivery of quality engineering and digital solutions for enterprise clients. With an MBA in Information Systems and Technology Development & Marketing and an MCPD in Computer Programming, Shmulik combines deep technological understanding with strategic business vision. His expertise spans sales growth, delivery excellence, customer relationship management, and innovation leadership."
   },
   {
-    name: "Michael Shurman",
-    role: "CTO",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/87a29782d_Michael_Shurman.png",
-    bio: "For the last 25 years Michael has served as an executive in Hi-Tech companies. Before joining Ravtech, Michael was a CTO in Israeli R&D center of Huawei Technologies, Michael was a Founder, CTO & Executive VP of R&D & VP of Product management of Allot Communications Ltd. (Nasdaq: ALLT). Michael holds B.Sc. Computer Science & Statistics, Hebrew University, Jerusalem and MA in Philosophy from Tel Aviv University."
-  },
-  {
     name: "Israel Kobler",
     role: "VP R&D",
     image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/18b1b3a4b_Israel_Kobler.png",
