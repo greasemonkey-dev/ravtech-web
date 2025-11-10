@@ -100,7 +100,7 @@ export default function AboutPage() {
   {
     name: "Israel Kobler",
     role: "VP R&D",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/18b1b3a4b_Israel_Kobler.png",
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/b79502e1b_Israel_Kobler_new.png",
     bio: "With 10 years of experience in software product/services development, architecture & management, Israel is a senior manager in the company who oversees and leads all R&D and innovation areas. In addition, he is responsible for overseeing the delivery of services carried out by development teams across the company, recruiting new employees to the development team (programmers, designers, etc.), creating schedules and deadlines, approve budgets regarding development, and in general he responsible for implementing the company's development processes and methodologies."
   },
   
