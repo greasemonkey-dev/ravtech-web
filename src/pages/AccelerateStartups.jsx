@@ -447,8 +447,8 @@ export default function AccelerateStartupsPage() {
             {/* Contact Form */}
             <Card className="border-none shadow-lg bg-white">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-black mb-6">
-                  Send Us a Message
+                <h3 className="text-2xl font-bold text-black mb-6">Send us your details, and our team will contact you.
+
                 </h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
