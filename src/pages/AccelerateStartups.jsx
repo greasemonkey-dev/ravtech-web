@@ -194,13 +194,13 @@ export default function AccelerateStartupsPage() {
 
 
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-3xl mx-auto">
-            This program is designed for early-stage startup companies that have
-            raised Seed/Pre-Seed funding and are deep in the 'short blanket'
-            stage, where additional software development power can make the
-            difference with the next customer or investor. The program focuses on
-            companies that can demonstrate significant growth potential and rely
-            on software as a key component of their product.
+          <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-3xl mx-auto">This program is designed for early-stage startup companies that have raised Seed/Pre-Seed funding and are deep in the 'short blanket' stage, where additional software development power can make the difference with the next customer or investor. 
+The program focuses on companies that can demonstrate significant growth potential and rely on software as a key component of their product.
+
+
+
+
+
           </p>
           <Button
             onClick={scrollToContact}
