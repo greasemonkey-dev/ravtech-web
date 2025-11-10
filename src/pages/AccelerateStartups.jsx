@@ -307,7 +307,7 @@ export default function AccelerateStartupsPage() {
             onClick={scrollToContact}
             className="bg-[#CCE7FA] text-black hover:bg-[#B8D9F0] text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105">
 
-              Schedule a Consultation Call
+              Let's Get In Touch
             </Button>
           </div>
       </section>
