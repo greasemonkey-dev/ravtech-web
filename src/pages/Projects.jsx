@@ -191,7 +191,7 @@ export default function ProjectsPage() {
             </div>
             <div className="text-center">
               <div className="text-[#0373BA] mb-2 text-5xl font-bold">87</div>
-              <p className="text-lg text-gray-700">Satisfied Customers</p>
+              <p className="text-lg text-gray-700">Customers</p>
             </div>
           </div>
         </div>
