@@ -158,10 +158,10 @@ export default function Layout({ children }) {
                             <ul className="space-y-3">
                                 <li>
                                     <Link
-                                        to={createPageUrl("Accelerate Startups")}
+                                        to={createPageUrl("Home")}
                                         className="text-gray-600 hover:text-black transition-colors"
                                     >
-                                        Accelerate Startups
+                                        Home
                                     </Link>
                                 </li>
                                 <li>
