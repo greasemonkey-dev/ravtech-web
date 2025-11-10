@@ -187,8 +187,8 @@ export default function AccelerateStartupsPage() {
         <div className="absolute top-1/2 left-1/2 w-48 h-48 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-5" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>ACCELERATE YOUR STARTUP!
-
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
+            ACCELERATE YOUR STARTUP!
           </h1>
           <p className="text-2xl sm:text-3xl text-gray-800 mb-8 font-medium">
             An acceleration program that will help you meet your next business
@@ -408,7 +408,7 @@ export default function AccelerateStartupsPage() {
       {/* FAQ */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">FAQ'
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">FAQ
 
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
