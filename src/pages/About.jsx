@@ -45,7 +45,7 @@ export default function AboutPage() {
 
   const stats = [
   { icon: Users, value: "200+", label: "Talented Employees" },
-  { icon: Globe, value: "87+", label: "Satisfied Clients" },
+  { icon: Globe, value: "87+", label: "Clients" },
   { icon: Code, value: "150+", label: "Successful Projects" },
   { icon: TrendingUp, value: "4.2", label: "Years Average Retention" }];
 
