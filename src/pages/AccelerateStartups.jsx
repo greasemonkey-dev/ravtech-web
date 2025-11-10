@@ -190,9 +190,9 @@ export default function AccelerateStartupsPage() {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>Accelerate your Startup
 
           </h1>
-          <p className="text-2xl sm:text-3xl text-gray-800 mb-8 font-medium">
-            An acceleration program that will help you meet your next business
-            goals!
+          <p className="text-2xl sm:text-3xl text-gray-800 mb-8 font-medium">An acceleration programme to fast-track your 
+next business goals.
+
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-3xl mx-auto">
             This program is designed for early-stage startup companies that have
