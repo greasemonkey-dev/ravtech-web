@@ -15,88 +15,93 @@ import {
   Smartphone,
   Globe,
   Cog,
-  ArrowRight } from
-"lucide-react";
+  ArrowRight
+} from "lucide-react";
 
 export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const carouselImages = [
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/1e893c4ad_Group-4-copy-2-3.png",
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/bff94e611_services-banner.png",
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/958171ad6_1-64a415cb.png"];
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/ae6adb97b_carusel_new.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/bff94e611_services-banner.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/958171ad6_1-64a415cb.png"
+  ];
 
 
   const services = [
-  {
-    icon: Code,
-    title: "End-to-End Projects",
-    description: "Helping you realize your ideas every step of the way."
-  },
-  {
-    icon: Users,
-    title: "R&D Extension",
-    description: "Providing the team that extends your R&D capabilities."
-  },
-  {
-    icon: UserPlus,
-    title: "Staff Augmentation",
-    description:
-    "Bridging the gap between your requirements and staffing constraints."
-  },
-  {
-    icon: MessageSquare,
-    title: "Consulting",
-    description: "Accompanying you across the complete project life cycle."
-  }];
+    {
+      icon: Code,
+      title: "End-to-End Projects",
+      description: "Helping you realize your ideas every step of the way."
+    },
+    {
+      icon: Users,
+      title: "R&D Extension",
+      description: "Providing the team that extends your R&D capabilities."
+    },
+    {
+      icon: UserPlus,
+      title: "Staff Augmentation",
+      description:
+        "Bridging the gap between your requirements and staffing constraints."
+    },
+    {
+      icon: MessageSquare,
+      title: "Consulting",
+      description: "Accompanying you across the complete project life cycle."
+    }
+  ];
 
 
   const testimonials = [
-  {
-    title:
-    "The Secret of NICE: 66% Faster Recruitment, 25% Cost Savings, Employees Who Stay 5 Years",
-    videoUrl: "https://www.youtube.com/embed/hGYLaLXPpRA",
-    company: "NICE"
-  },
-  {
-    title:
-    "Venn's Secret to Success: With RavTech We Achieved 25% Cost Savings and 30% More Productivity",
-    videoUrl: "https://www.youtube.com/embed/jfbUpJE4AZ8",
-    company: "Venn"
-  },
-  {
-    title:
-    "The Secret of CONNACT: 25% Cost Savings, Fast Recruitment, and 30% More Productivity",
-    videoUrl: "https://www.youtube.com/embed/4A5tLhZHr6Y",
-    company: "CONNACT"
-  },
-  {
-    title:
-    "The Secret of AMDOCS: How Juniors and Strong Team Lead Deliver Strong Results and 30% Cost Savings",
-    videoUrl: "https://www.youtube.com/embed/9Jw6jOLt_JY",
-    company: "AMDOCS"
-  }];
+    {
+      title:
+        "The Secret of NICE: 66% Faster Recruitment, 25% Cost Savings, Employees Who Stay 5 Years",
+      videoUrl: "https://www.youtube.com/embed/hGYLaLXPpRA",
+      company: "NICE"
+    },
+    {
+      title:
+        "Venn's Secret to Success: With RavTech We Achieved 25% Cost Savings and 30% More Productivity",
+      videoUrl: "https://www.youtube.com/embed/jfbUpJE4AZ8",
+      company: "Venn"
+    },
+    {
+      title:
+        "The Secret of CONNACT: 25% Cost Savings, Fast Recruitment, and 30% More Productivity",
+      videoUrl: "https://www.youtube.com/embed/4A5tLhZHr6Y",
+      company: "CONNACT"
+    },
+    {
+      title:
+        "The Secret of AMDOCS: How Juniors and Strong Team Lead Deliver Strong Results and 30% Cost Savings",
+      videoUrl: "https://www.youtube.com/embed/9Jw6jOLt_JY",
+      company: "AMDOCS"
+    }
+  ];
 
 
   const solutions = [
-  { icon: TestTube, title: "QA Automation" },
-  { icon: Brain, title: "Machine and Deep Learning" },
-  { icon: Smartphone, title: "Mobile Development" },
-  { icon: Globe, title: "Web Development" },
-  { icon: Cog, title: "DevOps" }];
+    { icon: TestTube, title: "QA Automation" },
+    { icon: Brain, title: "Machine and Deep Learning" },
+    { icon: Smartphone, title: "Mobile Development" },
+    { icon: Globe, title: "Web Development" },
+    { icon: Cog, title: "DevOps" }
+  ];
 
 
   const customers = [
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/e71eaf936_1.png",
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/01c442b0e_2.png",
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/88bed56a5_3.png",
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/44b798fd9_4.png",
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/c3e29b9d8_5.png",
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/9aed3be95_6.png",
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/03160abe8_7.png",
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/c3f122cce_8.png",
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/237b30c5a_9.png",
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/d5733920e_10.png"];
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/e71eaf936_1.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/01c442b0e_2.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/88bed56a5_3.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/44b798fd9_4.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/c3e29b9d8_5.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/9aed3be95_6.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/03160abe8_7.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/c3f122cce_8.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/237b30c5a_9.png",
+    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/d5733920e_10.png"
+  ];
 
 
   // Auto-rotate carousel
@@ -148,7 +153,7 @@ export default function HomePage() {
           <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-gradient-to-br from-[#0373BA]/20 to-cyan-200/20 blur-3xl animate-pulse opacity-50" style={{ animationDuration: '6s' }} />
           <div className="absolute bottom-[5%] right-[5%] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-[#0373BA]/30 to-blue-100/20 blur-3xl" style={{ animation: 'float 8s ease-in-out infinite' }} />
         </div>
-        
+
         <div className="max-w-7xl mx-auto">
           {/* Top Section: Title + Quick Stats */}
           <div className="text-center mb-6">
@@ -173,7 +178,7 @@ export default function HomePage() {
                 </span>
               </span>
             </h1>
-            
+
             <div className="flex items-center justify-center gap-3 mb-5 animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <div className="h-px w-10 sm:w-14 bg-gradient-to-r from-transparent via-[#0373BA] to-[#0373BA]" />
               <p className="text-lg sm:text-xl lg:text-2xl font-light tracking-wide bg-gradient-to-r from-gray-700 via-[#0373BA] to-gray-700 bg-clip-text text-transparent">
@@ -185,20 +190,20 @@ export default function HomePage() {
             {/* Mini Stats - Inline */}
             <div className="flex flex-wrap justify-center gap-4 mb-5 animate-slide-up" style={{ animationDelay: '0.3s' }}>
               {[
-              { value: '200+', label: 'Developers' },
-              { value: '87+', label: 'Clients' },
-              { value: '150+', label: 'Projects' },
-              { value: '4.2Y', label: 'Retention' }].
-              map((stat, index) =>
-              <div key={index} className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-br from-white/80 to-[#0373BA]/5 backdrop-blur-sm rounded-full border border-[#0373BA]/20 shadow-sm hover:shadow-md hover:border-[#0373BA]/40 transition-all duration-300">
-                  <div className="text-xl font-bold bg-gradient-to-br from-[#0373BA] to-gray-900 bg-clip-text text-transparent">
-                    {stat.value}
+                { value: '200+', label: 'Developers' },
+                { value: '87+', label: 'Clients' },
+                { value: '150+', label: 'Projects' },
+                { value: '4.2Y', label: 'Retention' }].
+                map((stat, index) =>
+                  <div key={index} className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-br from-white/80 to-[#0373BA]/5 backdrop-blur-sm rounded-full border border-[#0373BA]/20 shadow-sm hover:shadow-md hover:border-[#0373BA]/40 transition-all duration-300">
+                    <div className="text-xl font-bold bg-gradient-to-br from-[#0373BA] to-gray-900 bg-clip-text text-transparent">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
                   </div>
-                  <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
-                </div>
-              )}
+                )}
             </div>
-            
+
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-5 animate-slide-up" style={{ animationDelay: '0.4s' }}>
               <Link to={createPageUrl("Contact")}>
@@ -225,11 +230,11 @@ export default function HomePage() {
             <div className="bg-white/60 backdrop-blur-sm rounded-2xl py-4 px-6 shadow-md border border-[#0373BA]/10">
               <BrandScroller
                 logos={[
-                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-2.png",
-                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-5.png",
-                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-3.png",
-                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-4.png",
-                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png"]
+                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-2.png",
+                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-5.png",
+                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-3.png",
+                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-4.png",
+                  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png"]
                 } />
             </div>
           </div>
@@ -238,30 +243,30 @@ export default function HomePage() {
           <div className="relative animate-slide-up" style={{ animationDelay: '0.6s' }}>
             <div className="relative h-[280px] sm:h-[380px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50 ring-2 ring-[#0373BA]/20">
               {carouselImages.map((image, index) =>
-              <div
-                key={index}
-                className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentImageIndex ? "opacity-100" : "opacity-0"}`
-                }>
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    index === currentImageIndex ? "opacity-100" : "opacity-0"}`}
+                >
                   <img
-                  src={image}
-                  alt={`Project ${index + 1}`}
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                    src={image}
+                    alt={`Project ${index + 1}`}
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0373BA]/40 via-transparent to-transparent" />
                 </div>
               )}
-              
+
               {/* Carousel Controls */}
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
                 {carouselImages.map((_, index) =>
-                <button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index)}
-                  className={`transition-all duration-300 rounded-full ${
-                  index === currentImageIndex ?
-                  "bg-[#0373BA] w-8 h-2.5 shadow-lg" :
-                  "bg-white/60 hover:bg-white/80 w-2.5 h-2.5"}`
-                  } />
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`transition-all duration-300 rounded-full ${
+                      index === currentImageIndex ?
+                        "bg-[#0373BA] w-8 h-2.5 shadow-lg" :
+                        "bg-white/60 hover:bg-white/80 w-2.5 h-2.5"}`
+                    } />
 
                 )}
               </div>
@@ -319,18 +324,18 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) =>
-            <Card
-              key={index}
-              className="border-none shadow-lg overflow-hidden bg-white">
+              <Card
+                key={index}
+                className="border-none shadow-lg overflow-hidden bg-white">
 
                 <CardContent className="p-0">
                   <div className="aspect-video">
                     <iframe
-                    src={testimonial.videoUrl}
-                    title={testimonial.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full" />
+                      src={testimonial.videoUrl}
+                      title={testimonial.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full" />
 
                   </div>
                   <div className="p-6">
@@ -381,21 +386,21 @@ export default function HomePage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
-Our Customers
+            Our Customers
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 items-center justify-items-center">
             {customers.map((logoUrl, index) =>
-            <div
-              key={index}
-              className="flex items-center justify-center w-full h-20 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300">
+              <div
+                key={index}
+                className="flex items-center justify-center w-full h-20 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300">
 
                 <img
-                src={logoUrl}
-                alt={`Customer ${index + 1}`}
-                className="max-w-full max-h-full object-contain"
-                loading="lazy" />
+                  src={logoUrl}
+                  alt={`Customer ${index + 1}`}
+                  className="max-w-full max-h-full object-contain"
+                  loading="lazy" />
 
               </div>
             )}
