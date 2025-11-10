@@ -438,8 +438,8 @@ export default function AccelerateStartupsPage() {
         className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#CCE7FA] to-[#E5F4FF]">
 
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
-            For More Information and to Schedule a Consultation Call:
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">Ready to Get Started?
+
           </h2>
           <div className="w-24 h-1 bg-[#0373BA] mx-auto mb-16" />
 
