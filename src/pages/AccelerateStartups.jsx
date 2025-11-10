@@ -287,7 +287,7 @@ export default function AccelerateStartupsPage() {
               <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
                 {step.number}
               </div>
-              <h3 className="2xl font-bold text-black mb-4">
+              <h3 className="text-2xl font-bold text-black mb-4">
                 {step.stage}
               </h3>
               <p className="text-gray-700 leading-relaxed">
@@ -408,8 +408,8 @@ export default function AccelerateStartupsPage() {
       {/* FAQ */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="4xl sm:text-5xl font-bold text-center text-black mb-4">F&Q
-
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
+            Frequently Asked Questions
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
@@ -449,27 +449,27 @@ export default function AccelerateStartupsPage() {
               <Card className="border-none shadow-lg bg-white flex-1">
                 <CardContent className="p-8 h-full flex flex-col">
                   <h3 className="text-2xl font-bold text-black mb-6">
-                    Contact Information
+
                   </h3>
                   <div className="space-y-4 flex-1">
                     <div className="flex items-start space-x-3">
                       <MapPin className="text-[#0373BA] mt-1 lucide lucide-map-pin w-5 h-5 flex-shrink-0" />
-                      <p className="text-gray-700">Bar Kochva 21, Bnei Brak</p>
+                      <p className="text-gray-700"></p>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone className="w-5 h-5 text-[#0373BA] flex-shrink-0" />
                       <a
-                        href="tel:058-7625162"
-                        className="text-gray-700 hover:text-black">
-                        058-7625162
+                        href="tel:058-7625162" className="text-gray-700 hover:text-black">
+
+
                       </a>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="w-5 h-5 text-[#0373BA] flex-shrink-0" />
                       <a
-                        href="mailto:etid@ravtech.co.il" className="text-gray-700 hover:text-black">
-
-
+                        href="mailto:etid@ravtech.co.il"
+                        className="text-gray-700 hover:text-black">
+                        etid@ravtech.co.il
                       </a>
                     </div>
                   </div>
@@ -480,7 +480,7 @@ export default function AccelerateStartupsPage() {
             {/* Contact Form */}
             <div className="flex flex-col">
               <Card className="border-none shadow-lg bg-white flex-1">
-                <div className="p-8 h-full flex flex-col">
+                <CardContent className="p-8 h-full flex flex-col">
                   <h3 className="text-2xl font-bold text-black mb-6">
                     Send Us a Message
                   </h3>
@@ -530,7 +530,7 @@ export default function AccelerateStartupsPage() {
                       Submit
                     </Button>
                   </form>
-                </div>
+                </CardContent>
               </Card>
             </div>
           </div>
