@@ -56,7 +56,7 @@ export default function ServicesPage() {
 
 
 
-// I ADDAD
+  // I ADDAD
   const location = useLocation();
 
   useEffect(() => {
@@ -737,8 +737,8 @@ export default function ServicesPage() {
       {/* Case Studies Divider */}
       <section id="case-studies" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#CCE7FA] to-[#E5F4FF]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">
-            Real Clients, Real Results
+          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">Hear It from Our Clients
+
           </h2>
           <p className="text-xl text-gray-800">
             Discover how we've helped leading companies achieve significant cost savings, faster recruitment, and increased productivity.
@@ -805,39 +805,6 @@ export default function ServicesPage() {
                 </CardContent>
               </Card>
             )}
-          </div>
-        </div>
-      </section>
-
-      {/* Client Testimonials */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
-            Hear It from Our Clients
-          </h2>
-          <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* TODO: Implement client testimonials mapping here.
-                You can reuse the 'caseStudies' data or add new testimonials data as needed.
-                Example structure for a testimonial card:
-                {caseStudies.map((caseStudy, index) => (
-                  <Card key={index} className="border-none shadow-xl bg-white">
-                    <CardContent className="p-8">
-                      <p className="text-lg text-gray-700 italic mb-4">"{caseStudy.title}"</p>
-                      <div className="flex items-center">
-                        <div className={`w-10 h-10 ${caseStudy.bgColor} rounded-full flex items-center justify-center text-white font-bold mr-3`}>
-                          {caseStudy.company.charAt(0)}
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-black">{caseStudy.company}</h4>
-                          <p className="text-sm text-gray-500">CEO at {caseStudy.company}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-            */}
           </div>
         </div>
       </section>
