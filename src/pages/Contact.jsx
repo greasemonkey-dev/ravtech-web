@@ -160,7 +160,7 @@ export default function ContactPage() {
 
             {/* Office Location & Map */}
             <div className="flex flex-col h-full">
-              <h2 className="text-4xl font-bold text-black mb-4">Visit Our Office</h2>
+              <h2 className="text-4xl font-bold text-black mb-4">Visit Our HQ Office</h2>
               <p className="text-lg text-gray-600 mb-6">We'd love to meet you in person</p>
               <div className="bg-[#0373BA] mb-8 w-24 h-1" />
 
