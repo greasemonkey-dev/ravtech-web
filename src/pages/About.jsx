@@ -81,8 +81,8 @@ export default function AboutPage() {
   const teamMembers = [
   {
     name: "Benny Levin",
-    role: "Active Chairman",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/e117972f4_BennyLevin.jpg",
+    role: "Board Member",
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/4b197311f_Benny_Levin_new.png",
     bio: "Benny Levin co-founded NICE Systems, where he served as President, Director, Chairman and CEO. Benny also served as Chairman of the Board of dbMotion. Since retiring from most of his business activities, Benny dedicates himself to a wide array of social and philanthropic activities. He serves as Vice Chairman of IVN, and as Active Chairman of Ben Yakir and Kedma youth villages. Benny served in the IDF Intelligence Corps, retiring with the rank of Lieutenant Colonel. He has a bachelor's and master's degrees in Electrical Engineering from the Technion."
   },
   {
