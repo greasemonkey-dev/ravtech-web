@@ -443,65 +443,61 @@ export default function AccelerateStartupsPage() {
           </h2>
           <div className="w-24 h-1 bg-[#0373BA] mx-auto mb-16" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-   
-
+          <div className="max-w-2xl mx-auto">
             {/* Contact Form */}
-            <div className="flex flex-col">
-              <Card className="border-none shadow-lg bg-white flex-1">
-                <CardContent className="p-8 h-full flex flex-col">
-                  <h3 className="text-2xl font-bold text-black mb-6">
-                    Send Us a Message
-                  </h3>
-                  <form onSubmit={handleSubmit} className="space-y-4 flex-1 flex flex-col">
-                    <div>
-                      <input
-                        type="text"
-                        name="fullName"
-                        placeholder="Full Name *"
-                        required
-                        value={formData.fullName}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
-                    </div>
-                    <div>
-                      <input
-                        type="tel"
-                        name="mobile"
-                        placeholder="Mobile *"
-                        required
-                        value={formData.mobile}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
-                    </div>
-                    <div>
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Email *"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
-                    </div>
-                    <div className="flex-1">
-                      <textarea
-                        name="message"
-                        placeholder="Message Content"
-                        rows="4"
-                        value={formData.message}
-                        onChange={handleChange}
-                        className="w-full h-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none" />
-                    </div>
-                    <Button
-                      type="submit"
-                      className="w-full bg-black text-white hover:bg-gray-800 py-6 text-lg rounded-lg">
-                      Submit
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
+            <Card className="border-none shadow-lg bg-white">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-black mb-6">
+                  Send Us a Message
+                </h3>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <input
+                      type="text"
+                      name="fullName"
+                      placeholder="Full Name *"
+                      required
+                      value={formData.fullName}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
+                  </div>
+                  <div>
+                    <input
+                      type="tel"
+                      name="mobile"
+                      placeholder="Mobile *"
+                      required
+                      value={formData.mobile}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email *"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent" />
+                  </div>
+                  <div>
+                    <textarea
+                      name="message"
+                      placeholder="Message Content"
+                      rows="4"
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none" />
+                  </div>
+                  <Button
+                    type="submit"
+                    className="w-full bg-black text-white hover:bg-gray-800 py-6 text-lg rounded-lg">
+                    Submit
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
           </div>
 
           <div className="text-center mt-12">
