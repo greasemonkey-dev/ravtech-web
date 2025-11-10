@@ -92,10 +92,10 @@ export default function AboutPage() {
     bio: "Co-Founder, and Managing Partner of Sequoia Capital Israel venture capital fund 2001-today. Before his role at Sequoia Capital, Shmil held various important positions as a high-tech entrepreneur, including VP R&D of Lannet from 1992-1996 and CEO of Lannet from 1996-1998 and serving as President of division of Lucent Worldwide for Communications Systems from 1998-2000. Beyond his business activities, since 2018, Mr. Levy has been donating his time and fortune to social investments activities in the domain of incorporating ultra-Orthodox Jews in High Tech. As part of it Mr. Levy is active board member of Ravtech and JBH and co-founded Kodcode- and 'Mego' program that deals with training and placement of ultra-Orthodox men in the Israeli high-tech sector. Mr. Shmil Levy holds a degree in Computer Engineering from Ben Gurion University."
   },
   {
-    name: "Idan Nimni",
+    name: "Shmulik Moskowitz",
     role: "CEO",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/141f00e37_Idan_Nimni.jpg",
-    bio: "With over 20 years of experience in Cybersecurity, Idan has taken various leading positions in both Professional Services and Product Management in deep technology companies. Idan is a dynamic leader with a proven track record of team building, business execution and innovation. Holds a B.Sc in Management Engineering, and MBA from Tel Aviv University."
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/8e3cb3a5b_shmulik-moskowitz.png",
+    bio: "Shmulik Moskowitz is the CEO of RavTech, bringing over 15 years of leadership experience across global technology and service organisations. Before joining RavTech, Shmulik served as SVP Sales for Israel and Eastern Europe at Qualitest, where he led large cross-regional teams, developed new markets and business units, and drove end-to-end delivery of quality engineering and digital solutions for enterprise clients. With an MBA in Information Systems and Technology Development & Marketing and an MCPD in Computer Programming, Shmulik combines deep technological understanding with strategic business vision. His expertise spans sales growth, delivery excellence, customer relationship management, and innovation leadership."
   },
   {
     name: "Michael Shurman",
