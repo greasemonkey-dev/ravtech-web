@@ -320,12 +320,7 @@ The program focuses on companies that can demonstrate significant growth potenti
           </h2>
           <div className="bg-[#0373BA] mb-8 mx-auto w-24 h-1" />
 
-          <p className="text-lg text-gray-700 leading-relaxed text-center mb-16 max-w-4xl mx-auto">
-            The program includes deploying a software development team tailored to
-            your company's technology stack within 21 days from acceptance into
-            the program, saving you exhausting Talent Acquisition efforts during
-            the critical stages your company is in.
-          </p>
+          {/* This paragraph was removed as per the instructions */}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => {
