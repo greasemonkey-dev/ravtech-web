@@ -444,38 +444,7 @@ export default function AccelerateStartupsPage() {
           <div className="w-24 h-1 bg-[#0373BA] mx-auto mb-16" />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Details */}
-            <div className="flex flex-col">
-              <Card className="border-none shadow-lg bg-white flex-1">
-                <CardContent className="p-8 h-full flex flex-col">
-                  <h3 className="text-2xl font-bold text-black mb-6">
-                    Contact Information
-                  </h3>
-                  <div className="space-y-4 flex-1">
-                    <div className="flex items-start space-x-3">
-                      <MapPin className="text-[#0373BA] mt-1 lucide lucide-map-pin w-5 h-5 flex-shrink-0" />
-                      <p className="text-gray-700">Bar Kochva 21, Bnei Brak</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Phone className="w-5 h-5 text-[#0373BA] flex-shrink-0" />
-                      <a
-                        href="tel:058-7625162"
-                        className="text-gray-700 hover:text-black">
-                        058-7625162
-                      </a>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Mail className="w-5 h-5 text-[#0373BA] flex-shrink-0" />
-                      <a
-                        href="mailto:etid@ravtech.co.il"
-                        className="text-gray-700 hover:text-black">
-                        etid@ravtech.co.il
-                      </a>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+   
 
             {/* Contact Form */}
             <div className="flex flex-col">
