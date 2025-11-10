@@ -447,7 +447,7 @@ export default function AccelerateStartupsPage() {
             {/* Contact Details */}
             <div className="flex flex-col">
               <Card className="border-none shadow-lg bg-white flex-1">
-                <CardContent className="p-8 h-full flex flex-col">
+                <div className="p-8 h-full flex flex-col">
                   <h3 className="text-2xl font-bold text-black mb-6">
                     Contact Information
                   </h3>
@@ -473,7 +473,7 @@ export default function AccelerateStartupsPage() {
                       </a>
                     </div>
                   </div>
-                </CardContent>
+                </div>
               </Card>
             </div>
 
