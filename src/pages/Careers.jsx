@@ -214,7 +214,7 @@ export default function CareersPage() {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
             Careers
           </h1>
-          <p className="text-2xl text-gray-800 leading-relaxed mb-6">We’re committed to supporting every team member as a person and a professional — creating an environment where excellence and purpose meet.
+          <p className="text-2xl text-gray-800 leading-relaxed mb-6">We’re committed to supporting every team member as a person and a professional, creating an environment where excellence and purpose meet.
 
 
 
