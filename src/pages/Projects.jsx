@@ -67,10 +67,10 @@ export default function ProjectsPage() {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
             OUR PROJECTS
           </h1>
-          <p className="text-xl text-gray-700 leading-relaxed">Explore projects we’ve delivered across diverse industries- from startups and mid-sized companies to global enterprises.
-
-
-
+          <p className="text-xl text-gray-700 leading-relaxed">
+            See examples of the projects we implement in a wide range of
+            verticals and requirements, from startups through mid-sized companies
+            to global corporations.
           </p>
         </div>
       </section>
@@ -144,8 +144,8 @@ export default function ProjectsPage() {
       {/* Additional Clients */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
-            More Clients We've Worked With
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">Clients
+
           </h2>
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
@@ -225,8 +225,8 @@ export default function ProjectsPage() {
       {/* CTA Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
-            Ready to Start Your Project?
+          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">EMPOWERING YOUR STARTUP
+ TO SCALE
           </h2>
           <p className="text-xl text-gray-700 mb-8">
             Let's discuss how we can help you achieve your goals
