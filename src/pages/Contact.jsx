@@ -44,8 +44,8 @@ export default function ContactPage() {
         <div className="absolute top-1/2 left-1/2 w-48 h-48 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-5" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
-            Get in Touch
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>Let's Get in Touch
+
           </h1>
           <p className="text-2xl text-gray-800 leading-relaxed mb-6">
             Let's discuss how we can help you achieve your development goals
@@ -64,7 +64,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact Form */}
             <div className="flex flex-col h-full">
-              <h2 className="text-4xl font-bold text-black mb-4">Ready to Get Started?</h2>
+              <h2 className="text-4xl font-bold text-black mb-4">Let's Start a Conversation</h2>
               <p className="text-lg text-gray-600 mb-6">Share your project details and we'll get back to you within 24 hours</p>
               <div className="bg-[#0373BA] mb-8 w-24 h-1" />
 
@@ -217,6 +217,24 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#CCE7FA] to-[#E5F4FF]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
+            Ready to Start Your Project?
+          </h2>
+          <p className="text-xl text-gray-800 mb-8">
+            Our team is ready to help you achieve your development goals. Let's
+            build something amazing together.
+          </p>
+          <a href="mailto:contact@ravtech.co.il">
+            <Button className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">
+              <Mail className="w-5 h-5 mr-2" />
+              Email Us
+            </Button>
+          </a>
+        </div>
+      </section>
     </div>);
 
 }
