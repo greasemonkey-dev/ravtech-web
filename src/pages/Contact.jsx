@@ -217,24 +217,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#CCE7FA] to-[#E5F4FF]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-xl text-gray-800 mb-8">
-            Our team is ready to help you achieve your development goals. Let's
-            build something amazing together.
-          </p>
-          <a href="mailto:contact@ravtech.co.il">
-            <Button className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">
-              <Mail className="w-5 h-5 mr-2" />
-              Email Us
-            </Button>
-          </a>
-        </div>
-      </section>
     </div>);
 
 }
