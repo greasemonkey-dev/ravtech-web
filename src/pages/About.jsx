@@ -426,11 +426,6 @@ export default function AboutPage() {
             team, we'd love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to={createPageUrl("Contact")}>
-              <Button className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">
-                Work With Us
-              </Button>
-            </Link>
             <Link to={createPageUrl("Careers")}>
               <Button
                 variant="outline"
