@@ -309,38 +309,49 @@ export default function AboutPage() {
           <div className="bg-[#0373BA] mb-16 mx-auto w-24 h-1" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {teamMembers.map((member, index) =>
-            <Card
-              key={index}
-              className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300 group overflow-hidden">
+            {teamMembers.map((member, index) => {
+              let objectPosition = "object-center";
+              let filterStyle = {};
+              
+              if (member.name === "Shmulik Moskowitz") {
+                objectPosition = "object-top";
+              } else if (member.name === "Israel Kobler") {
+                filterStyle = { filter: 'grayscale(100%) brightness(0.9) contrast(1.1)' };
+              }
+              
+              return (
+                <Card
+                  key={index}
+                  className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300 group overflow-hidden">
 
-                <CardContent className="p-0">
-                  {/* Image */}
-                  <div className="relative h-80 overflow-hidden bg-gray-100">
-                    <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 grayscale"
-                    style={member.name === "Israel Kobler" ? { filter: 'grayscale(100%) brightness(0.9) contrast(1.1)' } : {}} />
+                  <CardContent className="p-0">
+                    {/* Image */}
+                    <div className="relative h-80 overflow-hidden bg-gray-100">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className={`w-full h-full object-cover ${objectPosition} transition-transform duration-500 group-hover:scale-105 grayscale`}
+                        style={filterStyle} />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
 
-                  {/* Content */}
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-black mb-1">
-                      {member.name}
-                    </h3>
-                    <p className="text-[#0373BA] mb-4 text-lg font-semibold">
-                      {member.role}
-                    </p>
-                    <p className="text-gray-600 leading-relaxed text-sm line-clamp-6">
-                      {member.bio}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            )}
+                    {/* Content */}
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold text-black mb-1">
+                        {member.name}
+                      </h3>
+                      <p className="text-[#0373BA] mb-4 text-lg font-semibold">
+                        {member.role}
+                      </p>
+                      <p className="text-gray-600 leading-relaxed text-sm line-clamp-6">
+                        {member.bio}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
