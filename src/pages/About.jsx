@@ -313,7 +313,7 @@ export default function AboutPage() {
               let imageStyle = {};
               
               if (member.name === "Shmulik Moskowitz") {
-                imageStyle = { objectPosition: '50% 15%' };
+                imageStyle = { objectPosition: '50% 15%', filter: 'grayscale(100%) brightness(1.15)' };
               } else if (member.name === "Israel Kobler") {
                 imageStyle = { filter: 'grayscale(100%) brightness(0.9) contrast(1.1)' };
               }
