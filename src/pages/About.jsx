@@ -321,7 +321,7 @@ export default function AboutPage() {
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 grayscale"
-                    style={member.name === "Israel Kobler" ? { filter: 'grayscale(100%) brightness(0.75)' } : {}} />
+                    style={member.name === "Israel Kobler" ? { filter: 'grayscale(100%) brightness(0.9) contrast(1.1)' } : {}} />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
