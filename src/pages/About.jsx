@@ -79,7 +79,7 @@ export default function AboutPage() {
 
 
   const teamMembers = [
-    {
+  {
     name: "Shmulik Moskowitz",
     role: "CEO",
     image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/8e3cb3a5b_shmulik-moskowitz.png",
@@ -103,14 +103,14 @@ export default function AboutPage() {
     image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/4f3eab6e4_Shmil_Levy.png",
     bio: "Co-Founder, and Managing Partner of Sequoia Capital Israel venture capital fund 2001-today. Before his role at Sequoia Capital, Shmil held various important positions as a high-tech entrepreneur, including VP R&D of Lannet from 1992-1996 and CEO of Lannet from 1996-1998 and serving as President of division of Lucent Worldwide for Communications Systems from 1998-2000. Beyond his business activities, since 2018, Mr. Levy has been donating his time and fortune to social investments activities in the domain of incorporating ultra-Orthodox Jews in High Tech. As part of it Mr. Levy is active board member of Ravtech and JBH and co-founded Kodcode- and 'Mego' program that deals with training and placement of ultra-Orthodox men in the Israeli high-tech sector. Mr. Shmil Levy holds a degree in Computer Engineering from Ben Gurion University."
   },
-  
+
   {
     name: "Israel Kobler",
     role: "VP R&D",
     image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/b79502e1b_Israel_Kobler_new.png",
     bio: "With 10 years of experience in software product/services development, architecture & management, Israel is a senior manager in the company who oversees and leads all R&D and innovation areas. In addition, he is responsible for overseeing the delivery of services carried out by development teams across the company, recruiting new employees to the development team (programmers, designers, etc.), creating schedules and deadlines, approve budgets regarding development, and in general he responsible for implementing the company's development processes and methodologies."
   },
-  
+
   {
     name: "Chani Smoler",
     role: "CFO",
@@ -129,8 +129,8 @@ export default function AboutPage() {
         <div className="absolute top-1/2 left-1/2 w-48 h-48 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-5" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
-            About RavTech
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>ABOUT US
+
           </h1>
           <p className="text-2xl text-gray-800 leading-relaxed mb-6">
             Where Technology Meets Social Impact
@@ -322,7 +322,7 @@ export default function AboutPage() {
                     <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 grayscale" />
+                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
@@ -426,6 +426,11 @@ export default function AboutPage() {
             team, we'd love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to={createPageUrl("Contact")}>
+              <Button className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">
+                Work With Us
+              </Button>
+            </Link>
             <Link to={createPageUrl("Careers")}>
               <Button
                 variant="outline"
