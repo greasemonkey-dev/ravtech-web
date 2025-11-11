@@ -82,7 +82,7 @@ export default function AboutPage() {
   {
     name: "Shmulik Moskowitz",
     role: "CEO",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/8e3cb3a5b_shmulik-moskowitz.png",
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/2b16da2ff_thumbnail_tmp_d310a441-78df-4a00-a1ec-091be8798f8b.jpg",
     bio: "Shmulik Moskowitz is the CEO of RavTech, bringing over 15 years of leadership experience across global technology and service organisations. Before joining RavTech, Shmulik served as SVP Sales for Israel and Eastern Europe at Qualitest, where he led large cross-regional teams, developed new markets and business units, and drove end-to-end delivery of quality engineering and digital solutions for enterprise clients. With an MBA in Information Systems and Technology Development & Marketing and an MCPD in Computer Programming, Shmulik combines deep technological understanding with strategic business vision. His expertise spans sales growth, delivery excellence, customer relationship management, and innovation leadership."
   },
   {
