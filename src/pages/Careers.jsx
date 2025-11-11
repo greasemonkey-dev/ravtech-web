@@ -211,8 +211,8 @@ export default function CareersPage() {
         <div className="absolute top-1/2 left-1/2 w-48 h-48 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-5" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>
-            Careers
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>CAREERS
+
           </h1>
           <p className="text-2xl text-gray-800 leading-relaxed mb-6">We’re committed to supporting every team member as a person and a professional, creating an environment where excellence and purpose meet.
 
