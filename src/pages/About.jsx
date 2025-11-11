@@ -310,13 +310,12 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {teamMembers.map((member, index) => {
-              let objectPosition = "object-center";
-              let filterStyle = {};
+              let imageStyle = {};
               
               if (member.name === "Shmulik Moskowitz") {
-                objectPosition = "object-top";
+                imageStyle = { objectPosition: '50% 15%' };
               } else if (member.name === "Israel Kobler") {
-                filterStyle = { filter: 'grayscale(100%) brightness(0.9) contrast(1.1)' };
+                imageStyle = { filter: 'grayscale(100%) brightness(0.9) contrast(1.1)' };
               }
               
               return (
@@ -330,8 +329,8 @@ export default function AboutPage() {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className={`w-full h-full object-cover ${objectPosition} transition-transform duration-500 group-hover:scale-105 grayscale`}
-                        style={filterStyle} />
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 grayscale"
+                        style={imageStyle} />
 
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
