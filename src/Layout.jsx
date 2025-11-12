@@ -43,23 +43,21 @@ export default function Layout({ children }) {
         }
     }, []);
 
+    // Add UserWay accessibility widget
     useEffect(() => {
         if (document.querySelector('script[src="https://cdn.userway.org/widget.js"]')) return;
 
-        window.UserWayWidgetApp = { position: 8 };
-
         const script = document.createElement("script");
-        script.src = "https://cdn.userway.org/widget.js";
+        script.setAttribute("data-position", "9"); // Bottom Center
         script.setAttribute("data-account", "5oBc94PtYh");
-        script.async = true;
-        document.body.appendChild(script);
+        script.setAttribute("src", "https://cdn.userway.org/widget.js");
+        (document.body || document.head).appendChild(script);
 
         return () => {
             const existingScript = document.querySelector('script[src="https://cdn.userway.org/widget.js"]');
             if (existingScript) existingScript.remove();
         };
     }, []);
-
 
 
     return (
@@ -315,6 +313,12 @@ export default function Layout({ children }) {
                     </div>
                 </div>
             </footer>
+
+            {/* Accessibility noscript fallback */}
+            <noscript>
+                Please ensure Javascript is enabled for purposes of{' '}
+                <a href="https://userway.org">website accessibility</a>
+            </noscript>
         </div>
     );
 }
