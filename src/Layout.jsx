@@ -47,7 +47,7 @@ export default function Layout({ children }) {
     useEffect(() => {
         // Set configuration before loading the script
         window.UserWayWidgetApp = {
-            position: '3', // bottom-left position
+            position: 5, // bottom-center position
         };
 
         const script = document.createElement("script");
