@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -43,7 +42,7 @@ export default function Layout({ children }) {
         }
     }, []);
 
- // Add UserWay accessibility widget
+    // Add UserWay accessibility widget
     useEffect(() => {
         // Set configuration before loading the script
         window.UserWayWidgetApp = {
@@ -63,7 +62,6 @@ export default function Layout({ children }) {
             }
         };
     }, []);
-
 
     return (
         <div className="min-h-screen bg-white">
@@ -98,8 +96,8 @@ export default function Layout({ children }) {
                                     key={item.title}
                                     to={item.url}
                                     className={`text-base font-semibold tracking-wide relative group transition-all duration-300 ${location.pathname === item.url
-                                        ? "text-black"
-                                        : "text-gray-700 hover:text-gray-900"
+                                            ? "text-black"
+                                            : "text-gray-700 hover:text-gray-900"
                                         }`}
                                 >
                                     <span className="transition-transform duration-300 group-hover:-translate-y-0.5 inline-block">
@@ -140,8 +138,8 @@ export default function Layout({ children }) {
                                             to={item.url}
                                             onClick={() => setIsOpen(false)}
                                             className={`text-lg font-medium transition-all duration-300 ${location.pathname === item.url
-                                                ? "text-black"
-                                                : "text-gray-700 hover:text-gray-900"
+                                                    ? "text-black"
+                                                    : "text-gray-700 hover:text-gray-900"
                                                 }`}
                                         >
                                             {item.title}
@@ -298,32 +296,26 @@ export default function Layout({ children }) {
                         </div>
                     </div>
 
-                    {/* Social Media & Copyright */}
+                    {/* Social Media & Copyright - Single Line */}
                     <div className="pt-8 border-t border-gray-200">
-                        <div className="flex flex-row justify-between items-center">
+                        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
                             <p className="text-sm text-gray-600">
                                 © 2025 RavTech. All rights reserved.
                             </p>
-                            <div className="flex items-center space-x-6">
+                            <div className="flex items-center gap-4">
                                 <a
                                     href="https://www.linkedin.com/company/ravtech"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
                                 >
-                                    <LinkedInIcon className="w-9 h-9" />
+                                    <LinkedInIcon className="w-6 h-6" />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </footer>
-
-            {/* Accessibility noscript fallback */}
-            <noscript>
-                Please ensure Javascript is enabled for purposes of{' '}
-                <a href="https://userway.org">website accessibility</a>
-            </noscript>
         </div>
     );
 }
