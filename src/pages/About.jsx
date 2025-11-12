@@ -222,8 +222,8 @@ export default function AboutPage() {
       {/* Statistics */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-16">
-            RavTech by the Numbers
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-16">RavTech By The Numbers
+
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -311,13 +311,13 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {teamMembers.map((member, index) => {
               let imageStyle = {};
-              
+
               if (member.name === "Shmulik Moskowitz") {
                 imageStyle = { objectPosition: '50% 15%', filter: 'grayscale(100%) brightness(1.15)' };
               } else if (member.name === "Israel Kobler") {
                 imageStyle = { filter: 'grayscale(100%) brightness(0.9) contrast(1.1)' };
               }
-              
+
               return (
                 <Card
                   key={index}
@@ -348,8 +348,8 @@ export default function AboutPage() {
                       </p>
                     </div>
                   </CardContent>
-                </Card>
-              );
+                </Card>);
+
             })}
           </div>
         </div>
