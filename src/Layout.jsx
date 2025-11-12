@@ -43,25 +43,23 @@ export default function Layout({ children }) {
         }
     }, []);
 
-useEffect(() => {
-    // Set configuration before loading the script
-    window.UserWayWidgetApp = {
-        position: 8, // bottom-center
-    };
+    useEffect(() => {
+        if (document.querySelector('script[src="https://cdn.userway.org/widget.js"]')) return;
 
-    const script = document.createElement("script");
-    script.src = "https://cdn.userway.org/widget.js";
-    script.setAttribute("data-account", "5oBc94PtYh");
-    script.async = true;
-    document.body.appendChild(script);
+        window.UserWayWidgetApp = { position: 8 };
 
-    return () => {
-        // Cleanup script on unmount
-        if (document.body.contains(script)) {
-            document.body.removeChild(script);
-        }
-    };
-}, []);
+        const script = document.createElement("script");
+        script.src = "https://cdn.userway.org/widget.js";
+        script.setAttribute("data-account", "5oBc94PtYh");
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+            const existingScript = document.querySelector('script[src="https://cdn.userway.org/widget.js"]');
+            if (existingScript) existingScript.remove();
+        };
+    }, []);
+
 
 
     return (
@@ -97,8 +95,8 @@ useEffect(() => {
                                     key={item.title}
                                     to={item.url}
                                     className={`text-base font-semibold tracking-wide relative group transition-all duration-300 ${location.pathname === item.url
-                                            ? "text-black"
-                                            : "text-gray-700 hover:text-gray-900"
+                                        ? "text-black"
+                                        : "text-gray-700 hover:text-gray-900"
                                         }`}
                                 >
                                     <span className="transition-transform duration-300 group-hover:-translate-y-0.5 inline-block">
@@ -139,8 +137,8 @@ useEffect(() => {
                                             to={item.url}
                                             onClick={() => setIsOpen(false)}
                                             className={`text-lg font-medium transition-all duration-300 ${location.pathname === item.url
-                                                    ? "text-black"
-                                                    : "text-gray-700 hover:text-gray-900"
+                                                ? "text-black"
+                                                : "text-gray-700 hover:text-gray-900"
                                                 }`}
                                         >
                                             {item.title}
