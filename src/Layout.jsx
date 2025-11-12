@@ -296,22 +296,20 @@ export default function Layout({ children }) {
                         </div>
                     </div>
 
-                    {/* Social Media & Copyright - Single Line */}
+                    {/* Copyright & Social Media - All on Left Side */}
                     <div className="pt-8 border-t border-gray-200">
-                        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <div className="flex items-center gap-4">
                             <p className="text-sm text-gray-600">
                                 © 2025 RavTech. All rights reserved.
                             </p>
-                            <div className="flex items-center gap-4">
-                                <a
-                                    href="https://www.linkedin.com/company/ravtech"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
-                                >
-                                    <LinkedInIcon className="w-6 h-6" />
-                                </a>
-                            </div>
+                            <a
+                                href="https://www.linkedin.com/company/ravtech"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
+                            >
+                                <LinkedInIcon className="w-5 h-5" />
+                            </a>
                         </div>
                     </div>
                 </div>
