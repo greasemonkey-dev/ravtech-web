@@ -43,6 +43,22 @@ export default function Layout({ children }) {
         }
     }, []);
 
+    // Add UserWay accessibility widget
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.src = "https://cdn.userway.org/widget.js";
+        script.setAttribute("data-account", "5oBc94PtYh");
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+            // Cleanup script on unmount
+            if (document.body.contains(script)) {
+                document.body.removeChild(script);
+            }
+        };
+    }, []);
+
     return (
         <div className="min-h-screen bg-white">
             <style>
