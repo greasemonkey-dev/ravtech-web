@@ -43,21 +43,24 @@ export default function Layout({ children }) {
         }
     }, []);
 
-    // Add UserWay accessibility widget
-    useEffect(() => {
-        if (document.querySelector('script[src="https://cdn.userway.org/widget.js"]')) return;
+  useEffect(() => {
+    const script = document.createElement("script");
 
-        const script = document.createElement("script");
-        script.setAttribute("data-position", "9"); // Bottom Center
-        script.setAttribute("data-account", "5oBc94PtYh");
-        script.setAttribute("src", "https://cdn.userway.org/widget.js");
-        (document.body || document.head).appendChild(script);
+    script.setAttribute("data-position", "9"); 
+    script.setAttribute("data-account", "5oBc94PtYh");
+    script.setAttribute("src", "https://cdn.userway.org/widget.js");
+    script.async = true;
 
-        return () => {
-            const existingScript = document.querySelector('script[src="https://cdn.userway.org/widget.js"]');
-            if (existingScript) existingScript.remove();
-        };
-    }, []);
+  
+    document.body.appendChild(script);
+
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
 
     return (
