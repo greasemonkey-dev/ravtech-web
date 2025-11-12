@@ -45,6 +45,11 @@ export default function Layout({ children }) {
 
     // Add UserWay accessibility widget
     useEffect(() => {
+        // Set configuration before loading the script
+        window.UserWayWidgetApp = {
+            position: '3', // bottom-left position
+        };
+
         const script = document.createElement("script");
         script.src = "https://cdn.userway.org/widget.js";
         script.setAttribute("data-account", "5oBc94PtYh");
@@ -81,7 +86,7 @@ export default function Layout({ children }) {
                             <img
                                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/44f4fb0d2_logo.png"
                                 alt="RavTech Logo"
-                                className="h-10 transition-transform duration-300 hover:scale-105"
+                                className="h-10 transition-transform duration-300 hover:scale-110"
                             />
                         </Link>
 
