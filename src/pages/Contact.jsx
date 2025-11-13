@@ -5,8 +5,9 @@ import {
   Phone,
   Mail,
   MapPin,
-  Send } from
-"lucide-react";
+  Send
+} from
+  "lucide-react";
 import { LinkedInIcon } from "../components/LinkedInIcon";
 
 export default function ContactPage() {
@@ -41,7 +42,7 @@ export default function ContactPage() {
         <div className="absolute top-10 right-10 w-64 h-64 rounded-full opacity-20" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
         <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full opacity-10" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
         <div className="absolute top-1/2 left-1/2 w-48 h-48 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-5" style={{ background: 'radial-gradient(circle, #0373BA 0%, transparent 70%)' }} />
-        
+
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8" style={{ fontFamily: 'Montserrat, sans-serif', color: '#0373BA' }}>Let's Get in Touch
 
@@ -197,17 +198,19 @@ export default function ContactPage() {
                   <CardContent className="p-0 h-full">
                     <div className="w-full h-full min-h-[300px] bg-gray-200">
                       <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.2958743843673!2d34.83447!3d32.08389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDA1JzAyLjAiTiAzNMKwNTAnMDQuMSJF!5e0!3m2!1sen!2sil!4v1234567890"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4370.383879499366!2d34.82153009067694!3d32.09316046482205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4a2be38f9bc7%3A0x6371f868074cc281!2sBar%20Kochva%20St%2021%2C%20Bnei%20Brak!5e1!3m2!1sen!2sil!4v1763022280080!5m2!1sen!2sil"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
                         allowFullScreen
                         loading="lazy"
-                        title="Bnei Brak Office Location" />
-
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="משרד בר כוכבא 21 בני ברק"
+                      />
                     </div>
                   </CardContent>
                 </Card>
+
               </div>
             </div>
           </div>
