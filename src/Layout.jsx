@@ -200,6 +200,14 @@ export default function Layout({ children }) {
                                         Projects
                                     </Link>
                                 </li>
+                                <li>
+                                    <Link
+                                        to={createPageUrl("AccelerateStartups")}
+                                        className="text-gray-600 hover:text-black transition-colors"
+                                    >
+                                        Accelerate Startups
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
 
