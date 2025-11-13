@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -181,17 +180,15 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    <div className="border-t border-gray-200 pt-6">
-                      <h4 className="text-lg font-semibold text-black mb-3">Follow Us</h4>
-                      <a
-                        href="https://www.linkedin.com/company/ravtech"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center w-12 h-12 bg-[#CCE7FA] rounded-lg hover:opacity-80 transition-opacity">
+                    <h4 className="text-lg font-semibold text-black mb-3">Follow Us</h4>
+                    <a
+                      href="https://www.linkedin.com/company/ravtech"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-12 h-12 bg-[#CCE7FA] rounded-lg hover:opacity-80 transition-opacity">
 
-                        <LinkedInIcon className="w-6 h-6 text-black" />
-                      </a>
-                    </div>
+                      <LinkedInIcon className="w-6 h-6 text-black" />
+                    </a>
                   </CardContent>
                 </Card>
 
