@@ -8,7 +8,6 @@ export const ThemeToggle = () => {
 
   useEffect(() => {
     setMounted(true);
-    // Get theme from localStorage or default to light
     const savedTheme = localStorage.getItem("theme") || "light";
     setTheme(savedTheme);
     document.documentElement.classList.toggle("dark", savedTheme === "dark");
@@ -17,7 +16,6 @@ export const ThemeToggle = () => {
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     
-    // Add view transition if supported
     if (document.startViewTransition) {
       document.startViewTransition(() => {
         setTheme(newTheme);
@@ -40,7 +38,7 @@ export const ThemeToggle = () => {
           @supports (view-transition-name: root) {
             ::view-transition-old(root),
             ::view-transition-new(root) {
-              animation-duration: 0.5s;
+              animation-duration: 0.4s;
             }
             
             ::view-transition-old(root) {
@@ -48,7 +46,7 @@ export const ThemeToggle = () => {
             }
             
             ::view-transition-new(root) {
-              animation-name: fade-in, scale-up;
+              animation-name: fade-in;
             }
             
             @keyframes fade-out {
@@ -57,10 +55,6 @@ export const ThemeToggle = () => {
             
             @keyframes fade-in {
               from { opacity: 0; }
-            }
-            
-            @keyframes scale-up {
-              from { transform: scale(0.95); }
             }
           }
         `}
@@ -73,7 +67,6 @@ export const ThemeToggle = () => {
         aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
       >
         <div className="relative w-full h-full flex items-center justify-center">
-          {/* Sun icon for light mode */}
           <Sun
             className={`absolute h-5 w-5 transition-all duration-500 ${
               theme === "light"
@@ -82,14 +75,13 @@ export const ThemeToggle = () => {
             }`}
             style={{ color: "#F59E0B" }}
           />
-          {/* Moon icon for dark mode */}
           <Moon
             className={`absolute h-5 w-5 transition-all duration-500 ${
               theme === "dark"
                 ? "rotate-0 scale-100 opacity-100"
                 : "-rotate-90 scale-0 opacity-0"
             }`}
-            style={{ color: "#6366F1" }}
+            style={{ color: "#818CF8" }}
           />
         </div>
       </Button>

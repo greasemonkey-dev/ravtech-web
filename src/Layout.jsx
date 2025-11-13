@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
     Sheet,
@@ -45,9 +45,8 @@ export default function Layout({ children }) {
 
     // Add UserWay accessibility widget
     useEffect(() => {
-        // Set configuration before loading the script
         window.UserWayWidgetApp = {
-            position: 5, // bottom-center position
+            position: 5,
         };
 
         const script = document.createElement("script");
@@ -57,7 +56,6 @@ export default function Layout({ children }) {
         document.body.appendChild(script);
 
         return () => {
-            // Cleanup script on unmount
             if (document.body.contains(script)) {
                 document.body.removeChild(script);
             }
@@ -65,7 +63,7 @@ export default function Layout({ children }) {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div className="min-h-screen bg-white dark:bg-[#0f172a] transition-colors duration-300">
             <style>
                 {`
           @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
@@ -76,18 +74,13 @@ export default function Layout({ children }) {
           }
           
           .dark .heading-custom {
-            color: #60A5FA;
-          }
-          
-          /* Dark mode styles */
-          .dark {
-            color-scheme: dark;
+            color: #0373BA;
           }
         `}
             </style>
 
             {/* Header */}
-            <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 transition-all duration-300 hover:shadow-md">
+            <header className="sticky top-0 z-50 bg-white/80 dark:bg-[#0f172a]/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-all duration-300 hover:shadow-md">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         {/* Logo */}
@@ -95,7 +88,7 @@ export default function Layout({ children }) {
                             <img
                                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/44f4fb0d2_logo.png"
                                 alt="RavTech Logo"
-                                className="h-10 transition-transform duration-300 hover:scale-110 dark:brightness-200"
+                                className="h-10 transition-transform duration-300 hover:scale-110"
                             />
                         </Link>
 
@@ -115,7 +108,7 @@ export default function Layout({ children }) {
                                         {item.title}
                                     </span>
                                     <span
-                                        className={`absolute -bottom-1 left-0 w-0 h-[2px] bg-gray-900 dark:bg-white rounded-full transition-all duration-300 group-hover:w-full ${
+                                        className={`absolute -bottom-1 left-0 w-0 h-[2px] bg-[#0373BA] rounded-full transition-all duration-300 group-hover:w-full ${
                                             location.pathname === item.url ? "w-full" : ""
                                         }`}
                                     />
@@ -136,16 +129,16 @@ export default function Layout({ children }) {
                             </a>
                         </div>
 
-                        {/* Mobile Menu Button */}
+                        {/* Mobile Menu */}
                         <div className="flex lg:hidden items-center gap-2">
                             <ThemeToggle />
                             <Sheet open={isOpen} onOpenChange={setIsOpen}>
                                 <SheetTrigger asChild>
                                     <Button variant="ghost" size="icon">
-                                        <Menu className="h-6 w-6 dark:text-white" />
+                                        <Menu className="h-6 w-6" />
                                     </Button>
                                 </SheetTrigger>
-                                <SheetContent side="right" className="w-[300px] sm:w-[400px] dark:bg-gray-900">
+                                <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                                     <nav className="flex flex-col space-y-6 mt-8">
                                         {navigationItems.map((item) => (
                                             <Link
@@ -155,7 +148,7 @@ export default function Layout({ children }) {
                                                 className={`text-lg font-medium transition-all duration-300 ${
                                                     location.pathname === item.url
                                                         ? "text-black dark:text-white"
-                                                        : "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                                                        : "text-gray-700 dark:text-gray-300"
                                                 }`}
                                             >
                                                 {item.title}
@@ -166,7 +159,7 @@ export default function Layout({ children }) {
                                                 href="https://www.linkedin.com/company/ravtech"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-[#0A66C2] hover:opacity-80 transition-opacity duration-300"
+                                                className="text-[#0A66C2]"
                                             >
                                                 <LinkedInIcon className="w-6 h-6" />
                                             </a>
@@ -179,12 +172,11 @@ export default function Layout({ children }) {
                 </div>
             </header>
 
-
             {/* Main Content */}
-            <main className="dark:bg-gray-900">{children}</main>
+            <main>{children}</main>
 
             {/* Footer */}
-            <footer className="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-24 transition-colors duration-300">
+            <footer className="bg-gray-50 dark:bg-[#1e293b] border-t border-gray-200 dark:border-gray-800 mt-24 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                         {/* Quick Links */}
@@ -196,7 +188,7 @@ export default function Layout({ children }) {
                                 <li>
                                     <Link
                                         to={createPageUrl("Services")}
-                                        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+                                        className="text-gray-600 dark:text-gray-400 hover:text-[#0373BA] transition-colors"
                                     >
                                         Services
                                     </Link>
@@ -204,7 +196,7 @@ export default function Layout({ children }) {
                                 <li>
                                     <Link
                                         to={createPageUrl("Projects")}
-                                        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+                                        className="text-gray-600 dark:text-gray-400 hover:text-[#0373BA] transition-colors"
                                     >
                                         Projects
                                     </Link>
@@ -212,7 +204,7 @@ export default function Layout({ children }) {
                                 <li>
                                     <Link
                                         to={createPageUrl("AccelerateStartups")}
-                                        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+                                        className="text-gray-600 dark:text-gray-400 hover:text-[#0373BA] transition-colors"
                                     >
                                         Accelerate Startups
                                     </Link>
@@ -229,7 +221,7 @@ export default function Layout({ children }) {
                                 <li>
                                     <Link
                                         to={createPageUrl("Careers")}
-                                        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+                                        className="text-gray-600 dark:text-gray-400 hover:text-[#0373BA] transition-colors"
                                     >
                                         Careers
                                     </Link>
@@ -237,7 +229,7 @@ export default function Layout({ children }) {
                                 <li>
                                     <Link
                                         to={createPageUrl("About")}
-                                        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+                                        className="text-gray-600 dark:text-gray-400 hover:text-[#0373BA] transition-colors"
                                     >
                                         About
                                     </Link>
@@ -245,7 +237,7 @@ export default function Layout({ children }) {
                                 <li>
                                     <Link
                                         to={createPageUrl("Contact")}
-                                        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+                                        className="text-gray-600 dark:text-gray-400 hover:text-[#0373BA] transition-colors"
                                     >
                                         Contact Us
                                     </Link>
@@ -267,7 +259,7 @@ export default function Layout({ children }) {
                                 <p>
                                     <a
                                         href="mailto:contact@ravtech.co.il"
-                                        className="hover:text-black dark:hover:text-white transition-colors"
+                                        className="hover:text-[#0373BA] transition-colors"
                                     >
                                         contact@ravtech.co.il
                                     </a>
@@ -289,23 +281,23 @@ export default function Layout({ children }) {
                                     type="text"
                                     placeholder="Name"
                                     required
-                                    className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
+                                    className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#0f172a] dark:text-white rounded focus:outline-none focus:ring-2 focus:ring-[#0373BA] focus:border-transparent"
                                 />
                                 <input
                                     type="email"
                                     placeholder="Email"
                                     required
-                                    className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
+                                    className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#0f172a] dark:text-white rounded focus:outline-none focus:ring-2 focus:ring-[#0373BA] focus:border-transparent"
                                 />
                                 <textarea
                                     placeholder="Message"
                                     required
                                     rows="3"
-                                    className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none"
+                                    className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#0f172a] dark:text-white rounded focus:outline-none focus:ring-2 focus:ring-[#0373BA] focus:border-transparent resize-none"
                                 />
                                 <Button
                                     type="submit"
-                                    className="w-full bg-[#CCE7FA] text-black hover:bg-[#B8D9F0] dark:bg-[#0373BA] dark:text-white dark:hover:bg-[#025a94] transition-colors"
+                                    className="w-full bg-[#0373BA] text-white hover:bg-[#025a94] transition-colors"
                                 >
                                     Submit
                                 </Button>
@@ -313,8 +305,8 @@ export default function Layout({ children }) {
                         </div>
                     </div>
 
-                    {/* Copyright & Social Media - All on Left Side */}
-                    <div className="pt-8 border-t border-gray-200 dark:border-gray-700">
+                    {/* Copyright & Social Media */}
+                    <div className="pt-8 border-t border-gray-200 dark:border-gray-800">
                         <div className="flex items-center gap-4">
                             <p className="text-sm text-gray-600 dark:text-gray-400">
                                 © 2025 RavTech. All rights reserved.
@@ -329,7 +321,7 @@ export default function Layout({ children }) {
                             </a>
                             <Link
                                 to={createPageUrl("TermsOfUse")}
-                                className="text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+                                className="text-sm text-gray-600 dark:text-gray-400 hover:text-[#0373BA] transition-colors"
                             >
                                 Terms of Use
                             </Link>
