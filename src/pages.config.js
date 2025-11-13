@@ -5,6 +5,7 @@ import Projects from './pages/Projects';
 import Careers from './pages/Careers';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import TermsOfUse from './pages/TermsOfUse';
 import Layout from './Layout.jsx';
 
 
@@ -16,6 +17,7 @@ export const PAGES = {
     "Careers": Careers,
     "About": About,
     "Contact": Contact,
+    "TermsOfUse": TermsOfUse,
 }
 
 export const pagesConfig = {

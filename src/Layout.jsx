@@ -318,6 +318,12 @@ export default function Layout({ children }) {
                             >
                                 <LinkedInIcon className="w-5 h-5" />
                             </a>
+                            <Link
+                                to={createPageUrl("TermsOfUse")}
+                                className="text-sm text-gray-600 hover:text-black transition-colors"
+                            >
+                                Terms of Use
+                            </Link>
                         </div>
                     </div>
                 </div>
