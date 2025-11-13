@@ -176,14 +176,7 @@ export default function Layout({ children }) {
                                 Quick Links
                             </h3>
                             <ul className="space-y-3">
-                                <li>
-                                    <Link
-                                        to={createPageUrl("Home")}
-                                        className="text-gray-600 hover:text-black transition-colors"
-                                    >
-                                        Home
-                                    </Link>
-                                </li>
+                                
                                 <li>
                                     <Link
                                         to={createPageUrl("Services")}
@@ -200,7 +193,14 @@ export default function Layout({ children }) {
                                         Projects
                                     </Link>
                                 </li>
-                                
+                                <li>
+                                    <Link
+                                        to={createPageUrl("AccelerateStartups")}
+                                        className="text-gray-600 hover:text-black transition-colors"
+                                    >
+                                        Accelerate Startups
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
 
