@@ -182,7 +182,7 @@ export default function HomePage() {
 
             <div className="flex items-center justify-center gap-3 mb-5 animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <div className="h-px w-10 sm:w-14 bg-gradient-to-r from-transparent via-[#0373BA] to-[#0373BA]" />
-              <p className="bg-clip-text text-transparent text-lg font-normal tracking-wide sm:text-xl lg:text-2xl from-gray-700 via-[#0373BA] to-gray-700">END-TO-END PROJECTS_
+              <p className="bg-clip-text text-sky-900 text-lg font-normal tracking-wide sm:text-xl lg:text-2xl from-gray-700 via-[#0373BA] to-gray-700">END-TO-END PROJECTS_
 
               </p>
               <div className="h-px w-10 sm:w-14 bg-gradient-to-l from-transparent via-[#0373BA] to-[#0373BA]" />
