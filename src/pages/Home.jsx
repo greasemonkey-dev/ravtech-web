@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -140,6 +139,19 @@ export default function HomePage() {
           .animate-slide-up {
             animation: slideUp 0.8s ease-out forwards;
           }
+          @keyframes waveMove {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+          }
+          .animate-wave {
+            animation: waveMove 20s linear infinite;
+          }
+          .animate-wave-slow {
+            animation: waveMove 25s linear infinite;
+          }
+          .animate-wave-slower {
+            animation: waveMove 30s linear infinite;
+          }
         `}
       </style>
 
@@ -153,6 +165,24 @@ export default function HomePage() {
           }} />
           <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-gradient-to-br from-[#0373BA]/20 to-cyan-200/20 blur-3xl animate-pulse opacity-50" style={{ animationDuration: '6s' }} />
           <div className="absolute bottom-[5%] right-[5%] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-[#0373BA]/30 to-blue-100/20 blur-3xl" style={{ animation: 'float 8s ease-in-out infinite' }} />
+          
+          {/* Animated Wave Lines */}
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="wave-pattern-1" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+                <path d="M0,50 Q50,30 100,50 T200,50" fill="none" stroke="rgba(135, 206, 250, 0.15)" strokeWidth="2" className="animate-wave" />
+              </pattern>
+              <pattern id="wave-pattern-2" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+                <path d="M0,50 Q50,70 100,50 T200,50" fill="none" stroke="rgba(135, 206, 250, 0.1)" strokeWidth="1.5" className="animate-wave-slow" />
+              </pattern>
+              <pattern id="wave-pattern-3" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+                <path d="M0,50 Q50,35 100,50 T200,50" fill="none" stroke="rgba(135, 206, 250, 0.2)" strokeWidth="2.5" className="animate-wave-slower" />
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="100%" height="33%" fill="url(#wave-pattern-1)" />
+            <rect x="0" y="33%" width="100%" height="33%" fill="url(#wave-pattern-2)" />
+            <rect x="0" y="66%" width="100%" height="34%" fill="url(#wave-pattern-3)" />
+          </svg>
         </div>
 
         <div className="max-w-7xl mx-auto">
