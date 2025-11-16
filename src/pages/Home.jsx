@@ -141,32 +141,48 @@ export default function HomePage() {
             animation: slideUp 0.8s ease-out forwards;
           }
           @keyframes wave-flow {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+            0% { 
+              transform: translateX(-100%);
+              opacity: 0.4;
+            }
+            50% {
+              opacity: 0.8;
+            }
+            100% { 
+              transform: translateX(100%);
+              opacity: 0.4;
+            }
           }
           .wave-line {
             position: absolute;
-            width: 200%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(3, 115, 186, 0.3), transparent);
-            animation: wave-flow 8s linear infinite;
-            pointer-events: none; /* Ensure waves don't interfere with interactions */
+            width: 300%;
+            height: 3px;
+            background: linear-gradient(90deg, 
+              transparent 0%, 
+              rgba(3, 115, 186, 0.1) 20%,
+              rgba(3, 115, 186, 0.6) 50%,
+              rgba(3, 115, 186, 0.1) 80%,
+              transparent 100%);
+            animation: wave-flow 6s linear infinite;
+            pointer-events: none;
+            left: -100%;
+            z-index: 1;
           }
           .wave-line-1 {
-            top: 15%;
+            top: 20%;
             animation-delay: 0s;
           }
           .wave-line-2 {
-            top: 35%;
-            animation-delay: -2s;
+            top: 40%;
+            animation-delay: -1.5s;
           }
           .wave-line-3 {
-            top: 55%;
-            animation-delay: -4s;
+            top: 60%;
+            animation-delay: -3s;
           }
           .wave-line-4 {
-            top: 75%;
-            animation-delay: -6s;
+            top: 80%;
+            animation-delay: -4.5s;
           }
         `}
       </style>
@@ -174,7 +190,7 @@ export default function HomePage() {
       {/* Hero Section - Compact & Visual */}
       <section className="relative pt-16 pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-white via-blue-50/20 to-gray-50">
         {/* Animated Wave Lines */}
-        <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 1 }}>
           <div className="wave-line wave-line-1" />
           <div className="wave-line wave-line-2" />
           <div className="wave-line wave-line-3" />
@@ -191,7 +207,7 @@ export default function HomePage() {
           <div className="absolute bottom-[5%] right-[5%] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-[#0373BA]/30 to-blue-100/20 blur-3xl" style={{ animation: 'float 8s ease-in-out infinite' }} />
         </div>
 
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto relative" style={{ zIndex: 10 }}>
           {/* Top Section: Title + Quick Stats */}
           <div className="text-center mb-6">
             <h1 className="relative mb-3 animate-slide-up">
