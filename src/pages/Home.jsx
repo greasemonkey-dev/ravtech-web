@@ -140,11 +140,47 @@ export default function HomePage() {
           .animate-slide-up {
             animation: slideUp 0.8s ease-out forwards;
           }
+          @keyframes wave-flow {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+          }
+          .wave-line {
+            position: absolute;
+            width: 200%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(3, 115, 186, 0.3), transparent);
+            animation: wave-flow 8s linear infinite;
+            pointer-events: none; /* Ensure waves don't interfere with interactions */
+          }
+          .wave-line-1 {
+            top: 15%;
+            animation-delay: 0s;
+          }
+          .wave-line-2 {
+            top: 35%;
+            animation-delay: -2s;
+          }
+          .wave-line-3 {
+            top: 55%;
+            animation-delay: -4s;
+          }
+          .wave-line-4 {
+            top: 75%;
+            animation-delay: -6s;
+          }
         `}
       </style>
 
       {/* Hero Section - Compact & Visual */}
       <section className="relative pt-16 pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-white via-blue-50/20 to-gray-50">
+        {/* Animated Wave Lines */}
+        <div className="absolute inset-0 -z-10 pointer-events-none">
+          <div className="wave-line wave-line-1" />
+          <div className="wave-line wave-line-2" />
+          <div className="wave-line wave-line-3" />
+          <div className="wave-line wave-line-4" />
+        </div>
+
         {/* Animated Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0" style={{
