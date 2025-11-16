@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -141,16 +140,16 @@ export default function HomePage() {
             animation: slideUp 0.8s ease-out forwards;
           }
           @keyframes waveMove {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
           }
-          .wave-line {
+          .animate-wave {
             animation: waveMove 20s linear infinite;
           }
-          .wave-line-2 {
+          .animate-wave-slow {
             animation: waveMove 25s linear infinite;
           }
-          .wave-line-3 {
+          .animate-wave-slower {
             animation: waveMove 30s linear infinite;
           }
         `}
@@ -168,37 +167,21 @@ export default function HomePage() {
           <div className="absolute bottom-[5%] right-[5%] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-[#0373BA]/30 to-blue-100/20 blur-3xl" style={{ animation: 'float 8s ease-in-out infinite' }} />
           
           {/* Animated Wave Lines */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ minWidth: '200%' }}>
-            <g className="wave-line">
-              <path d="M0,100 Q250,50 500,100 T1000,100 T1500,100 T2000,100 T2500,100 T3000,100" 
-                    stroke="rgba(135, 206, 250, 0.2)" 
-                    strokeWidth="3" 
-                    fill="none" />
-            </g>
-            <g className="wave-line-2">
-              <path d="M0,200 Q250,150 500,200 T1000,200 T1500,200 T2000,200 T2500,200 T3000,200" 
-                    stroke="rgba(135, 206, 250, 0.15)" 
-                    strokeWidth="2" 
-                    fill="none" />
-            </g>
-            <g className="wave-line-3">
-              <path d="M0,300 Q250,250 500,300 T1000,300 T1500,300 T2000,300 T2500,300 T3000,300" 
-                    stroke="rgba(135, 206, 250, 0.25)" 
-                    strokeWidth="2.5" 
-                    fill="none" />
-            </g>
-            <g className="wave-line">
-              <path d="M0,400 Q250,370 500,400 T1000,400 T1500,400 T2000,400 T2500,400 T3000,400" 
-                    stroke="rgba(135, 206, 250, 0.12)" 
-                    strokeWidth="2" 
-                    fill="none" />
-            </g>
-            <g className="wave-line-2">
-              <path d="M0,500 Q250,460 500,500 T1000,500 T1500,500 T2000,500 T2500,500 T3000,500" 
-                    stroke="rgba(135, 206, 250, 0.18)" 
-                    strokeWidth="2" 
-                    fill="none" />
-            </g>
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="wave-pattern-1" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+                <path d="M0,50 Q50,30 100,50 T200,50" fill="none" stroke="rgba(135, 206, 250, 0.15)" strokeWidth="2" className="animate-wave" />
+              </pattern>
+              <pattern id="wave-pattern-2" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+                <path d="M0,50 Q50,70 100,50 T200,50" fill="none" stroke="rgba(135, 206, 250, 0.1)" strokeWidth="1.5" className="animate-wave-slow" />
+              </pattern>
+              <pattern id="wave-pattern-3" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+                <path d="M0,50 Q50,35 100,50 T200,50" fill="none" stroke="rgba(135, 206, 250, 0.2)" strokeWidth="2.5" className="animate-wave-slower" />
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="100%" height="33%" fill="url(#wave-pattern-1)" />
+            <rect x="0" y="33%" width="100%" height="33%" fill="url(#wave-pattern-2)" />
+            <rect x="0" y="66%" width="100%" height="34%" fill="url(#wave-pattern-3)" />
           </svg>
         </div>
 
