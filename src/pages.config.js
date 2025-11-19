@@ -6,7 +6,7 @@ import Careers from './pages/Careers';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import TermsOfUse from './pages/TermsOfUse';
-import Layout from './Layout.jsx';
+import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
@@ -23,5 +23,5 @@ export const PAGES = {
 export const pagesConfig = {
     mainPage: "Home",
     Pages: PAGES,
-    Layout: Layout,
+    Layout: __Layout,
 };

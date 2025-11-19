@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -144,7 +143,7 @@ export default function HomePage() {
       </style>
 
       {/* Hero Section - Compact & Visual */}
-      <section className="bg-sky-100 pt-16 pb-8 px-4 relative sm:px-6 lg:px-8 overflow-hidden from-white via-blue-50/20 to-gray-50">
+      <section className="bg-sky-100 relative min-h-[600px] flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8 overflow-hidden from-white via-blue-50/20 to-gray-50">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0" style={{
