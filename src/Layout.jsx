@@ -315,7 +315,7 @@ export default function Layout({ children }) {
                                 to={createPageUrl("TermsOfUse & Privacy Policy")}
                                 className="text-sm text-gray-600 hover:text-black transition-colors"
                             >
-                                Terms of Use
+                                Terms of Use & Privacy Policy
                             </Link>
                         </div>
                     </div>
