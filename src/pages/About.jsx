@@ -175,7 +175,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600"
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/47b7a0f98_DSC09720.jpg"
                 alt="RavTech Team"
                 className="w-full h-full object-cover" />
 
