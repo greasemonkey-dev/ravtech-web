@@ -393,7 +393,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=600"
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/8f153b016_DSC09712.jpg"
                 alt="Team collaboration"
                 className="w-full h-full object-cover" />
 
