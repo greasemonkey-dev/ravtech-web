@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { LinkedInIcon } from "@/components/LinkedInIcon";
 import {
   Heart,
   Users,
@@ -299,7 +300,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Team */}
+     {/* Our Team */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-black mb-4">
@@ -312,43 +313,93 @@ export default function AboutPage() {
               let imageStyle = {};
 
               if (member.name === "Shmulik Moskowitz") {
-                imageStyle = { objectPosition: '50% 15%', filter: 'grayscale(100%) brightness(1.15)' };
+                imageStyle = {
+                  objectPosition: "50% 15%",
+                  filter: "grayscale(100%) brightness(1.15)",
+                };
               } else if (member.name === "Israel Kobler") {
-                imageStyle = { filter: 'grayscale(100%) brightness(0.9) contrast(1.1)' };
+                imageStyle = {
+                  filter: "grayscale(100%) brightness(0.9) contrast(1.1)",
+                };
               }
 
               return (
-                <Card
+                <div
                   key={index}
-                  className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300 group overflow-hidden">
+                  className="group perspective-1000"
+                  style={{ perspective: "1000px" }}
+                >
+                  <div
+                    className="relative w-full h-[480px] transition-transform duration-700 ease-in-out group-hover:[transform:rotateY(180deg)]"
+                    style={{ transformStyle: "preserve-3d" }}
+                  >
+                    {/* Front Side */}
+                    <div
+                      className="absolute inset-0 rounded-2xl overflow-hidden shadow-lg bg-white"
+                      style={{ backfaceVisibility: "hidden" }}
+                    >
+                      {/* Image */}
+                      <div className="relative h-80 overflow-hidden bg-gray-100">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover grayscale"
+                          style={imageStyle}
+                        />
+                      </div>
 
-                  <CardContent className="p-0">
-                    {/* Image */}
-                    <div className="relative h-80 overflow-hidden bg-gray-100">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 grayscale"
-                        style={imageStyle} />
-
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      {/* Content */}
+                      <div className="p-6 bg-white">
+                        <h3 className="text-2xl font-bold text-black mb-1">
+                          {member.name}
+                        </h3>
+                        <p className="text-[#0373BA] mb-2 text-lg font-semibold">
+                          {member.role}
+                        </p>
+                        <p className="text-gray-500 text-sm line-clamp-2">
+                          {member.bio}...
+                        </p>
+                      </div>
                     </div>
 
-                    {/* Content */}
-                    <div className="p-6">
-                      <h3 className="text-2xl font-bold text-black mb-1">
-                        {member.name}
-                      </h3>
-                      <p className="text-[#0373BA] mb-4 text-lg font-semibold">
-                        {member.role}
-                      </p>
-                      <p className="text-gray-600 leading-relaxed text-sm line-clamp-6">
-                        {member.bio}
-                      </p>
+                    {/* Back Side */}
+                    <div
+                      className="absolute inset-0 rounded-2xl overflow-hidden shadow-lg bg-white p-6 flex flex-col"
+                      style={{ 
+                        backfaceVisibility: "hidden",
+                        transform: "rotateY(180deg)"
+                      }}
+                    >
+                      {/* Header with accent */}
+                      <div className="border-b-2 border-[#CCE7FA] pb-4 mb-4">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h3 className="text-2xl font-bold text-black mb-1">
+                              {member.name}
+                            </h3>
+                            <p className="text-[#0373BA] text-lg font-semibold">
+                              {member.role}
+                            </p>
+                          </div>
+                          <a 
+                            href="#" 
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <LinkedInIcon className="w-7 h-7 text-[#0A66C2]" />
+                          </a>
+                        </div>
+                      </div>
+                      
+                      {/* Bio */}
+                      <div className="flex-1 overflow-y-auto">
+                        <p className="text-gray-600 leading-relaxed text-sm">
+                          {member.bio}
+                        </p>
+                      </div>
                     </div>
-                  </CardContent>
-                </Card>);
-
+                  </div>
+                </div>
+              );
             })}
           </div>
         </div>
