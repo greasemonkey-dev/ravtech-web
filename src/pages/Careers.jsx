@@ -374,6 +374,15 @@ export default function CareersPage() {
         </div>
       </section>
 
+      {/* Team Image */}
+      <section className="relative h-[400px] overflow-hidden">
+        <img
+          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/79dd52225_DSC08345.jpg"
+          alt="RavTech team at work"
+          className="w-full h-full object-cover"
+        />
+      </section>
+
       {/* Why Work at RavTech */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
