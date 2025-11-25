@@ -78,43 +78,58 @@ export default function AboutPage() {
   }];
 
 
+
   const teamMembers = [
-  {
-    name: "Shmulik Moskowitz",
-    role: "CEO",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/2b16da2ff_thumbnail_tmp_d310a441-78df-4a00-a1ec-091be8798f8b.jpg",
-    bio: "Shmulik Moskowitz is the CEO of RavTech, bringing over 15 years of leadership experience across global technology and service organisations. Before joining RavTech, Shmulik served as SVP Sales for Israel and Eastern Europe at Qualitest, where he led large cross-regional teams, developed new markets and business units, and drove end-to-end delivery of quality engineering and digital solutions for enterprise clients. With an MBA in Information Systems and Technology Development & Marketing and an MCPD in Computer Programming, Shmulik combines deep technological understanding with strategic business vision. His expertise spans sales growth, delivery excellence, customer relationship management, and innovation leadership."
-  },
-  {
-    name: "Israel Kobler",
-    role: "VP R&D",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/b79502e1b_Israel_Kobler_new.png",
-    bio: "With 10 years of experience in software product/services development, architecture & management, Israel is a senior manager in the company who oversees and leads all R&D and innovation areas. In addition, he is responsible for overseeing the delivery of services carried out by development teams across the company, recruiting new employees to the development team (programmers, designers, etc.), creating schedules and deadlines, approve budgets regarding development, and in general he responsible for implementing the company's development processes and methodologies."
-  },
-  {
-    name: "Chani Smoler",
-    role: "CFO",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/fe7a00a60_Chani_Smoler.jpg",
-    bio: "Chani is a licensed CPA and holds a BA in Accounting and Information Systems from the Jerusalem College of Technology. Chani is in charge of all Financial aspects of the company and holds a unique role serving as a special advisor to the board of directors. Prior to working at Ravtech, Chani worked for over 5 years as the finance manager at Gvahim, a subsidiary of the Rashi Foundation, and 6 years at Wexler Kodntz'ik Enoch Co. CPA office."
-  },
-  {
-    name: "Shai Liberman",
-    role: "Chairman of the Board",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/5bfd81f06_Shai_Liberman.jpg",
-    bio: "Shai Liberman is the Chairman of the Board at RavTech, bringing over 20 years of executive leadership in the global IT services industry. As Managing Director at Qualitest, Shai leads operations across Israel, Eastern Europe, Switzerland, and Portugal- overseeing more than 2,000 employees and major global accounts. With deep expertise in strategic growth, market expansion, M&A, and organisational leadership, Shai combines business vision with a people-first approach to drive sustainable growth and innovation."
-  },
-  {
-    name: "Benny Levin",
-    role: "Board Member",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/4b197311f_Benny_Levin_new.png",
-    bio: "Benny Levin co-founded NICE Systems, where he served as President, Director, Chairman and CEO. Benny also served as Chairman of the Board of dbMotion. Since retiring from most of his business activities, Benny dedicates himself to a wide array of social and philanthropic activities. He serves as Vice Chairman of IVN, and as Active Chairman of Ben Yakir and Kedma youth villages. Benny served in the IDF Intelligence Corps, retiring with the rank of Lieutenant Colonel. He has a bachelor's and master's degrees in Electrical Engineering from the Technion."
-  },
-  {
-    name: "Shmil Levy",
-    role: "Board Member",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/4f3eab6e4_Shmil_Levy.png",
-    bio: "Co-Founder, and Managing Partner of Sequoia Capital Israel venture capital fund 2001-today. Before his role at Sequoia Capital, Shmil held various important positions as a high-tech entrepreneur, including VP R&D of Lannet from 1992-1996 and CEO of Lannet from 1996-1998 and serving as President of division of Lucent Worldwide for Communications Systems from 1998-2000. Beyond his business activities, since 2018, Mr. Levy has been donating his time and fortune to social investments activities in the domain of incorporating ultra-Orthodox Jews in High Tech. As part of it Mr. Levy is active board member of Ravtech and JBH and co-founded Kodcode- and 'Mego' program that deals with training and placement of ultra-Orthodox men in the Israeli high-tech sector. Mr. Shmil Levy holds a degree in Computer Engineering from Ben Gurion University."
-  }];
+    {
+      name: "Shmulik Moskowitz",
+      role: "CEO",
+      image:
+        "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/2b16da2ff_thumbnail_tmp_d310a441-78df-4a00-a1ec-091be8798f8b.jpg",
+      bio: "Shmulik Moskowitz is the CEO of RavTech, bringing over 15 years of leadership experience across global technology and service organisations. Before joining RavTech, Shmulik served as SVP Sales for Israel and Eastern Europe at Qualitest, where he led large cross-regional teams, developed new markets and business units, and drove end-to-end delivery of quality engineering and digital solutions for enterprise clients. With an MBA in Information Systems and Technology Development & Marketing and an MCPD in Computer Programming, Shmulik combines deep technological understanding with strategic business vision. His expertise spans sales growth, delivery excellence, customer relationship management, and innovation leadership.",
+      linkedin: "https://www.linkedin.com/in/shmulik-moskowitz-379a389/",
+    },
+    {
+      name: "Israel Kobler",
+      role: "VP R&D",
+      image:
+        "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/b79502e1b_Israel_Kobler_new.png",
+      bio: "With 10 years of experience in software product/services development, architecture & management, Israel is a senior manager in the company who oversees and leads all R&D and innovation areas. In addition, he is responsible for overseeing the delivery of services carried out by development teams across the company, recruiting new employees to the development team (programmers, designers, etc.), creating schedules and deadlines, approve budgets regarding development, and in general he responsible for implementing the company's development processes and methodologies.",
+      linkedin: "https://www.linkedin.com/in/israel-kobler/",
+    },
+    {
+      name: "Chani Smoler",
+      role: "CFO",
+      image:
+        "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/fe7a00a60_Chani_Smoler.jpg",
+      bio: "Chani is a licensed CPA and holds a BA in Accounting and Information Systems from the Jerusalem College of Technology. Chani is in charge of all Financial aspects of the company and holds a unique role serving as a special advisor to the board of directors. Prior to working at Ravtech, Chani worked for over 5 years as the finance manager at Gvahim, a subsidiary of the Rashi Foundation, and 6 years at Wexler Kodntz'ik Enoch Co. CPA office.",
+      linkedin: "https://www.linkedin.com/in/chani-smoler/",
+    },
+    {
+      name: "Shai Liberman",
+      role: "Chairman of the Board",
+      image:
+        "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/5bfd81f06_Shai_Liberman.jpg",
+      bio: "Shai Liberman is the Chairman of the Board at RavTech, bringing over 20 years of executive leadership in the global IT services industry. As Managing Director at Qualitest, Shai leads operations across Israel, Eastern Europe, Switzerland, and Portugal- overseeing more than 2,000 employees and major global accounts. With deep expertise in strategic growth, market expansion, M&A, and organisational leadership, Shai combines business vision with a people-first approach to drive sustainable growth and innovation.",
+      linkedin: "https://www.linkedin.com/in/shailiberman/",
+    },
+    {
+      name: "Benny Levin",
+      role: "Board Member",
+      image:
+        "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/4b197311f_Benny_Levin_new.png",
+      bio: "Benny Levin co-founded NICE Systems, where he served as President, Director, Chairman and CEO. Benny also served as Chairman of the Board of dbMotion. Since retiring from most of his business activities, Benny dedicates himself to a wide array of social and philanthropic activities. He serves as Vice Chairman of IVN, and as Active Chairman of Ben Yakir and Kedma youth villages. Benny served in the IDF Intelligence Corps, retiring with the rank of Lieutenant Colonel. He has a bachelor's and master's degrees in Electrical Engineering from the Technion.",
+      linkedin: "https://www.linkedin.com/in/benny-levin-aa97371/",
+    },
+    {
+      name: "Shmil Levy",
+      role: "Board Member",
+      image:
+        "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/4f3eab6e4_Shmil_Levy.png",
+      bio: "Co-Founder, and Managing Partner of Sequoia Capital Israel venture capital fund 2001-today. Before his role at Sequoia Capital, Shmil held various important positions as a high-tech entrepreneur, including VP R&D of Lannet from 1992-1996 and CEO of Lannet from 1996-1998 and serving as President of division of Lucent Worldwide for Communications Systems from 1998-2000. Beyond his business activities, since 2018, Mr. Levy has been donating his time and fortune to social investments activities in the domain of incorporating ultra-Orthodox Jews in High Tech. As part of it Mr. Levy is active board member of Ravtech and JBH and co-founded Kodcode- and 'Mego' program that deals with training and placement of ultra-Orthodox men in the Israeli high-tech sector. Mr. Shmil Levy holds a degree in Computer Engineering from Ben Gurion University.",
+      linkedin: "https://www.linkedin.com/in/shmil-levy-8697343/",
+    },
+  ];
+
 
 
   return (
@@ -382,7 +397,9 @@ export default function AboutPage() {
                             </p>
                           </div>
                           <a 
-                            href="#" 
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}
                           >
                             <LinkedInIcon className="w-7 h-7 text-[#0A66C2]" />
