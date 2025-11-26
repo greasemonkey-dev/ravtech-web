@@ -23,7 +23,6 @@ const navigationItems = [
 export default function Layout({ children }) {
     const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
-    const [formMessage, setFormMessage] = useState({ show: false, success: false, text: "" });
 
     // Scroll to top on route change
     useEffect(() => {
@@ -280,10 +279,10 @@ export default function Layout({ children }) {
                                             message: formData.get("message")
                                         })
                                     });
-                                    setFormMessage({ show: true, success: true, text: "Thank you! Your message has been sent successfully." });
+                                    alert("Form submitted! Thank you for your message.");
                                     e.target.reset();
-                                } catch {
-                                    setFormMessage({ show: true, success: false, text: "Oops! Something went wrong. Please try again." });
+                                } catch (error) {
+                                    alert("Something went wrong. Please try again.");
                                 }
                             }}>
                                 <input
@@ -313,11 +312,6 @@ export default function Layout({ children }) {
                                 >
                                     Submit
                                 </Button>
-                                {formMessage.show && (
-                                    <p className={`text-sm ${formMessage.success ? "text-green-600" : "text-red-600"}`}>
-                                        {formMessage.text}
-                                    </p>
-                                )}
                             </form>
                         </div>
                     </div>
