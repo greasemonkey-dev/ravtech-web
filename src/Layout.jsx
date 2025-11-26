@@ -265,24 +265,42 @@ export default function Layout({ children }) {
                             <h3 className="text-sm font-bold uppercase tracking-wider mb-4 heading-custom">
                                 Quick Contact
                             </h3>
-                            <form className="space-y-3" onSubmit={(e) => {
+                            <form className="space-y-3" onSubmit={async (e) => {
                                 e.preventDefault();
-                                alert("Form submitted! Thank you for your message.");
-                                e.target.reset();
+                                const formData = new FormData(e.target);
+                                try {
+                                    await fetch("https://hook.eu2.make.com/50pb6dj7h20tfxc3sgx5wh5h2u1ehwek", {
+                                        method: "POST",
+                                        headers: { "Content-Type": "application/json" },
+                                        body: JSON.stringify({
+                                            source: "Footer",
+                                            name: formData.get("name"),
+                                            email: formData.get("email"),
+                                            message: formData.get("message")
+                                        })
+                                    });
+                                    alert("Form submitted! Thank you for your message.");
+                                    e.target.reset();
+                                } catch (error) {
+                                    alert("Something went wrong. Please try again.");
+                                }
                             }}>
                                 <input
                                     type="text"
+                                    name="name"
                                     placeholder="Name"
                                     required
                                     className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
                                 />
                                 <input
                                     type="email"
+                                    name="email"
                                     placeholder="Email"
                                     required
                                     className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
                                 />
                                 <textarea
+                                    name="message"
                                     placeholder="Message"
                                     required
                                     rows="3"
