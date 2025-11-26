@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/sheet";
 import { LinkedInIcon } from "@/components/LinkedInIcon";
 import CookieConsent from "@/components/CookieConsent";
-import FormMessage from "@/components/FormMessage";
 
 const navigationItems = [
     { title: "Accelerate Startups", url: createPageUrl("AccelerateStartups") },
@@ -24,7 +23,6 @@ const navigationItems = [
 export default function Layout({ children }) {
     const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
-    const [formMessage, setFormMessage] = useState({ show: false, success: true, text: "" });
 
     // Scroll to top on route change
     useEffect(() => {
@@ -56,22 +54,12 @@ export default function Layout({ children }) {
         script.src = "https://cdn.userway.org/widget.js";
         script.setAttribute("data-account", "5oBc94PtYh");
         script.async = true;
-        
-        // Handle script errors gracefully
-        script.onerror = () => {
-            console.warn("UserWay widget failed to load");
-        };
-        
         document.body.appendChild(script);
 
         return () => {
             // Cleanup script on unmount
-            try {
-                if (document.body.contains(script)) {
-                    document.body.removeChild(script);
-                }
-            } catch (e) {
-                // Ignore cleanup errors
+            if (document.body.contains(script)) {
+                document.body.removeChild(script);
             }
         };
     }, []);
@@ -291,10 +279,10 @@ export default function Layout({ children }) {
                                             message: formData.get("message")
                                         })
                                     });
-                                    setFormMessage({ show: true, success: true, text: "Thank you! Your message has been sent successfully." });
+                                    alert("Form submitted! Thank you for your message.");
                                     e.target.reset();
                                 } catch (error) {
-                                    setFormMessage({ show: true, success: false, text: "Oops! Something went wrong. Please try again." });
+                                    alert("Something went wrong. Please try again.");
                                 }
                             }}>
                                 <input
@@ -357,14 +345,6 @@ export default function Layout({ children }) {
 
             {/* Cookie Consent */}
             <CookieConsent />
-
-            {/* Form Message Modal */}
-            <FormMessage
-                show={formMessage.show}
-                success={formMessage.success}
-                text={formMessage.text}
-                onClose={() => setFormMessage({ ...formMessage, show: false })}
-            />
         </div>
     );
 }
