@@ -28,10 +28,22 @@ export default function AccelerateStartupsPage() {
     message: ""
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Thank you! We'll contact you soon to schedule a consultation call.");
-    setFormData({ fullName: "", mobile: "", email: "", message: "" });
+    try {
+      await fetch("https://hook.eu2.make.com/50pb6dj7h20tfxc3sgx5wh5h2u1ehwek", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "Accelerate Startups",
+          ...formData
+        })
+      });
+      alert("Thank you! We'll contact you soon to schedule a consultation call.");
+      setFormData({ fullName: "", mobile: "", email: "", message: "" });
+    } catch (error) {
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   const handleChange = (e) => {
