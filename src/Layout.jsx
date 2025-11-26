@@ -9,6 +9,7 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import { LinkedInIcon } from "@/components/LinkedInIcon";
+import CookieConsent from "@/components/CookieConsent";
 
 const navigationItems = [
     { title: "Accelerate Startups", url: createPageUrl("AccelerateStartups") },
