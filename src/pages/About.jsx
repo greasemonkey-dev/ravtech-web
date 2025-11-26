@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,6 +16,20 @@ import {
 "lucide-react";
 
 export default function AboutPage() {
+  const [flippedIndices, setFlippedIndices] = useState(new Set());
+
+  const handleCardClick = (index) => {
+    setFlippedIndices((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
+  };
+
   const values = [
   {
     icon: Heart,
@@ -325,6 +339,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {teamMembers.map((member, index) => {
+              const isFlipped = flippedIndices.has(index);
               let imageStyle = {};
 
               if (member.name === "Shmulik Moskowitz") {
@@ -341,11 +356,12 @@ export default function AboutPage() {
               return (
                 <div
                   key={index}
-                  className="group perspective-1000"
+                  className="group perspective-1000 cursor-pointer"
                   style={{ perspective: "1000px" }}
+                  onClick={() => handleCardClick(index)}
                 >
                   <div
-                    className="relative w-full h-[480px] transition-transform duration-700 ease-in-out group-hover:[transform:rotateY(180deg)]"
+                    className={`relative w-full h-[480px] transition-all duration-500 ease-in-out will-change-transform md:group-hover:[transform:rotateY(180deg)] ${isFlipped ? '[transform:rotateY(180deg)]' : ''}`}
                     style={{ transformStyle: "preserve-3d" }}
                   >
                     {/* Front Side */}
