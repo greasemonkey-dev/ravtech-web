@@ -19,16 +19,28 @@ export default function ContactPage() {
     message: ""
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Thank you for your message! We'll get back to you within 24 hours.");
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      company: "",
-      message: ""
-    });
+    try {
+      await fetch("https://hook.eu2.make.com/50pb6dj7h20tfxc3sgx5wh5h2u1ehwek", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "Contact Us",
+          ...formData
+        })
+      });
+      alert("Thank you for your message! We'll get back to you within 24 hours.");
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        company: "",
+        message: ""
+      });
+    } catch (error) {
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   const handleChange = (e) => {
