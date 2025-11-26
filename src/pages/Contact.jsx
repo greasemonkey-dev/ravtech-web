@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormMessage from "@/components/FormMessage";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -18,6 +19,7 @@ export default function ContactPage() {
     company: "",
     message: ""
   });
+  const [formMessage, setFormMessage] = useState({ show: false, success: false, text: "" });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,7 +32,7 @@ export default function ContactPage() {
           ...formData
         })
       });
-      alert("Thank you for your message! We'll get back to you within 24 hours.");
+      setFormMessage({ show: true, success: true, text: "Thank you for your message! We'll get back to you within 24 hours." });
       setFormData({
         fullName: "",
         email: "",
@@ -38,8 +40,8 @@ export default function ContactPage() {
         company: "",
         message: ""
       });
-    } catch (error) {
-      alert("Something went wrong. Please try again.");
+    } catch {
+      setFormMessage({ show: true, success: false, text: "Oops! Something went wrong. Please try again." });
     }
   };
 
@@ -239,6 +241,14 @@ export default function ContactPage() {
           </a>
         </div>
       </section>
-    </div>);
 
-}
+              {/* Form Success/Error Message Modal */}
+              <FormMessage
+                show={formMessage.show}
+                success={formMessage.success}
+                text={formMessage.text}
+                onClose={() => setFormMessage({ show: false, success: false, text: "" })}
+              />
+            </div>);
+
+      }

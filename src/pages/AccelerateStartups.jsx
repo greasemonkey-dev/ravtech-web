@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormMessage from "@/components/FormMessage";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -27,6 +28,7 @@ export default function AccelerateStartupsPage() {
     email: "",
     message: ""
   });
+  const [formMessage, setFormMessage] = useState({ show: false, success: false, text: "" });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,10 +41,10 @@ export default function AccelerateStartupsPage() {
           ...formData
         })
       });
-      alert("Thank you! We'll contact you soon to schedule a consultation call.");
+      setFormMessage({ show: true, success: true, text: "Thank you! We'll contact you soon to schedule a consultation call." });
       setFormData({ fullName: "", mobile: "", email: "", message: "" });
-    } catch (error) {
-      alert("Something went wrong. Please try again.");
+    } catch {
+      setFormMessage({ show: true, success: false, text: "Oops! Something went wrong. Please try again." });
     }
   };
 
@@ -512,10 +514,18 @@ export default function AccelerateStartupsPage() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-700">RavTech 2025</p>
-          </div>
-        </div>
-      </section>
-    </div>);
+                        <p className="text-gray-700">RavTech 2025</p>
+                      </div>
+                    </div>
+                  </section>
+
+                  {/* Form Success/Error Message Modal */}
+                  <FormMessage
+                    show={formMessage.show}
+                    success={formMessage.success}
+                    text={formMessage.text}
+                    onClose={() => setFormMessage({ show: false, success: false, text: "" })}
+                  />
+                </div>);
 
 }
