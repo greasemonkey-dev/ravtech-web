@@ -300,17 +300,11 @@ export default function Layout({ children }) {
 
                     {/* Copyright & Social Media - All on Left Side */}
                     <div className="pt-8 border-t border-gray-200">
-                        <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-4">
+                        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                             <p className="text-sm text-gray-600 text-center md:text-left">
                                 © 2025 RavTech. All rights reserved.
                             </p>
-                            <div className="flex items-center gap-6">
-                                <Link
-                                    to={createPageUrl("TermsOfUse")}
-                                    className="text-sm text-gray-600 hover:text-black transition-colors"
-                                >
-                                    Terms of Use & Privacy Policy
-                                </Link>
+                            <div className="flex items-center gap-4">
                                 <a
                                     href="https://www.linkedin.com/company/ravtech"
                                     target="_blank"
@@ -319,6 +313,12 @@ export default function Layout({ children }) {
                                 >
                                     <LinkedInIcon className="w-5 h-5" />
                                 </a>
+                                <Link
+                                    to={createPageUrl("TermsOfUse")}
+                                    className="text-sm text-gray-600 hover:text-black transition-colors"
+                                >
+                                    Terms of Use & Privacy Policy
+                                </Link>
                             </div>
                         </div>
                     </div>
