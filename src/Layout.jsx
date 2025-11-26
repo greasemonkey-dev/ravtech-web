@@ -56,12 +56,22 @@ export default function Layout({ children }) {
         script.src = "https://cdn.userway.org/widget.js";
         script.setAttribute("data-account", "5oBc94PtYh");
         script.async = true;
+        
+        // Handle script errors gracefully
+        script.onerror = () => {
+            console.warn("UserWay widget failed to load");
+        };
+        
         document.body.appendChild(script);
 
         return () => {
             // Cleanup script on unmount
-            if (document.body.contains(script)) {
-                document.body.removeChild(script);
+            try {
+                if (document.body.contains(script)) {
+                    document.body.removeChild(script);
+                }
+            } catch (e) {
+                // Ignore cleanup errors
             }
         };
     }, []);
