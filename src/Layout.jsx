@@ -322,6 +322,9 @@ export default function Layout({ children }) {
                     </div>
                 </div>
             </footer>
+
+            {/* Cookie Consent */}
+            <CookieConsent />
         </div>
     );
 }
