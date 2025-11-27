@@ -47,8 +47,8 @@ const Scroller = ({ logos = DEFAULT_LOGOS, reverse = false }) => {
               src={src}
               alt={`logo-${i}`}
               style={{
-                width: isQualitest ? "120px" : "80px",
-                height: isQualitest ? "60px" : "40px",
+                width: isQualitest ? "200px" : "80px",
+                height: isQualitest ? "90px" : "40px",
                 objectFit: "contain",
                 filter: "grayscale(100%) contrast(90%) opacity(90%)"
               }}
