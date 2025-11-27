@@ -5,17 +5,15 @@ const DEFAULT_LOGOS = [
   "https://ravtech.co.il/wp-content/uploads/2025/03/logo-5.png",
   "https://ravtech.co.il/wp-content/uploads/2025/03/logo-3.png",
   "https://ravtech.co.il/wp-content/uploads/2025/03/logo-4.png",
-  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png",
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/68c7526ab_QUALITEST_logo.png"
+  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png"
 ];
 
 const Scroller = ({ logos = DEFAULT_LOGOS, reverse = false }) => {
-  // Repeat logos enough times to fill screen (4x), then double for seamless loop
-  const baseSet = [...logos, ...logos, ...logos, ...logos];
-  const repeated = [...baseSet, ...baseSet];
+  const repeated = Array(5).fill(logos).flat();
 
   return (
     <div style={{ position: "relative", overflow: "hidden", width: "100%" }}>
+      {/* 🔹 מגדירים את האנימציות כאן */}
       <style>
         {`
           @keyframes marquee {
@@ -35,22 +33,21 @@ const Scroller = ({ logos = DEFAULT_LOGOS, reverse = false }) => {
           flexDirection: "row",
           alignItems: "center",
           gap: "3rem",
-          width: "max-content",
-          animation: `${reverse ? "marqueeReverse" : "marquee"} 80s linear infinite`,
-          maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)"
+          width: "200%",
+          animation: `${reverse ? "marqueeReverse" : "marquee"} 60s linear infinite`,
+          maskImage:
+            "linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0))"
         }}
       >
         {repeated.map((src, i) => (
           <img
             key={i}
             src={src}
-            alt="Brand Logo"
+            alt={`logo-${i}`}
             style={{
+              width: "80px",
               height: "40px",
-              width: "auto",
-              maxWidth: "150px",
               objectFit: "contain",
-              flexShrink: 0,
               filter: "grayscale(100%) contrast(90%) opacity(90%)"
             }}
             loading="lazy"
