@@ -376,10 +376,7 @@ export default function ServicesPage() {
           <div className="bg-[#0373BA] mb-8 w-24 h-1" />
 
           <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-4xl">
-            We manage end-to-end projects of all sizes. Working with you on the management and developer levels, we accompany you throughout the whole lifecycle of your project. We share our expertise in creating product roadmaps, implementation, and integration, relying on the Kanban methodology in all project phases.{" "}
-            <Link to={createPageUrl("Projects")} className="text-[#0373BA] font-semibold hover:text-black transition-colors">
-              Read about the Oriient end-to-end project.
-            </Link>
+            We manage end-to-end projects of all sizes. Working with you on the management and developer levels, we accompany you throughout the whole lifecycle of your project. We share our expertise in creating product roadmaps, implementation, and integration, relying on the Kanban methodology in all project phases.
           </p>
 
           <div className="relative">
