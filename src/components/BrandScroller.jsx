@@ -10,7 +10,7 @@ const DEFAULT_LOGOS = [
 ];
 
 const Scroller = ({ logos = DEFAULT_LOGOS, reverse = false }) => {
-  const repeated = Array(6).fill(logos).flat();
+  const repeated = Array(5).fill(logos).flat();
 
   return (
     <div style={{ position: "relative", overflow: "hidden", width: "100%" }}>
