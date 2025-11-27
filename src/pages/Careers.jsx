@@ -431,13 +431,13 @@ export default function CareersPage() {
             We're always looking for talented individuals. Send us your CV and
             let's talk about opportunities.
           </p>
-          <Button
-            onClick={scrollToContact}
-            className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">
-
-            <Mail className="w-5 h-5 mr-2" />
-            Send Your CV
-          </Button>
+          <a href="mailto:ravtech+j1000+s11365@app.civi.co.il">
+                        <Button
+                          className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">
+                          <Mail className="w-5 h-5 mr-2" />
+                          Send Your CV
+                        </Button>
+                      </a>
         </div>
       </section>
     </div>);
