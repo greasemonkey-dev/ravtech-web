@@ -10,11 +10,12 @@ const DEFAULT_LOGOS = [
 ];
 
 const Scroller = ({ logos = DEFAULT_LOGOS, reverse = false }) => {
-  const repeated = Array(5).fill(logos).flat();
+  // Repeat logos enough times to fill screen (4x), then double for seamless loop
+  const baseSet = [...logos, ...logos, ...logos, ...logos];
+  const repeated = [...baseSet, ...baseSet];
 
   return (
     <div style={{ position: "relative", overflow: "hidden", width: "100%" }}>
-      {/* 🔹 מגדירים את האנימציות כאן */}
       <style>
         {`
           @keyframes marquee {
@@ -34,21 +35,22 @@ const Scroller = ({ logos = DEFAULT_LOGOS, reverse = false }) => {
           flexDirection: "row",
           alignItems: "center",
           gap: "3rem",
-          width: "200%",
-          animation: `${reverse ? "marqueeReverse" : "marquee"} 60s linear infinite`,
-          maskImage:
-            "linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0))"
+          width: "max-content",
+          animation: `${reverse ? "marqueeReverse" : "marquee"} 80s linear infinite`,
+          maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)"
         }}
       >
         {repeated.map((src, i) => (
           <img
             key={i}
             src={src}
-            alt={`logo-${i}`}
+            alt="Brand Logo"
             style={{
-              width: "80px",
               height: "40px",
+              width: "auto",
+              maxWidth: "150px",
               objectFit: "contain",
+              flexShrink: 0,
               filter: "grayscale(100%) contrast(90%) opacity(90%)"
             }}
             loading="lazy"
