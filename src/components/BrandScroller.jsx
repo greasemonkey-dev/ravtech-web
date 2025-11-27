@@ -5,41 +5,8 @@ const DEFAULT_LOGOS = [
   "https://ravtech.co.il/wp-content/uploads/2025/03/logo-5.png",
   "https://ravtech.co.il/wp-content/uploads/2025/03/logo-3.png",
   "https://ravtech.co.il/wp-content/uploads/2025/03/logo-4.png",
-  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png",
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/aed64a88b_QUALITEST_logo-6.png"
+  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png"
 ];
-
-const SafeLogo = ({ src, index, style }) => {
-  const [imgSrc, setImgSrc] = React.useState(src);
-
-  React.useEffect(() => {
-    // Fix for Supabase image with wrong Content-Type header
-    if (src.includes("supabase.co") && src.includes("QUALITEST")) {
-      fetch(src)
-        .then(res => res.blob())
-        .then(blob => {
-          // Force the blob to be treated as an image if it's octet-stream
-          const imageBlob = blob.type === 'application/octet-stream' 
-            ? new Blob([blob], { type: 'image/png' }) 
-            : blob;
-          const url = URL.createObjectURL(imageBlob);
-          setImgSrc(url);
-        })
-        .catch(err => console.error("Failed to load logo:", err));
-    }
-  }, [src]);
-
-  return (
-    <img
-      key={index}
-      src={imgSrc}
-      alt={`logo-${index}`}
-      style={style}
-      loading="lazy"
-      draggable={false}
-    />
-  );
-};
 
 const Scroller = ({ logos = DEFAULT_LOGOS, reverse = false }) => {
   const repeated = Array(5).fill(logos).flat();
@@ -73,16 +40,18 @@ const Scroller = ({ logos = DEFAULT_LOGOS, reverse = false }) => {
         }}
       >
         {repeated.map((src, i) => (
-          <SafeLogo
+          <img
             key={i}
-            index={i}
             src={src}
+            alt={`logo-${i}`}
             style={{
               width: "80px",
               height: "40px",
               objectFit: "contain",
               filter: "grayscale(100%) contrast(90%) opacity(90%)"
             }}
+            loading="lazy"
+            draggable={false}
           />
         ))}
       </div>
