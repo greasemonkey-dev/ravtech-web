@@ -635,10 +635,7 @@ export default function ServicesPage() {
             Our comprehensive service includes building an automation lab and a full testing system, running the testing and ensuring product functionality on every device. Our clear aim is to shorten release cycles and improve the final product.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-4xl">
-            As a partner of Perfecto Mobile, we provide development and testing system maintenance for mobile, web, client-server, load/performance and more.{" "}
-            <Link to={createPageUrl("Projects")} className="text-[#0373BA] hover:text-black font-semibold transition-colors">
-              Read the QA automation project at Check Point.
-            </Link>
+            As a partner of Perfecto Mobile, we provide development and testing system maintenance for mobile, web, client-server, load/performance and more.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
