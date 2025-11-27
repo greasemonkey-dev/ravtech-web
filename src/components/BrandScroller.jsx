@@ -39,21 +39,24 @@ const Scroller = ({ logos = DEFAULT_LOGOS, reverse = false }) => {
             "linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0))"
         }}
       >
-        {repeated.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt={`logo-${i}`}
-            style={{
-              width: "80px",
-              height: "40px",
-              objectFit: "contain",
-              filter: "grayscale(100%) contrast(90%) opacity(90%)"
-            }}
-            loading="lazy"
-            draggable={false}
-          />
-        ))}
+        {repeated.map((src, i) => {
+          const isQualitest = typeof src === 'string' && src.includes("QUALITEST_logo");
+          return (
+            <img
+              key={i}
+              src={src}
+              alt={`logo-${i}`}
+              style={{
+                width: isQualitest ? "120px" : "80px",
+                height: isQualitest ? "60px" : "40px",
+                objectFit: "contain",
+                filter: "grayscale(100%) contrast(90%) opacity(90%)"
+              }}
+              loading="lazy"
+              draggable={false}
+            />
+          );
+        })}
       </div>
     </div>
   );
