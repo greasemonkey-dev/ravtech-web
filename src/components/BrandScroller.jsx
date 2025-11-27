@@ -5,7 +5,8 @@ const DEFAULT_LOGOS = [
   "https://ravtech.co.il/wp-content/uploads/2025/03/logo-5.png",
   "https://ravtech.co.il/wp-content/uploads/2025/03/logo-3.png",
   "https://ravtech.co.il/wp-content/uploads/2025/03/logo-4.png",
-  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png"
+  "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png",
+  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/68c7526ab_QUALITEST_logo.png"
 ];
 
 const Scroller = ({ logos = DEFAULT_LOGOS, reverse = false }) => {
