@@ -447,10 +447,7 @@ export default function ServicesPage() {
           <div className="bg-[#0373BA] mb-8 w-24 h-1" />
 
           <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-4xl">
-            Bridging the gap between your evolving IT/development needs and staffing requirements — whether it's for a short-term project or to meet your long-term goals – we provide your IT and development department with expert personnel to support your project and your team.{" "}
-            <Link to={createPageUrl("Projects")} className="text-[#0373BA] font-semibold hover:text-black transition-colors">
-              Read about the Check Point staff augmentation project.
-            </Link>
+            Bridging the gap between your evolving IT/development needs and staffing requirements — whether it's for a short-term project or to meet your long-term goals – we provide your IT and development department with expert personnel to support your project and your team.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
