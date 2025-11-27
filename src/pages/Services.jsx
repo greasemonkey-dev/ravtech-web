@@ -525,10 +525,7 @@ export default function ServicesPage() {
             We build your mobile application using the latest technologies and languages. We enable user collaboration, tracking and routing, server-side simulations, statistical analysis and more. Some of the technologies we use include: native Android, native iOS, client & server architecture, GEO Mapping, Mobility & Tracking, augmented reality.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-4xl">
-            We deploy the Perfecto Mobile testing platform to ensure your app will function smoothly on all Android flavors.{" "}
-            <Link to={createPageUrl("Projects")} className="text-[#0373BA] hover:text-black font-semibold transition-colors">
-              Read the RavTech mobile project at Oriient.
-            </Link>
+            We deploy the Perfecto Mobile testing platform to ensure your app will function smoothly on all Android flavors.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
