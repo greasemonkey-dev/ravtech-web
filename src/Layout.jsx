@@ -66,6 +66,20 @@ export default function Layout({ children }) {
         };
     }, []);
 
+    // Add Google Site Verification
+    useEffect(() => {
+        const meta = document.createElement("meta");
+        meta.name = "google-site-verification";
+        meta.content = "k1VwoRrOyYTpKLWQ2E1MvDvAOKl2umNngDgFH_WvqDc";
+        document.head.appendChild(meta);
+
+        return () => {
+            if (document.head.contains(meta)) {
+                document.head.removeChild(meta);
+            }
+        };
+    }, []);
+
     return (
         <div className="min-h-screen bg-white">
             <style>
