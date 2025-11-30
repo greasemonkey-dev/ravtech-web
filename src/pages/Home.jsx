@@ -230,12 +230,12 @@ export default function HomePage() {
             <div className="bg-white/60 backdrop-blur-sm rounded-2xl py-4 px-6 shadow-md border border-[#0373BA]/10">
               <BrandScroller
                 logos={[
-                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-2.png",
-                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-5.png",
-                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-3.png",
-                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-4.png",
-                "https://ravtech.co.il/wp-content/uploads/2025/03/logo-1.png",
-                "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/c5a1d2142_QUALITEST-logo-6.png"]
+                "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/167410083_Check-Point-logo-4.png",
+                "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/01e55e056_DISKIN-logo-2.png",
+                "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/a404dd8d9_Elbit-Systems-logo-1.png",
+                "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/73cedb1da_Nice-logo-5.png",
+                "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/49fcca056_QUALITEST-logo-6.png",
+                "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/484b2e10f_WIX-logo-3.png"]
                 } />
             </div>
           </div>
