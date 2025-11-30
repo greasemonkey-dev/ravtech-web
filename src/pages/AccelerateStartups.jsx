@@ -33,7 +33,7 @@ export default function AccelerateStartupsPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch("https://hook.eu2.make.com/50pb6dj7h20tfxc3sgx5wh5h2u1ehwek", {
+      await fetch("https://hook.eu1.make.com/wgwrrp5zb9b56hhv5j5daxuas8fha38y", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
