@@ -84,13 +84,13 @@ export default function Layout({ children }) {
         useEffect(() => {
         const script = document.createElement("script");
         script.async = true;
-        script.src = "https://www.googletagmanager.com/gtag/js?id=G-32BWV1Y8ZX";
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-LRWXG6XWC3";
         document.head.appendChild(script);
 
         window.dataLayer = window.dataLayer || [];
         function gtag(){window.dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-32BWV1Y8ZX');
+        gtag('config', 'G-LRWXG6XWC3');
 
         return () => {
             if (document.head.contains(script)) {
