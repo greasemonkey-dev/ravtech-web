@@ -66,12 +66,38 @@ export default function Layout({ children }) {
         };
     }, []);
 
-    // Add Google Site Verification
-    useEffect(() => {
-        const meta = document.createElement("meta");
-        meta.name = "google-site-verification";
-        meta.content = "k1VwoRrOyYTpKLWQ2E1MvDvAOKl2umNngDgFH_WvqDc";
-        document.head.appendChild(meta);
+    // Add Organization JSON-LD Schema
+        useEffect(() => {
+            const script = document.createElement("script");
+            script.type = "application/ld+json";
+            script.text = JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Ravtech",
+                "url": "https://ravtech.co.il",
+                "logo": "https://ravtech.co.il/logo.png",
+                "description": "AI integration and data unification for manufacturing and logistics companies in Israel",
+                "areaServed": "IL",
+                "knowsLanguage": ["he", "en"],
+                "serviceType": [
+                    "AI Integration",
+                    "Data Unification",
+                    "Supply Chain Automation",
+                    "ERP AI Integration",
+                    "Route Optimization AI"
+                ],
+                "sameAs": ["https://www.linkedin.com/company/ravtech"]
+            });
+            document.head.appendChild(script);
+            return () => { if (document.head.contains(script)) document.head.removeChild(script); };
+        }, []);
+
+        // Add Google Site Verification
+        useEffect(() => {
+            const meta = document.createElement("meta");
+            meta.name = "google-site-verification";
+            meta.content = "k1VwoRrOyYTpKLWQ2E1MvDvAOKl2umNngDgFH_WvqDc";
+            document.head.appendChild(meta);
 
         return () => {
             if (document.head.contains(meta)) {
