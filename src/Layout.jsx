@@ -15,6 +15,10 @@ import FormMessage from "@/components/FormMessage";
 const navigationItems = [
     { title: "Accelerate Startups", url: createPageUrl("AccelerateStartups") },
     { title: "Services", url: createPageUrl("Services") },
+    { title: "Industries", url: null, children: [
+        { title: "AI Manufacturing", url: "/ai-manufacturing" },
+        { title: "AI Logistics", url: "/ai-logistics" },
+    ]},
     { title: "Projects", url: createPageUrl("Projects") },
     { title: "Careers", url: createPageUrl("Careers") },
     { title: "About", url: createPageUrl("About") },
@@ -153,24 +157,40 @@ export default function Layout({ children }) {
 
                         {/* Desktop Navigation */}
                         <nav className="hidden lg:flex items-center space-x-8">
-                            {navigationItems.map((item) => (
+                            {navigationItems.map((item) =>
+                              item.children ? (
+                                <div key={item.title} className="relative group">
+                                  <button className="text-base font-semibold tracking-wide text-gray-700 hover:text-gray-900 flex items-center gap-1 transition-all duration-300">
+                                    <span className="transition-transform duration-300 group-hover:-translate-y-0.5 inline-block">{item.title}</span>
+                                    <svg aria-hidden="true" className="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                  </button>
+                                  <div className="absolute top-full left-0 mt-2 w-52 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                    {item.children.map(child => (
+                                      <Link key={child.title} to={child.url} className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0373BA] transition-colors first:rounded-t-lg last:rounded-b-lg">
+                                        {child.title}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+                              ) : (
                                 <Link
-                                    key={item.title}
-                                    to={item.url}
-                                    className={`text-base font-semibold tracking-wide relative group transition-all duration-300 ${location.pathname === item.url
-                                            ? "text-black"
-                                            : "text-gray-700 hover:text-gray-900"
-                                        }`}
+                                  key={item.title}
+                                  to={item.url}
+                                  className={`text-base font-semibold tracking-wide relative group transition-all duration-300 ${location.pathname === item.url
+                                      ? "text-black"
+                                      : "text-gray-700 hover:text-gray-900"
+                                    }`}
                                 >
-                                    <span className="transition-transform duration-300 group-hover:-translate-y-0.5 inline-block">
-                                        {item.title}
-                                    </span>
-                                    <span
-                                        className={`absolute -bottom-1 left-0 w-0 h-[2px] bg-gray-900 rounded-full transition-all duration-300 group-hover:w-full ${location.pathname === item.url ? "w-full" : ""
-                                            }`}
-                                    />
+                                  <span className="transition-transform duration-300 group-hover:-translate-y-0.5 inline-block">
+                                    {item.title}
+                                  </span>
+                                  <span
+                                    className={`absolute -bottom-1 left-0 w-0 h-[2px] bg-gray-900 rounded-full transition-all duration-300 group-hover:w-full ${location.pathname === item.url ? "w-full" : ""
+                                      }`}
+                                  />
                                 </Link>
-                            ))}
+                              )
+                            )}
                         </nav>
 
                         {/* Social Icons - Desktop */}
@@ -194,19 +214,35 @@ export default function Layout({ children }) {
                             </SheetTrigger>
                             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                                 <nav className="flex flex-col space-y-6 mt-8">
-                                    {navigationItems.map((item) => (
+                                    {navigationItems.map((item) =>
+                                      item.children ? (
+                                        <React.Fragment key={item.title}>
+                                          <span className="text-xs font-bold uppercase tracking-wider text-gray-400 mt-2">Industries</span>
+                                          {item.children.map(child => (
+                                            <Link
+                                              key={child.title}
+                                              to={child.url}
+                                              onClick={() => setIsOpen(false)}
+                                              className="text-lg font-medium text-gray-700 hover:text-gray-900 pl-4 border-l-2 border-[#0373BA] transition-all duration-300"
+                                            >
+                                              {child.title}
+                                            </Link>
+                                          ))}
+                                        </React.Fragment>
+                                      ) : (
                                         <Link
-                                            key={item.title}
-                                            to={item.url}
-                                            onClick={() => setIsOpen(false)}
-                                            className={`text-lg font-medium transition-all duration-300 ${location.pathname === item.url
-                                                    ? "text-black"
-                                                    : "text-gray-700 hover:text-gray-900"
-                                                }`}
+                                          key={item.title}
+                                          to={item.url}
+                                          onClick={() => setIsOpen(false)}
+                                          className={`text-lg font-medium transition-all duration-300 ${location.pathname === item.url
+                                              ? "text-black"
+                                              : "text-gray-700 hover:text-gray-900"
+                                            }`}
                                         >
-                                            {item.title}
+                                          {item.title}
                                         </Link>
-                                    ))}
+                                      )
+                                    )}
                                     <div className="flex items-center space-x-4 pt-8 border-t border-gray-200">
                                         <a
                                             href="https://www.linkedin.com/company/ravtech"
@@ -231,7 +267,7 @@ export default function Layout({ children }) {
             {/* Footer */}
             <footer className="bg-gray-50 border-t border-gray-200 mt-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
                         {/* Quick Links */}
                         <div>
                             <h3 className="text-sm font-bold uppercase tracking-wider mb-4 heading-custom">
@@ -297,6 +333,35 @@ export default function Layout({ children }) {
                                     </Link>
                                 </li>
                             </ul>
+                        </div>
+
+                        {/* Industry Solutions */}
+                        <div>
+                          <h3 className="text-sm font-bold uppercase tracking-wider mb-4 heading-custom">
+                            Industry Solutions
+                          </h3>
+                          <ul className="space-y-3">
+                            <li>
+                              <Link to="/ai-manufacturing" className="text-gray-600 hover:text-black transition-colors">
+                                AI Manufacturing
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/ai-logistics" className="text-gray-600 hover:text-black transition-colors">
+                                AI Logistics
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/case-studies/degalert" className="text-gray-600 hover:text-black transition-colors">
+                                DegAlert Case Study
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/faq/ai-manufacturing-logistics" className="text-gray-600 hover:text-black transition-colors">
+                                AI Manufacturing FAQ
+                              </Link>
+                            </li>
+                          </ul>
                         </div>
 
                         {/* Contact Info */}
