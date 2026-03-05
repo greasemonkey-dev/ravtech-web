@@ -48,6 +48,11 @@
  * The mainPage value must match a key in the PAGES object exactly.
  */
 import About from './pages/About';
+import AiManufacturingHeCluster from './pages/AiManufacturingHeCluster';
+import AiLogisticsHeCluster from './pages/AiLogisticsHeCluster';
+import AiUseCasesIsrael from './pages/AiUseCasesIsrael';
+import AiIntegrationFramework from './pages/AiIntegrationFramework';
+import FaqAiManufacturing from './pages/FaqAiManufacturing';
 import SupplyChainAutomation from './pages/SupplyChainAutomation';
 import ErpMethodology from './pages/ErpMethodology';
 import RouteOptimization from './pages/RouteOptimization';
@@ -103,6 +108,11 @@ export const PAGES = {
     "ai-logistics/route-optimization-guide": RouteOptimizationGuide,
     "ai-logistics/warehouse-automation": WarehouseAutomation,
     "ai-logistics/real-time-tracking": RealTimeTracking,
+    "ai-manufacturing-he/cluster": AiManufacturingHeCluster,
+    "ai-logistics-he/cluster": AiLogisticsHeCluster,
+    "blog/ai-manufacturing-use-cases-israel-2026": AiUseCasesIsrael,
+    "ai-integration-framework": AiIntegrationFramework,
+    "faq/ai-manufacturing-logistics": FaqAiManufacturing,
 }
 
 export const pagesConfig = {
