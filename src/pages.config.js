@@ -66,6 +66,13 @@ import Projects from './pages/Projects';
 import Services from './pages/Services';
 import Solutions from './pages/Solutions';
 import TermsOfUse from './pages/TermsOfUse';
+import SupplyChainIsrael from './pages/SupplyChainIsrael';
+import ErpAiIntegration from './pages/ErpAiIntegration';
+import PredictiveMaintenance from './pages/PredictiveMaintenance';
+import QualityControlAi from './pages/QualityControlAi';
+import RouteOptimizationGuide from './pages/RouteOptimizationGuide';
+import WarehouseAutomation from './pages/WarehouseAutomation';
+import RealTimeTracking from './pages/RealTimeTracking';
 import __Layout from './Layout.jsx';
 
 
@@ -89,6 +96,13 @@ export const PAGES = {
     "ai-manufacturing/erp-methodology": ErpMethodology,
     "ai-logistics/route-optimization": RouteOptimization,
     "ai-logistics/demand-forecasting-methodology": DemandForecasting,
+    "ai-manufacturing/supply-chain-israel": SupplyChainIsrael,
+    "ai-manufacturing/erp-ai-integration": ErpAiIntegration,
+    "ai-manufacturing/predictive-maintenance": PredictiveMaintenance,
+    "ai-manufacturing/quality-control-ai": QualityControlAi,
+    "ai-logistics/route-optimization-guide": RouteOptimizationGuide,
+    "ai-logistics/warehouse-automation": WarehouseAutomation,
+    "ai-logistics/real-time-tracking": RealTimeTracking,
 }
 
 export const pagesConfig = {
