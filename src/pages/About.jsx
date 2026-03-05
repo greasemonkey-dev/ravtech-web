@@ -502,6 +502,12 @@ export default function AboutPage() {
                 organization, we continue to expand our reach and deepen our
                 impact on both the tech industry and Israeli society.
               </p>
+              <p className="text-gray-600 mb-6">
+                Beyond software products, Ravtech integrates AI into traditional industrial operations — helping Israeli manufacturing and logistics companies unify their data and automate decisions.{" "}
+                <Link to="/case-studies/degalert" className="text-[#0373BA] hover:underline font-medium">
+                  See our work with DegAlert →
+                </Link>
+              </p>
             </div>
           </div>
         </div>

@@ -104,6 +104,25 @@ export default function HomePage() {
 
 
 
+  useEffect(() => {
+    const prevTitle = document.title;
+    document.title = "Ravtech — Software Development & AI Integration for Industry";
+
+    let meta = document.querySelector('meta[name="description"]');
+    let metaCreated = false;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = "description";
+      metaCreated = true;
+    }
+    meta.content = "Ravtech — software development partner for Israeli startups and AI integration for manufacturing and logistics companies. Proven results. Technical team based in Israel.";
+    if (metaCreated) document.head.appendChild(meta);
+
+    return () => {
+      document.title = prevTitle;
+    };
+  }, []);
+
   // Auto-rotate carousel
   useEffect(() => {
     const interval = setInterval(() => {
