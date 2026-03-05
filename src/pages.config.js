@@ -49,6 +49,7 @@
  */
 import About from './pages/About';
 import AiManufacturing from './pages/AiManufacturing';
+import AiManufacturingHe from './pages/AiManufacturingHe';
 import DegAlert from './pages/DegAlert';
 import AccelerateStartups from './pages/AccelerateStartups';
 import Careers from './pages/Careers';
@@ -65,6 +66,7 @@ import __Layout from './Layout.jsx';
 export const PAGES = {
     "About": About,
     "ai-manufacturing": AiManufacturing,
+    "ai-manufacturing-he": AiManufacturingHe,
     "case-studies/degalert": DegAlert,
     "AccelerateStartups": AccelerateStartups,
     "Careers": Careers,
