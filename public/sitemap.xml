@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- HOMEPAGE -->
+  <url>
+    <loc>https://ravtech.co.il/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- PILLAR — Manufacturing (EN + HE pair) -->
+  <url>
+    <loc>https://ravtech.co.il/ai-manufacturing</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ravtech.co.il/ai-manufacturing"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/ai-manufacturing-he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ravtech.co.il/ai-manufacturing"/>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ai-manufacturing-he</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/ai-manufacturing-he"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ravtech.co.il/ai-manufacturing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ravtech.co.il/ai-manufacturing"/>
+  </url>
+
+  <!-- PILLAR — Logistics (EN + HE pair) -->
+  <url>
+    <loc>https://ravtech.co.il/ai-logistics</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ravtech.co.il/ai-logistics"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/ai-logistics-he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ravtech.co.il/ai-logistics"/>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ai-logistics-he</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/ai-logistics-he"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ravtech.co.il/ai-logistics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ravtech.co.il/ai-logistics"/>
+  </url>
+
+  <!-- ANCHOR — DegAlert Case Study -->
+  <url>
+    <loc>https://ravtech.co.il/case-studies/degalert</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ravtech.co.il/case-studies/degalert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ravtech.co.il/case-studies/degalert"/>
+  </url>
+
+  <!-- METHODOLOGY — Manufacturing -->
+  <url>
+    <loc>https://ravtech.co.il/ai-manufacturing/supply-chain-automation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ravtech.co.il/ai-manufacturing/supply-chain-automation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ravtech.co.il/ai-manufacturing/supply-chain-automation"/>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ai-manufacturing/erp-methodology</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ravtech.co.il/ai-manufacturing/erp-methodology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ravtech.co.il/ai-manufacturing/erp-methodology"/>
+  </url>
+
+  <!-- METHODOLOGY — Logistics -->
+  <url>
+    <loc>https://ravtech.co.il/ai-logistics/route-optimization</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ravtech.co.il/ai-logistics/route-optimization"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ravtech.co.il/ai-logistics/route-optimization"/>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ai-logistics/demand-forecasting-methodology</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ravtech.co.il/ai-logistics/demand-forecasting-methodology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ravtech.co.il/ai-logistics/demand-forecasting-methodology"/>
+  </url>
+
+  <!-- CLUSTERS — Manufacturing EN -->
+  <url>
+    <loc>https://ravtech.co.il/ai-manufacturing/supply-chain-israel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ai-manufacturing/erp-ai-integration</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ai-manufacturing/predictive-maintenance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ai-manufacturing/quality-control-ai</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- CLUSTER — Manufacturing HE -->
+  <url>
+    <loc>https://ravtech.co.il/ai-manufacturing-he/cluster</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/ai-manufacturing-he/cluster"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ravtech.co.il/ai-manufacturing/supply-chain-israel"/>
+  </url>
+
+  <!-- CLUSTERS — Logistics EN -->
+  <url>
+    <loc>https://ravtech.co.il/ai-logistics/route-optimization-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ai-logistics/warehouse-automation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ai-logistics/real-time-tracking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- CLUSTER — Logistics HE -->
+  <url>
+    <loc>https://ravtech.co.il/ai-logistics-he/cluster</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/ai-logistics-he/cluster"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ravtech.co.il/ai-logistics/route-optimization-guide"/>
+  </url>
+
+  <!-- BONUS PAGES -->
+  <url>
+    <loc>https://ravtech.co.il/blog/ai-manufacturing-use-cases-israel-2026</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ai-integration-framework</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/faq/ai-manufacturing-logistics</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
