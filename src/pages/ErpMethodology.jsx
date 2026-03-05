@@ -39,6 +39,7 @@ export default function ErpMethodology() {
 
     return () => {
       document.title = prevTitle;
+      if (metaCreated && document.head.contains(meta)) document.head.removeChild(meta);
       if (document.head.contains(schema)) document.head.removeChild(schema);
     };
   }, []);
@@ -72,7 +73,7 @@ export default function ErpMethodology() {
       </div>
 
       <div className="p-8 bg-gray-50 rounded-xl text-center mt-16">
-        <h3 className="text-xl font-bold mb-3">Start your ERP AI integration</h3>
+        <h3 className="text-xl font-bold mb-3">Ready to integrate your ERP with AI?</h3>
         <Link to={createPageUrl("Contact")} className="inline-flex items-center gap-2 bg-[#0373BA] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#025a94] transition-colors">
           Start your ERP AI integration <ArrowRight aria-hidden="true" className="w-4 h-4" />
         </Link>

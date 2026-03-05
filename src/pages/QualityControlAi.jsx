@@ -39,6 +39,7 @@ export default function QualityControlAi() {
 
     return () => {
       document.title = prevTitle;
+      if (metaCreated && document.head.contains(meta)) document.head.removeChild(meta);
       if (document.head.contains(schema)) document.head.removeChild(schema);
     };
   }, []);
