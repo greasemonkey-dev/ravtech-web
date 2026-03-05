@@ -420,6 +420,28 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+
+      {/* Enterprise AI Integration — Phase 2 CTA (below fold, additive) */}
+      <section className="py-16 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-sm font-semibold text-[#0373BA] uppercase tracking-wide mb-3">Enterprise AI Integration</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Running a factory or logistics operation?</h2>
+          <p className="text-gray-600 mb-8 max-w-xl mx-auto">
+            We help Israeli manufacturers and logistics companies integrate AI into their existing operations — without replacing systems or hiring data scientists.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/ai-manufacturing" className="inline-flex items-center justify-center gap-2 bg-[#0373BA] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#025a94] transition-colors">
+              AI Manufacturing <ArrowRight aria-hidden="true" className="w-4 h-4" />
+            </Link>
+            <Link to="/ai-logistics" className="inline-flex items-center justify-center gap-2 border border-[#0373BA] text-[#0373BA] px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              AI Logistics <ArrowRight aria-hidden="true" className="w-4 h-4" />
+            </Link>
+          </div>
+          <p className="text-xs text-gray-400 mt-6">
+            Proven with DegAlert — 40% faster order handling, 3,847 orders tracked in real-time.
+          </p>
+        </div>
+      </section>
     </div>);
 
 }
