@@ -5,15 +5,28 @@ import { ArrowRight, TrendingUp, Clock, Package } from "lucide-react";
 
 export default function DegAlert() {
   useEffect(() => {
+    // Title — restore on unmount
+    const prevTitle = document.title;
     document.title = "DegAlert Case Study — AI Supply Chain Automation | Ravtech";
 
-    const meta = document.querySelector('meta[name="description"]') || document.createElement('meta');
-    meta.name = "description";
+    // Meta description — find or create, always update
+    let meta = document.querySelector('meta[name="description"]');
+    let metaCreated = false;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = "description";
+      metaCreated = true;
+    }
     meta.content = "How Ravtech built an AI supply chain system for DegAlert — 40% faster order handling, 3,847 orders tracked in real-time, hundreds of thousands ₪ saved annually.";
-    if (!document.querySelector('meta[name="description"]')) document.head.appendChild(meta);
+    if (metaCreated) document.head.appendChild(meta);
+
+    // JSON-LD schema — remove existing before adding (dedup guard)
+    const existingSchema = document.querySelector('script[data-page="degalert"]');
+    if (existingSchema) existingSchema.remove();
 
     const schema = document.createElement("script");
     schema.type = "application/ld+json";
+    schema.setAttribute("data-page", "degalert");
     schema.text = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -25,6 +38,7 @@ export default function DegAlert() {
     document.head.appendChild(schema);
 
     return () => {
+      document.title = prevTitle;
       if (document.head.contains(schema)) document.head.removeChild(schema);
     };
   }, []);
@@ -32,7 +46,7 @@ export default function DegAlert() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Breadcrumb */}
-      <nav className="text-sm text-gray-500 mb-8">
+      <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-8">
         <Link to={createPageUrl("Home")} className="hover:text-black">Home</Link>
         <span className="mx-2">/</span>
         <Link to="/ai-manufacturing" className="hover:text-black">AI Manufacturing</Link>
@@ -48,7 +62,7 @@ export default function DegAlert() {
         </p>
       </div>
 
-      <h1 className="text-4xl font-bold text-gray-900 mb-4 heading-custom">
+      <h1 className="text-4xl font-bold mb-4 heading-custom">
         DegAlert — AI Supply Chain Automation
       </h1>
       <p className="text-xl text-gray-600 mb-12">
@@ -58,18 +72,18 @@ export default function DegAlert() {
       {/* Key metrics */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
         <div className="border border-gray-200 rounded-lg p-6 text-center">
-          <TrendingUp className="w-8 h-8 text-[#0373BA] mx-auto mb-3" />
+          <TrendingUp aria-hidden="true" className="w-8 h-8 text-[#0373BA] mx-auto mb-3" />
           <div className="text-3xl font-bold text-gray-900 mb-1">40%</div>
           <div className="text-sm text-gray-600">Faster order handling</div>
         </div>
         <div className="border border-gray-200 rounded-lg p-6 text-center">
-          <Package className="w-8 h-8 text-[#0373BA] mx-auto mb-3" />
+          <Package aria-hidden="true" className="w-8 h-8 text-[#0373BA] mx-auto mb-3" />
           <div className="text-3xl font-bold text-gray-900 mb-1">3,847</div>
           <div className="text-sm text-gray-600">Orders tracked in real-time</div>
         </div>
         <div className="border border-gray-200 rounded-lg p-6 text-center">
-          <Clock className="w-8 h-8 text-[#0373BA] mx-auto mb-3" />
-          <div className="text-3xl font-bold text-gray-900 mb-1">₪₪₪</div>
+          <Clock aria-hidden="true" className="w-8 h-8 text-[#0373BA] mx-auto mb-3" />
+          <div className="text-3xl font-bold text-gray-900 mb-1">₪100K+</div>
           <div className="text-sm text-gray-600">Saved annually</div>
         </div>
       </div>
