@@ -70,31 +70,6 @@ export default function Layout({ children }) {
         };
     }, []);
 
-    // Add Organization JSON-LD Schema
-        useEffect(() => {
-            const script = document.createElement("script");
-            script.type = "application/ld+json";
-            script.text = JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "name": "Ravtech",
-                "url": "https://ravtech.co.il",
-                "logo": "https://ravtech.co.il/logo.png",
-                "description": "AI integration and data unification for manufacturing and logistics companies in Israel",
-                "areaServed": "IL",
-                "knowsLanguage": ["he", "en"],
-                "serviceType": [
-                    "AI Integration",
-                    "Data Unification",
-                    "Supply Chain Automation",
-                    "ERP AI Integration",
-                    "Route Optimization AI"
-                ],
-                "sameAs": ["https://www.linkedin.com/company/ravtech"]
-            });
-            document.head.appendChild(script);
-            return () => { if (document.head.contains(script)) document.head.removeChild(script); };
-        }, []);
 
         // Add Google Site Verification
         useEffect(() => {
@@ -130,6 +105,37 @@ export default function Layout({ children }) {
         }, []);
 
     return (
+        <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Ravtech",
+            "url": "https://ravtech.co.il",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/44f4fb0d2_logo.png",
+                "width": 200,
+                "height": 60
+            },
+            "description": "AI integration and data unification for manufacturing and logistics companies in Israel",
+            "areaServed": "IL",
+            "knowsLanguage": ["he", "en"],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "21 Bar Kochva Street, Concord Tower",
+                "addressLocality": "Bnei Brak",
+                "addressCountry": "IL"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "contact@ravtech.co.il",
+                "contactType": "customer service",
+                "availableLanguage": ["Hebrew", "English"]
+            },
+            "sameAs": [
+                "https://www.linkedin.com/company/ravtech"
+            ]
+        }) }} />
         <div className="min-h-screen bg-white">
             <style>
                 {`
@@ -480,5 +486,6 @@ export default function Layout({ children }) {
                 onClose={() => setFormMessage({ show: false, success: false, text: "" })}
             />
         </div>
+        </>
     );
 }
