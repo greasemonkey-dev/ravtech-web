@@ -48,6 +48,7 @@
  * The mainPage value must match a key in the PAGES object exactly.
  */
 import About from './pages/About';
+import ContentPolicy from './pages/ContentPolicy';
 import AiManufacturingHeCluster from './pages/AiManufacturingHeCluster';
 import AiLogisticsHeCluster from './pages/AiLogisticsHeCluster';
 import AiUseCasesIsrael from './pages/AiUseCasesIsrael';
@@ -97,6 +98,7 @@ export const PAGES = {
     "Services": Services,
     "Solutions": Solutions,
     "TermsOfUse": TermsOfUse,
+    "ContentPolicy": ContentPolicy,
     "ai-manufacturing/supply-chain-automation": SupplyChainAutomation,
     "ai-manufacturing/erp-methodology": ErpMethodology,
     "ai-logistics/route-optimization": RouteOptimization,

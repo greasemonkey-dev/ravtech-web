@@ -469,6 +469,12 @@ export default function Layout({ children }) {
                                 >
                                     Terms of Use & Privacy Policy
                                 </Link>
+                                <Link
+                                    to={createPageUrl("ContentPolicy")}
+                                    className="text-sm text-gray-600 hover:text-black transition-colors"
+                                >
+                                    Content Policy
+                                </Link>
                             </div>
                         </div>
                     </div>
