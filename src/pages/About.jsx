@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,8 +15,76 @@ import {
   Handshake } from
 "lucide-react";
 
+const PERSON_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://ravtech.co.il/about#shmulik-moskowitz",
+  name: "Shmulik Moskowitz",
+  jobTitle: "CEO",
+  description:
+    "Shmulik Moskowitz is the CEO of RavTech, bringing over 15 years of leadership experience across global technology and service organisations. Before joining RavTech, Shmulik served as SVP Sales for Israel and Eastern Europe at Qualitest, where he led large cross-regional teams and drove end-to-end delivery of quality engineering and digital solutions for enterprise clients.",
+  image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69033bb7c3427caaeea09a3b/2b16da2ff_thumbnail_tmp_d310a441-78df-4a00-a1ec-091be8798f8b.jpg",
+  url: "https://ravtech.co.il/about",
+  sameAs: ["https://www.linkedin.com/in/shmulik-moskowitz-379a389/"],
+  knowsAbout: [
+    "Software Development Services",
+    "Staff Augmentation",
+    "R&D Extension & Management",
+    "Quality Engineering",
+    "Sales Leadership & Business Development",
+    "Enterprise Technology Consulting",
+    "Social Impact Business",
+  ],
+  worksFor: { "@id": "https://ravtech.co.il/#organization" },
+};
+
+const ORG_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://ravtech.co.il/#organization",
+  name: "RavTech",
+  url: "https://ravtech.co.il",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://ravtech.co.il/logo-schema.png",
+    width: 200,
+    height: 60,
+  },
+  description:
+    "RavTech is a leading software development company combining technical excellence with social responsibility, delivering world-class services while empowering Haredi talent in the tech industry.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Concord Tower, 21 Bar Kochva Street",
+    addressLocality: "Bnei-Brak",
+    addressCountry: "IL",
+  },
+  contactPoint: { "@type": "ContactPoint", email: "contact@ravtech.co.il", contactType: "customer service" },
+  sameAs: ["https://www.linkedin.com/company/ravtech"],
+  foundingDate: "2013",
+  numberOfEmployees: { "@type": "QuantitativeValue", value: 200 },
+};
+
 export default function AboutPage() {
   const [flippedIndices, setFlippedIndices] = useState(new Set());
+
+  useEffect(() => {
+    document.title = "About Shmulik Moskowitz | CEO — RavTech";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute("content", "Shmulik Moskowitz is the CEO of RavTech, bringing over 15 years of leadership in global technology. RavTech delivers software development services while empowering Haredi talent in tech.");
+
+    const injectSchema = (id, data) => {
+      let el = document.getElementById(id);
+      if (!el) { el = document.createElement("script"); el.id = id; el.type = "application/ld+json"; document.head.appendChild(el); }
+      el.textContent = JSON.stringify(data);
+    };
+    injectSchema("schema-person", PERSON_SCHEMA);
+    injectSchema("schema-org", ORG_SCHEMA);
+
+    return () => {
+      document.title = "RavTech | Software Development & Social Impact";
+      ["schema-person", "schema-org"].forEach(id => document.getElementById(id)?.remove());
+    };
+  }, []);
 
   const handleCardClick = (index) => {
     setFlippedIndices((prev) => {
