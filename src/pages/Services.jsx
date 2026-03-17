@@ -386,7 +386,7 @@ export default function ServicesPage() {
             <div className="ai-card-amber rounded-2xl p-8">
               <div className="flex items-start justify-between mb-6">
                 <div>
-                  <div className="ai-pill-amber mb-3">מוצר ישראלי</div>
+                  <div className="ai-pill-amber mb-3" dir="rtl" lang="he">מוצר ישראלי</div>
                   <h3 className="ai-font text-2xl font-black text-white">RavDoc AI</h3>
                   <p className="text-sm mt-1" style={{ color: "rgba(255,255,255,0.45)" }}>
                     AI Document Processing
