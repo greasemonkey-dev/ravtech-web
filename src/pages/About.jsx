@@ -572,8 +572,8 @@ export default function AboutPage() {
               </p>
               <p className="text-gray-600 mb-6">
                 Beyond software products, Ravtech integrates AI into traditional industrial operations — helping Israeli manufacturing and logistics companies unify their data and automate decisions.{" "}
-                <Link to="/case-studies/degalert" className="text-[#0373BA] hover:underline font-medium">
-                  See our work with DegAlert →
+                <Link to="/ai-manufacturing" className="text-[#0373BA] hover:underline font-medium">
+                  See our AI manufacturing work →
                 </Link>
               </p>
             </div>

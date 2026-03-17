@@ -57,25 +57,25 @@ export default function HomePage() {
   {
     title:
     "The Secret of NICE: 66% Faster Recruitment, 25% Cost Savings, Employees Who Stay 5 Years",
-    videoUrl: "https://www.youtube.com/embed/hGYLaLXPpRA",
+    videoUrl: "https://www.youtube-nocookie.com/embed/hGYLaLXPpRA",
     company: "NICE"
   },
   {
     title:
     "Venn's Secret to Success: With RavTech We Achieved 25% Cost Savings and 30% More Productivity",
-    videoUrl: "https://www.youtube.com/embed/jfbUpJE4AZ8",
+    videoUrl: "https://www.youtube-nocookie.com/embed/jfbUpJE4AZ8",
     company: "Venn"
   },
   {
     title:
     "The Secret of CONNACT: 25% Cost Savings, Fast Recruitment, and 30% More Productivity",
-    videoUrl: "https://www.youtube.com/embed/4A5tLhZHr6Y",
+    videoUrl: "https://www.youtube-nocookie.com/embed/4A5tLhZHr6Y",
     company: "CONNACT"
   },
   {
     title:
     "The Secret of AMDOCS: How Juniors and Strong Team Lead Deliver Strong Results and 30% Cost Savings",
-    videoUrl: "https://www.youtube.com/embed/9Jw6jOLt_JY",
+    videoUrl: "https://www.youtube-nocookie.com/embed/9Jw6jOLt_JY",
     company: "AMDOCS"
   }];
 
@@ -156,7 +156,7 @@ export default function HomePage() {
             to { opacity: 1; transform: translateY(0); }
           }
           .animate-slide-up {
-            animation: slideUp 0.8s ease-out forwards;
+            animation: slideUp 0.8s ease-out both;
           }
         `}
       </style>
@@ -457,7 +457,7 @@ export default function HomePage() {
             </Link>
           </div>
           <p className="text-xs text-gray-400 mt-6">
-            Proven with DegAlert — 40% faster order handling, 3,847 orders tracked in real-time.
+            Proven with Israeli manufacturers — measurably faster operations, automated at scale.
           </p>
         </div>
       </section>

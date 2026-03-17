@@ -358,8 +358,8 @@ export default function Layout({ children }) {
                               </Link>
                             </li>
                             <li>
-                              <Link to="/case-studies/degalert" className="text-gray-600 hover:text-black transition-colors">
-                                DegAlert Case Study
+                              <Link to="/ai-manufacturing" className="text-gray-600 hover:text-black transition-colors">
+                                AI Manufacturing Guide
                               </Link>
                             </li>
                             <li>

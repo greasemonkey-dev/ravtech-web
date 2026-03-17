@@ -71,9 +71,7 @@ export default function AiManufacturingHe() {
       <p className="text-xl text-gray-600 mb-6">
         כיצד יצרנים ישראלים משתמשים ב-AI לצמצום עלויות תפעוליות וביטול עיכובים בשרשרת האספקה — מבלי להחליף מערכות קיימות.
       </p>
-      <Link to="/case-studies/degalert" className="inline-flex items-center gap-2 text-[#0373BA] font-semibold hover:underline mb-12 block">
-        <ArrowRight aria-hidden="true" className="w-4 h-4 rotate-180" /> ראו מקרה בוחן DegAlert — 40% מהיר יותר
-      </Link>
+
 
       {/* Cluster grid */}
       <h2 className="text-2xl font-bold text-gray-900 mb-6">מדריכי AI לתעשייה</h2>

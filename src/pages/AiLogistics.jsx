@@ -81,9 +81,7 @@ export default function AiLogistics() {
       <p className="text-xl text-gray-600 mb-6">
         How Israeli logistics companies are using AI to cut costs, optimize routes, and eliminate manual tracking — without replacing existing systems.
       </p>
-      <Link to="/case-studies/degalert" className="inline-flex items-center gap-2 text-[#0373BA] font-semibold hover:underline mb-12 block">
-        See DegAlert case study — 40% faster order handling <ArrowRight className="w-4 h-4" />
-      </Link>
+
 
       {/* Cluster grid */}
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Logistics AI Guides</h2>

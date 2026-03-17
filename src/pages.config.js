@@ -47,6 +47,13 @@
  *
  * The mainPage value must match a key in the PAGES object exactly.
  */
+import RavDataDashboard from './pages/RavDataDashboard';
+import RavDataHome from './pages/RavDataHome';
+import RavDataReconciliation from './pages/RavDataReconciliation';
+import RavDataOcr from './pages/RavDataOcr';
+import RavDataProviders from './pages/RavDataProviders';
+import RavDataFaq from './pages/RavDataFaq';
+import RavDataBlog from './pages/RavDataBlog';
 import About from './pages/About';
 import ContentPolicy from './pages/ContentPolicy';
 import AiManufacturingHeCluster from './pages/AiManufacturingHeCluster';
@@ -62,7 +69,6 @@ import AiLogistics from './pages/AiLogistics';
 import AiLogisticsHe from './pages/AiLogisticsHe';
 import AiManufacturing from './pages/AiManufacturing';
 import AiManufacturingHe from './pages/AiManufacturingHe';
-import DegAlert from './pages/DegAlert';
 import AccelerateStartups from './pages/AccelerateStartups';
 import Careers from './pages/Careers';
 import CaseStudies from './pages/CaseStudies';
@@ -79,6 +85,7 @@ import QualityControlAi from './pages/QualityControlAi';
 import RouteOptimizationGuide from './pages/RouteOptimizationGuide';
 import WarehouseAutomation from './pages/WarehouseAutomation';
 import RealTimeTracking from './pages/RealTimeTracking';
+import RavDocAi from './pages/RavDocAi';
 import __Layout from './Layout.jsx';
 
 
@@ -88,7 +95,6 @@ export const PAGES = {
     "ai-logistics-he": AiLogisticsHe,
     "ai-manufacturing": AiManufacturing,
     "ai-manufacturing-he": AiManufacturingHe,
-    "case-studies/degalert": DegAlert,
     "AccelerateStartups": AccelerateStartups,
     "Careers": Careers,
     "CaseStudies": CaseStudies,
@@ -115,6 +121,15 @@ export const PAGES = {
     "blog/ai-manufacturing-use-cases-israel-2026": AiUseCasesIsrael,
     "ai-integration-framework": AiIntegrationFramework,
     "faq/ai-manufacturing-logistics": FaqAiManufacturing,
+    // RavData cluster
+    "ravdata": RavDataHome,
+    "ravdata/invoice-reconciliation": RavDataReconciliation,
+    "ravdata/delivery-note-ocr": RavDataOcr,
+    "ravdata/provider-management": RavDataProviders,
+    "faq/small-fleet-management-israel": RavDataFaq,
+    "blog/logistics-management-software-israel-2026": RavDataBlog,
+    "ravdata/logistics-dashboard": RavDataDashboard,
+    "ravdoc-ai": RavDocAi,
 }
 
 export const pagesConfig = {
