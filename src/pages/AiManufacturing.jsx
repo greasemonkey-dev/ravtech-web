@@ -83,6 +83,19 @@ export default function AiManufacturing() {
       </p>
 
 
+      {/* Above-fold CTA */}
+      <div className="flex flex-col sm:flex-row items-center gap-4 mb-12 p-5 bg-[#E0F2FE] rounded-xl border border-[#0373BA]/20">
+        <p className="text-gray-700 text-sm flex-1">
+          Ready to explore AI for your factory? Talk to us — no commitment, 30-minute call.
+        </p>
+        <Link
+          to="/contact"
+          className="inline-flex items-center gap-2 bg-[#0373BA] text-white text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-[#025a94] transition-colors whitespace-nowrap"
+        >
+          Talk to us <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
+
       {/* Cluster grid */}
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Manufacturing AI Guides</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
