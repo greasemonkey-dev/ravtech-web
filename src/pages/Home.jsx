@@ -180,7 +180,7 @@ export default function HomePage() {
             <h1 className="relative mb-3 animate-slide-up">
               <span className="block text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
                 <span className="relative inline-block">
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#0373BA] via-cyan-500 to-[#0373BA] bg-clip-text text-transparent blur-lg opacity-40 animate-pulse" style={{ animationDuration: '3s' }}>
+                  <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-[#0373BA] via-cyan-500 to-[#0373BA] bg-clip-text text-transparent blur-lg opacity-40 animate-pulse" style={{ animationDuration: '3s' }}>
                     ACHIEVE WHAT
                   </span>
                   <span className="relative bg-gradient-to-r from-gray-900 via-[#0373BA] to-gray-900 bg-clip-text text-transparent">
@@ -189,7 +189,7 @@ export default function HomePage() {
                 </span>
                 <br />
                 <span className="relative inline-block mt-1">
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#0373BA] via-cyan-500 to-[#0373BA] bg-clip-text text-transparent blur-lg opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }}>
+                  <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-[#0373BA] via-cyan-500 to-[#0373BA] bg-clip-text text-transparent blur-lg opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }}>
                     YOU ENVISION
                   </span>
                   <span className="relative bg-gradient-to-r from-gray-900 via-[#0373BA] to-gray-900 bg-clip-text text-transparent">

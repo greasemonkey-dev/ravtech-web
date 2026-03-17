@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { LinkedInIcon } from "@/components/LinkedInIcon";
 import {
   Heart,
@@ -359,7 +358,7 @@ export default function AboutPage() {
             {/* Timeline line */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#CCE7FA] -translate-x-1/2" />
 
-            <div className="space-y-12">
+            <div className="space-y-8">
               {milestones.map((milestone, index) =>
               <div
                 key={index}
@@ -592,18 +591,17 @@ export default function AboutPage() {
             team, we'd love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to={createPageUrl("Contact")}>
-              <Button className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">
-                Work With Us
-              </Button>
+            <Link
+              to={createPageUrl("Contact")}
+              className="inline-flex items-center justify-center bg-[#0373BA] text-white hover:bg-[#025a94] text-lg px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg font-semibold"
+            >
+              Work With Us
             </Link>
-            <Link to={createPageUrl("Careers")}>
-              <Button
-                variant="outline"
-                className="text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 border-2 border-black hover:bg-black hover:text-white">
-
-                Join Our Team
-              </Button>
+            <Link
+              to={createPageUrl("Careers")}
+              className="inline-flex items-center justify-center border-2 border-[#0373BA] text-[#0373BA] hover:bg-[#0373BA] hover:text-white text-lg px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 font-semibold bg-transparent"
+            >
+              Join Our Team
             </Link>
           </div>
         </div>

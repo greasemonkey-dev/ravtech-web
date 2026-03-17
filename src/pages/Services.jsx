@@ -558,10 +558,11 @@ export default function ServicesPage() {
           <p className="text-xl text-gray-800 mb-8">
             Let's discuss how we can help you achieve your development goals
           </p>
-          <Link to={createPageUrl("Contact")}>
-            <Button className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">
-              Contact Us Today
-            </Button>
+          <Link
+            to={createPageUrl("Contact")}
+            className="inline-flex items-center justify-center bg-black text-white hover:bg-gray-800 text-lg px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg font-semibold"
+          >
+            Contact Us Today
           </Link>
         </div>
       </section>

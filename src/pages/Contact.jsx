@@ -123,7 +123,7 @@ export default function ContactPage() {
 
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone
+                        Phone <span className="text-xs text-gray-400 font-normal">(optional)</span>
                       </label>
                       <input
                         type="tel"
@@ -138,7 +138,7 @@ export default function ContactPage() {
 
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                        Company
+                        Company <span className="text-xs text-gray-400 font-normal">(optional)</span>
                       </label>
                       <input
                         type="text"
@@ -237,11 +237,12 @@ export default function ContactPage() {
             Our team is ready to help you achieve your development goals. Let's
             build something amazing together.
           </p>
-          <a href="mailto:contact@ravtech.co.il">
-            <Button className="bg-black text-white hover:bg-gray-800 text-lg px-8 py-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">
-              <Mail className="w-5 h-5 mr-2" />
-              Email Us
-            </Button>
+          <a
+            href="mailto:contact@ravtech.co.il"
+            className="inline-flex items-center justify-center bg-black text-white hover:bg-gray-800 text-lg px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg font-semibold"
+          >
+            <Mail className="w-5 h-5 mr-2" />
+            Email Us
           </a>
         </div>
       </section>
