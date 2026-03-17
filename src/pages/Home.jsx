@@ -4,6 +4,7 @@ import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { BrandScroller } from "../components/BrandScroller";
+import ResponsiveVideo from "../components/ResponsiveVideo";
 import {
   Code,
   Users,
@@ -350,15 +351,7 @@ export default function HomePage() {
               className="border-none shadow-lg overflow-hidden bg-white">
 
                 <CardContent className="p-0">
-                  <div className="aspect-video">
-                    <iframe
-                    src={testimonial.videoUrl}
-                    title={testimonial.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full" />
-
-                  </div>
+                  <ResponsiveVideo src={testimonial.videoUrl} title={testimonial.title} />
                   <div className="p-6">
                     <h3 className="text-lg font-semibold text-black mb-2">
                       {testimonial.company}

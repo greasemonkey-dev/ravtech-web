@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { createPageUrl } from "@/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import ResponsiveVideo from "../components/ResponsiveVideo";
 import {
   FileText, Code2, Rocket, Wrench,
   Users, Lightbulb, GitBranch, TrendingUp, ClipboardList,
@@ -482,15 +483,7 @@ export default function ServicesPage() {
                     <div className={`absolute top-4 left-4 ${cs.bgColor} text-white font-bold text-sm px-4 py-2 rounded-full z-10`}>
                       Case #{cs.number}
                     </div>
-                    <div className="aspect-video bg-gray-900">
-                      <iframe
-                        src={cs.videoUrl}
-                        title={cs.title}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="w-full h-full"
-                      />
-                    </div>
+                    <ResponsiveVideo src={cs.videoUrl} title={cs.title} />
                   </div>
                   <div className="p-8">
                     <div className="flex items-center mb-4">
