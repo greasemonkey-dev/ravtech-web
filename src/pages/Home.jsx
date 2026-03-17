@@ -333,6 +333,15 @@ export default function HomePage() {
 
             })}
           </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to={createPageUrl("Services")}
+              className="inline-flex items-center gap-2 text-[#0373BA] font-semibold hover:underline text-base"
+            >
+              See all services & capabilities <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
