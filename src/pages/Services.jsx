@@ -186,6 +186,7 @@ const caseStudies = [
 export default function ServicesPage() {
   const location = useLocation();
   useEffect(() => {
+    document.title = "Services & AI Solutions | RavTech";
     if (location.hash) {
       setTimeout(() => {
         const el = document.querySelector(location.hash);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FormMessage from "@/components/FormMessage";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -12,6 +12,10 @@ import {
 import { LinkedInIcon } from "../components/LinkedInIcon";
 
 export default function ContactPage() {
+  useEffect(() => {
+    document.title = "Contact RavTech | Start Your Project";
+  }, []);
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
