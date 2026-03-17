@@ -225,13 +225,14 @@ export default function HomePage() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-5 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <Link to={createPageUrl("Contact")}>
-                <Button className="group relative bg-gradient-to-r from-[#0373BA] to-[#0373BA]/90 text-white hover:from-[#025a94] hover:to-[#0373BA] text-sm px-8 py-5 rounded-full transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-[#0373BA]/30 overflow-hidden">
-                  <span className="relative flex items-center gap-2">
-                    Contact Us Now
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
-                </Button>
+              <Link
+                to={createPageUrl("Contact")}
+                className="group relative inline-flex items-center justify-center bg-gradient-to-r from-[#0373BA] to-[#0373BA]/90 text-white hover:from-[#025a94] hover:to-[#0373BA] text-sm px-8 py-5 rounded-full transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-[#0373BA]/30 overflow-hidden"
+              >
+                <span className="relative flex items-center gap-2">
+                  Contact Us Now
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
               </Link>
               <Button
                 variant="outline"
