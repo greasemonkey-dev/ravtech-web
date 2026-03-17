@@ -440,7 +440,7 @@ export default function Layout({ children }) {
                                 />
                                 <Button
                                     type="submit"
-                                    className="w-full bg-[#CCE7FA] text-black hover:bg-[#B8D9F0] transition-colors"
+                                    className="w-full bg-[#0373BA] text-white hover:bg-[#025a94] transition-colors font-semibold"
                                 >
                                     Submit
                                 </Button>
