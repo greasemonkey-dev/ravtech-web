@@ -123,8 +123,8 @@ export default function Layout({ children }) {
             "knowsLanguage": ["he", "en"],
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "21 Bar Kochva Street, Concord Tower",
-                "addressLocality": "Bnei Brak",
+                "streetAddress": "Yegi'a Kapayim St 24",
+                "addressLocality": "Petah Tikva",
                 "addressCountry": "IL"
             },
             "contactPoint": {
@@ -389,9 +389,8 @@ export default function Layout({ children }) {
                             </h3>
                             <div className="space-y-3 text-sm text-gray-600">
                                 <p>
-                                    Concord Tower<br />
-                                    21 Bar Kochva Street<br />
-                                    Bnei-Brak, Israel
+                                    Yegi'a Kapayim St 24<br />
+                                    Petah Tikva, Israel
                                 </p>
                                 <p>
                                     <a

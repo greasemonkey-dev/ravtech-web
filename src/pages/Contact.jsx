@@ -190,11 +190,10 @@ export default function ContactPage() {
                         <MapPin className="w-6 h-6 text-black" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-black mb-2">Bnei Brak Office</h3>
+                        <h3 className="text-xl font-semibold text-black mb-2">Petah Tikva Office</h3>
                         <p className="text-gray-700 leading-relaxed">
-                          Concord Tower<br />
-                          21 Bar Kochva Street<br />
-                          Bnei-Brak, Israel
+                          Yegi'a Kapayim St 24<br />
+                          Petah Tikva, Israel
                         </p>
                       </div>
                     </div>
@@ -208,14 +207,14 @@ export default function ContactPage() {
                   <CardContent className="p-0 h-full">
                     <div className="w-full h-full min-h-[300px] bg-gray-200">
                       <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4370.383879499366!2d34.82153009067694!3d32.09316046482205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4a2be38f9bc7%3A0x6371f868074cc281!2sBar%20Kochva%20St%2021%2C%20Bnei%20Brak!5e1!3m2!1sen!2sil!4v1763022280080!5m2!1sen!2sil"
+                        src="https://maps.google.com/maps?q=Yegia+Kapayim+24,+Petah+Tikva,+Israel&output=embed"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
                         allowFullScreen
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        title="משרד בר כוכבא 21 בני ברק"
+                        title="Yegi'a Kapayim 24, Petah Tikva"
                       />
                     </div>
                   </CardContent>

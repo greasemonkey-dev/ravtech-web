@@ -53,8 +53,8 @@ const ORG_SCHEMA = {
     "RavTech is a leading software development company combining technical excellence with social responsibility, delivering world-class services while empowering Haredi talent in the tech industry.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Concord Tower, 21 Bar Kochva Street",
-    addressLocality: "Bnei-Brak",
+    streetAddress: "Yegi'a Kapayim St 24",
+    addressLocality: "Petah Tikva",
     addressCountry: "IL",
   },
   contactPoint: { "@type": "ContactPoint", email: "contact@ravtech.co.il", contactType: "customer service" },
