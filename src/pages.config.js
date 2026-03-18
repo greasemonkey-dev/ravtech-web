@@ -86,6 +86,7 @@ import RouteOptimizationGuide from './pages/RouteOptimizationGuide';
 import WarehouseAutomation from './pages/WarehouseAutomation';
 import RealTimeTracking from './pages/RealTimeTracking';
 import RavDocAi from './pages/RavDocAi';
+import Editorial from './pages/Editorial';
 import __Layout from './Layout.jsx';
 
 
@@ -130,6 +131,7 @@ export const PAGES = {
     "blog/logistics-management-software-israel-2026": RavDataBlog,
     "ravdata/logistics-dashboard": RavDataDashboard,
     "ravdoc-ai": RavDocAi,
+    "editorial": Editorial,
 }
 
 export const pagesConfig = {

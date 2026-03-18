@@ -188,6 +188,13 @@
     <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/blog/logistics-management-software-israel-2026"/>
   </url>
 
+  <!-- TRUST / EDITORIAL -->
+  <url>
+    <loc>https://ravtech.co.il/editorial</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
   <!-- BONUS PAGES -->
   <url>
     <loc>https://ravtech.co.il/blog/ai-manufacturing-use-cases-israel-2026</loc>
