@@ -6,8 +6,8 @@ import { ArrowRight, TrendingUp, Clock, Package, AlertTriangle, Eye, Bell } from
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "DegAlert — AI Supply Chain Automation",
-  "description": "How Ravtech implemented AI-powered supply chain automation for DegAlert, achieving 40% faster order handling.",
+  "headline": "Global Logistics Company — AI Supply Chain Automation",
+  "description": "How Ravtech implemented AI-powered supply chain automation for a leading global logistics company operating in Israel, achieving 40% faster order handling.",
   "author": { "@type": "Organization", "name": "Ravtech" },
   "publisher": { "@type": "Organization", "name": "Ravtech", "url": "https://ravtech.co.il" }
 };
@@ -15,7 +15,7 @@ const schema = {
 export default function DegAlert() {
   useEffect(() => {
     const prevTitle = document.title;
-    document.title = "DegAlert Case Study — AI Supply Chain Automation | Ravtech";
+    document.title = "Global Logistics Company Case Study — AI Supply Chain Automation | Ravtech";
 
     let meta = document.querySelector('meta[name="description"]');
     let metaCreated = false;
@@ -24,7 +24,7 @@ export default function DegAlert() {
       meta.name = "description";
       metaCreated = true;
     }
-    meta.content = "How Ravtech built an AI supply chain system for DegAlert — 40% faster order handling, 3,847 orders tracked in real-time, hundreds of thousands ₪ saved annually.";
+    meta.content = "How Ravtech built an AI supply chain system for a global logistics company operating in Israel — 40% faster order handling, 3,847 orders tracked in real-time, hundreds of thousands ₪ saved annually.";
     if (metaCreated) document.head.appendChild(meta);
 
     return () => {
@@ -48,23 +48,28 @@ export default function DegAlert() {
           <span className="mx-2">/</span>
           <Link to="/ai-manufacturing" className="hover:text-black">AI Manufacturing</Link>
           <span className="mx-2">/</span>
-          <span>DegAlert Case Study</span>
+          <span>Global Logistics Company Case Study</span>
         </nav>
 
         {/* TL;DR */}
         <div className="bg-blue-50 border-l-4 border-[#0373BA] p-4 mb-10 rounded-r">
           <p className="text-sm font-bold text-[#0373BA] mb-1">TL;DR</p>
           <p className="text-gray-800 text-sm">
-            Ravtech unified DegAlert's ERP, CRM, and logistics into a single AI operations layer — cutting order handling time by 40%, tracking 3,847 orders in real-time across 3 systems, and saving ₪100K+ annually.
+            Ravtech unified a global logistics company's ERP, CRM, and logistics into a single AI operations layer — cutting order handling time by 40%, tracking 3,847 orders in real-time across 3 systems, and saving ₪100K+ annually.
           </p>
         </div>
 
         {/* Header */}
+        <div className="mb-4">
+          <span className="inline-block text-xs font-semibold text-gray-400 uppercase tracking-widest bg-gray-100 px-3 py-1 rounded-full mb-4">
+            Confidential · Name withheld by request
+          </span>
+        </div>
         <h1 className="text-4xl font-bold mb-4 heading-custom">
-          DegAlert — AI Supply Chain Automation
+          Global Logistics Company — AI Supply Chain Automation
         </h1>
         <p className="text-xl text-gray-600 mb-12">
-          How a traditional Israeli manufacturer went from blind order management to real-time AI operations — in one integration.
+          How a major Israeli logistics operation went from blind order management to real-time AI operations — in one integration.
         </p>
 
         {/* Key metrics */}
@@ -90,7 +95,7 @@ export default function DegAlert() {
         <section className="mb-20">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">The Challenge</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            DegAlert manages high-volume B2B manufacturing orders across a complex supply chain. Their ERP tracked production, their CRM handled customer communications, and a separate logistics platform managed shipments — but none of these systems talked to each other. Operations managers spent hours each day making phone calls and sending emails just to answer the question: <em>where is this order right now?</em>
+            This global logistics company manages high-volume B2B orders across a complex supply chain operating throughout Israel. Their ERP tracked production, their CRM handled customer communications, and a separate logistics platform managed shipments — but none of these systems talked to each other. Operations managers spent hours each day making phone calls and sending emails just to answer the question: <em>where is this order right now?</em>
           </p>
 
           {/* Pain-point callout */}
@@ -120,7 +125,7 @@ export default function DegAlert() {
         <section className="mb-20">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">The Ravtech Approach</h2>
           <p className="text-gray-600 leading-relaxed mb-10">
-            Rather than replacing DegAlert's existing systems, we built an AI operations layer on top of them — connecting ERP, CRM, and logistics data into a unified view, then adding intelligence to surface risks before they become problems.
+            Rather than replacing the client's existing systems, we built an AI operations layer on top of them — connecting ERP, CRM, and logistics data into a unified view, then adding intelligence to surface risks before they become problems.
           </p>
 
           {/* Architecture flow */}
@@ -200,7 +205,7 @@ export default function DegAlert() {
         <section className="mb-20">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">The Result</h2>
           <p className="text-gray-600 leading-relaxed mb-8">
-            Within weeks of go-live, DegAlert's operations team had a fundamentally different relationship with their supply chain. Problems that previously surfaced as customer complaints were now caught and resolved internally — before anyone outside the building knew there was an issue.
+            Within weeks of go-live, the operations team had a fundamentally different relationship with their supply chain. Problems that previously surfaced as customer complaints were now caught and resolved internally — before anyone outside the building knew there was an issue.
           </p>
 
           {/* Pull-quote */}
@@ -208,7 +213,7 @@ export default function DegAlert() {
             <p className="text-[#0373BA] font-medium italic text-lg leading-snug">
               "We stopped firefighting. Now we see problems before our customers do."
             </p>
-            <footer className="text-sm text-gray-500 mt-2">— DegAlert Operations Team</footer>
+            <footer className="text-sm text-gray-500 mt-2">— Operations Team</footer>
           </blockquote>
 
           {/* Outcome list */}

@@ -21,7 +21,7 @@ export default function CaseStudiesPage() {
       company: "AMDOCS",
       title:
         "The Secret of AMDOCS: How Juniors and a Strong Team Lead Deliver Strong Results and 30% Cost Savings",
-      videoUrl: "https://www.youtube.com/embed/9Jw6jOLt_JY",
+      videoUrl: "https://www.youtube-nocookie.com/embed/9Jw6jOLt_JY",
       keyResults: [
         { icon: DollarSign, text: "30% Cost Savings", color: "text-green-600" },
         { icon: Award, text: "Strong Delivery", color: "text-blue-600" },
@@ -38,7 +38,7 @@ export default function CaseStudiesPage() {
       company: "CONNACT",
       title:
         "The Secret of CONNACT: 25% Cost Savings, Fast Recruitment, and 30% More Productivity with Haredi Employees",
-      videoUrl: "https://www.youtube.com/embed/4A5tLhZHr6Y",
+      videoUrl: "https://www.youtube-nocookie.com/embed/4A5tLhZHr6Y",
       keyResults: [
         { icon: DollarSign, text: "25% Cost Savings", color: "text-green-600" },
         { icon: Clock, text: "Fast Recruitment", color: "text-orange-600" },
@@ -60,7 +60,7 @@ export default function CaseStudiesPage() {
       company: "VENN",
       title:
         "Venn's Secret to Success: With RavTech We Achieved 25% Cost Savings and 30% More Productivity",
-      videoUrl: "https://www.youtube.com/embed/jfbUpJE4AZ8",
+      videoUrl: "https://www.youtube-nocookie.com/embed/jfbUpJE4AZ8",
       keyResults: [
         { icon: DollarSign, text: "25% Cost Savings", color: "text-green-600" },
         {
@@ -81,7 +81,7 @@ export default function CaseStudiesPage() {
       company: "NICE",
       title:
         "The Secret of NICE: 66% Faster Recruitment, 25% Cost Savings, and Employees Who Stay 5 Years",
-      videoUrl: "https://www.youtube.com/embed/hGYLaLXPpRA",
+      videoUrl: "https://www.youtube-nocookie.com/embed/hGYLaLXPpRA",
       keyResults: [
         {
           icon: Clock,

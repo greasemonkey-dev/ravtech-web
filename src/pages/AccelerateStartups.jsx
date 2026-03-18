@@ -120,22 +120,22 @@ export default function AccelerateStartupsPage() {
   {
     title:
     "The Secret of NICE: 66% Faster Recruitment, 25% Cost Savings, Employees Who Stay 5 Years",
-    videoUrl: "https://www.youtube.com/embed/hGYLaLXPpRA"
+    videoUrl: "https://www.youtube-nocookie.com/embed/hGYLaLXPpRA"
   },
   {
     title:
     "Venn's Secret to Success: With RavTech We Achieved 25% Cost Savings and 30% More Productivity",
-    videoUrl: "https://www.youtube.com/embed/jfbUpJE4AZ8"
+    videoUrl: "https://www.youtube-nocookie.com/embed/jfbUpJE4AZ8"
   },
   {
     title:
     "The Secret of CONNACT: 25% Cost Savings, Fast Recruitment, and 30% More Productivity",
-    videoUrl: "https://www.youtube.com/embed/4A5tLhZHr6Y"
+    videoUrl: "https://www.youtube-nocookie.com/embed/4A5tLhZHr6Y"
   },
   {
     title:
     "The Secret of AMDOCS: How Juniors and Strong Team Lead Deliver Strong Results and 30% Cost Savings",
-    videoUrl: "https://www.youtube.com/embed/9Jw6jOLt_JY"
+    videoUrl: "https://www.youtube-nocookie.com/embed/9Jw6jOLt_JY"
   }];
 
 

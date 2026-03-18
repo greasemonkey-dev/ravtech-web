@@ -143,6 +143,51 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ravtech.co.il/ai-logistics/route-optimization-guide"/>
   </url>
 
+  <!-- RAVDATA PRODUCT CLUSTER -->
+  <url>
+    <loc>https://ravtech.co.il/ravdata</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/ravdata"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ravtech.co.il/ravdata"/>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ravdata/invoice-reconciliation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/ravdata/invoice-reconciliation"/>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ravdata/delivery-note-ocr</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/ravdata/delivery-note-ocr"/>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ravdata/provider-management</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/ravdata/provider-management"/>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/ravdata/logistics-dashboard</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/ravdata/logistics-dashboard"/>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/faq/small-fleet-management-israel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/faq/small-fleet-management-israel"/>
+  </url>
+  <url>
+    <loc>https://ravtech.co.il/blog/logistics-management-software-israel-2026</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ravtech.co.il/blog/logistics-management-software-israel-2026"/>
+  </url>
+
   <!-- BONUS PAGES -->
   <url>
     <loc>https://ravtech.co.il/blog/ai-manufacturing-use-cases-israel-2026</loc>
