@@ -27,6 +27,7 @@ const navigationItems = [
 
 export default function Layout({ children }) {
     const location = useLocation();
+    const isDarkRoute = location.pathname.startsWith('/ravdata');
     const [isOpen, setIsOpen] = useState(false);
     const [formMessage, setFormMessage] = useState({ show: false, success: false, text: "" });
 
@@ -136,20 +137,31 @@ export default function Layout({ children }) {
                 "https://www.linkedin.com/company/ravtech"
             ]
         }) }} />
-        <div className="min-h-screen bg-white">
+        <div className={`min-h-screen ${isDarkRoute ? 'bg-[#070E1A] dark-layout' : 'bg-white'}`}>
             <style>
                 {`
           @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
-          
+
           .heading-custom {
             font-family: 'Montserrat', sans-serif;
             color: #0373BA;
           }
+
+          .dark-layout footer .heading-custom { color: #00D4FF; }
+          .dark-layout footer a,
+          .dark-layout footer p,
+          .dark-layout footer li { color: rgba(255,255,255,0.5); }
+          .dark-layout footer a:hover { color: rgba(255,255,255,0.9); }
+          .dark-layout footer .border-t { border-color: rgba(255,255,255,0.06); }
+          .dark-layout footer input,
+          .dark-layout footer textarea { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: white; }
+          .dark-layout footer input::placeholder,
+          .dark-layout footer textarea::placeholder { color: rgba(255,255,255,0.3); }
         `}
             </style>
 
             {/* Header */}
-            <header className="sticky top-0 z-50 bg-white border-b border-gray-200 transition-all duration-300 hover:shadow-md">
+            <header className={`sticky top-0 z-50 transition-all duration-300 hover:shadow-md ${isDarkRoute ? 'bg-[#070E1A] border-b border-white/[0.08]' : 'bg-white border-b border-gray-200'}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         {/* Logo */}
@@ -166,7 +178,7 @@ export default function Layout({ children }) {
                             {navigationItems.map((item) =>
                               item.children ? (
                                 <div key={item.title} className="relative group">
-                                  <button className="text-base font-semibold tracking-wide text-gray-700 hover:text-gray-900 flex items-center gap-1 transition-all duration-300">
+                                  <button className={`text-base font-semibold tracking-wide flex items-center gap-1 transition-all duration-300 ${isDarkRoute ? 'text-white/70 hover:text-white' : 'text-gray-700 hover:text-gray-900'}`}>
                                     <span className="transition-transform duration-300 group-hover:-translate-y-0.5 inline-block">{item.title}</span>
                                     <svg aria-hidden="true" className="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                                   </button>
@@ -183,15 +195,15 @@ export default function Layout({ children }) {
                                   key={item.title}
                                   to={item.url}
                                   className={`text-base font-semibold tracking-wide relative group transition-all duration-300 ${location.pathname === item.url
-                                      ? "text-black"
-                                      : "text-gray-700 hover:text-gray-900"
+                                      ? isDarkRoute ? "text-white" : "text-black"
+                                      : isDarkRoute ? "text-white/70 hover:text-white" : "text-gray-700 hover:text-gray-900"
                                     }`}
                                 >
                                   <span className="transition-transform duration-300 group-hover:-translate-y-0.5 inline-block">
                                     {item.title}
                                   </span>
                                   <span
-                                    className={`absolute -bottom-1 left-0 w-0 h-[2px] bg-gray-900 rounded-full transition-all duration-300 group-hover:w-full ${location.pathname === item.url ? "w-full" : ""
+                                    className={`absolute -bottom-1 left-0 w-0 h-[2px] rounded-full transition-all duration-300 group-hover:w-full ${isDarkRoute ? 'bg-[#00D4FF]' : 'bg-gray-900'} ${location.pathname === item.url ? "w-full" : ""
                                       }`}
                                   />
                                 </Link>
@@ -271,7 +283,7 @@ export default function Layout({ children }) {
             <main>{children}</main>
 
             {/* Footer */}
-            <footer className="bg-gray-50 border-t border-gray-200 mt-24">
+            <footer className={`border-t mt-0 ${isDarkRoute ? 'bg-[#040A14] border-white/[0.06]' : 'bg-gray-50 border-gray-200 mt-24'}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
                         {/* Quick Links */}
