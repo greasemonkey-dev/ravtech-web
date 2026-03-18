@@ -4,7 +4,7 @@ import { createPageUrl } from "@/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Building2, Shield, Navigation } from "lucide-react";
+import { Building2, Shield, Navigation } from "lucide-react";
 
 export default function ProjectsPage() {
   const featuredProjects = [
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
               return (
                 <Card
                   key={project.id}
-                  className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden bg-white group flex flex-col">
+                  className="border-none shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden bg-white group">
 
                   {/* Project Image */}
                   <div className="relative h-64 overflow-hidden">
@@ -103,7 +103,7 @@ export default function ProjectsPage() {
                     </div>
                   </div>
 
-                  <CardContent className="p-8 flex flex-col flex-1">
+                  <CardContent className="p-8">
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag, idx) =>
@@ -118,20 +118,9 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-700 leading-relaxed mb-6 flex-1">
+                    <p className="text-gray-700 leading-relaxed">
                       {project.description}
                     </p>
-
-                    {/* CTA Button */}
-                    <Link to={`${createPageUrl("Services")}#case-studies`} className="mt-auto">
-                      <Button
-                        variant="outline"
-                        className="w-full group/btn hover:bg-black hover:text-white transition-all duration-300">
-
-                        View Case Study
-                        <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                      </Button>
-                    </Link>
                   </CardContent>
                 </Card>);
 
