@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import path from 'path'
 
 export default defineConfig({
-  base: '/ravtech-web/',
+  base: process.env.GITHUB_PAGES ? '/ravtech-web/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
