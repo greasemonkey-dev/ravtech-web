@@ -67,9 +67,9 @@ export default function AboutPage() {
   const [flippedIndices, setFlippedIndices] = useState(new Set());
 
   useEffect(() => {
-    document.title = "About Shmulik Moskowitz | CEO — RavTech";
+    document.title = "About Us | RavTech";
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute("content", "Shmulik Moskowitz is the CEO of RavTech, bringing over 15 years of leadership in global technology. RavTech delivers software development services while empowering Haredi talent in tech.");
+    if (metaDesc) metaDesc.setAttribute("content", "RavTech is an Israeli software development and AI integration company. We deliver manufacturing and logistics AI solutions, custom software, and digital transformation for Israeli industry.");
 
     const injectSchema = (id, data) => {
       let el = document.getElementById(id);
