@@ -7,7 +7,7 @@
       // Single Page App redirect trick for GitHub Pages + BrowserRouter
       // When GitHub Pages 404s on a deep path, encode it into a query param
       // and redirect to index.html, which decodes it back into history.
-      var pathSegmentsToKeep = 0;
+      var pathSegmentsToKeep = window.location.hostname === 'greasemonkey-dev.github.io' ? 1 : 0;
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
