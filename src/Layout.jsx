@@ -370,8 +370,8 @@ export default function Layout({ children }) {
                               </Link>
                             </li>
                             <li>
-                              <Link to="/ai-manufacturing" className="text-gray-600 hover:text-black transition-colors">
-                                AI Manufacturing Guide
+                              <Link to="/ravdoc-ai" className="text-gray-600 hover:text-black transition-colors">
+                                RavDoc AI
                               </Link>
                             </li>
                             <li>
