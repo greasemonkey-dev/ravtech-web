@@ -38,7 +38,7 @@ class PageErrorBoundary extends Component {
 function App() {
   return (
     <QueryClientProvider client={queryClientInstance}>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <LayoutWrapper>
           <Routes>
             <Route path="/" element={<PageErrorBoundary><MainPage /></PageErrorBoundary>} />
