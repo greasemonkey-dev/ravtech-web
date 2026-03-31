@@ -445,7 +445,7 @@ export default function RavDataHome() {
               </div>
 
               <div className="rd-fade-up rd-delay-4 flex gap-4 flex-wrap">
-                <Link to="/Contact" className="rd-btn-primary text-white font-bold px-8 py-3.5 rounded-xl inline-flex items-center gap-2 text-sm">
+                <Link to="/contact" className="rd-btn-primary text-white font-bold px-8 py-3.5 rounded-xl inline-flex items-center gap-2 text-sm">
                   קבל דמו חינם <ArrowLeft className="w-4 h-4" />
                 </Link>
                 <Link to="/ravdata/logistics-dashboard" className="border border-white/20 text-white/70 hover:text-white hover:border-white/40 transition-all px-6 py-3.5 rounded-xl text-sm font-medium">
@@ -598,7 +598,7 @@ export default function RavDataHome() {
             דמו חינם · הגדרה תוך 7 דקות · ללא כרטיס אשראי
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link to="/Contact" className="rd-btn-primary text-white font-bold px-10 py-4 rounded-xl inline-flex items-center gap-2">
+            <Link to="/contact" className="rd-btn-primary text-white font-bold px-10 py-4 rounded-xl inline-flex items-center gap-2">
               קבע פגישת דמו <ArrowLeft className="w-4 h-4" />
             </Link>
             <Link to="/faq/small-fleet-management-israel" className="border border-white/20 text-white/60 hover:text-white hover:border-white/40 transition-all px-8 py-4 rounded-xl text-sm font-medium">
