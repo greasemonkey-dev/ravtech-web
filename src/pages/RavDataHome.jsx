@@ -466,12 +466,12 @@ export default function RavDataHome() {
       <section className="bg-[#070E1A] border-y border-white/[0.06]" dir="rtl">
         <div className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { to: 7, suffix: " דק׳", label: "זמן הגדרה" },
-            { to: 4000, suffix: "+", label: "חברות הובלה בישראל" },
-            { to: 100, suffix: "%", label: "חשבוניות מנוטרות" },
+            { to: 7, suffix: " דק׳", label: "זמן הגדרה ממוצע" },
             { to: 23000, prefix: "₪", label: "חיסכון ממוצע בחודשיים" },
+            { to: 50, suffix: "×", label: "מהיר יותר מעיבוד ידני" },
+            { to: 98, suffix: "%", label: "דיוק OCR בעברית" },
           ].map(({ to, prefix, suffix, label }) => (
-            <div key={label}>
+            <div key={label} data-value={`${prefix ?? ""}${to}${suffix ?? ""}`}>
               <div className="text-3xl md:text-4xl font-black text-white rd-font">
                 <StatCounter to={to} prefix={prefix} suffix={suffix} />
               </div>
