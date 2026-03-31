@@ -366,6 +366,8 @@ const clusters = [
 
 export default function RavDataHome() {
   useEffect(() => {
+    document.documentElement.setAttribute('lang', 'he');
+    document.documentElement.setAttribute('dir', 'rtl');
     const prevTitle = document.title;
     document.title = "RavData AI | תוכנה לניהול הובלות לחברות קטנות — AI לוגיסטיקה ישראל";
 
@@ -393,6 +395,8 @@ export default function RavDataHome() {
     document.head.appendChild(schema);
 
     return () => {
+      document.documentElement.setAttribute('lang', 'en');
+      document.documentElement.removeAttribute('dir');
       document.title = prevTitle;
       [hreflangHe, hreflangEn, schema].forEach(el => el.parentNode?.removeChild(el));
     };
