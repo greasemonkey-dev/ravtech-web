@@ -451,6 +451,20 @@ export default function HomePage() {
           <p className="text-gray-600 mb-8 max-w-xl mx-auto">
             We help Israeli manufacturers and logistics companies integrate AI into their existing operations — without replacing systems or hiring data scientists.
           </p>
+          <ul className="text-sm text-gray-600 space-y-2 mb-6 text-left max-w-md mx-auto">
+            <li className="flex items-start gap-2">
+              <span className="text-[#0373BA] mt-0.5">✓</span>
+              <span>Supply chain delay prediction — before the delay hits production</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#0373BA] mt-0.5">✓</span>
+              <span>Predictive maintenance — reduce unplanned downtime by up to 40%</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#0373BA] mt-0.5">✓</span>
+              <span>6–12 weeks from data audit to live deployment — no ERP replacement</span>
+            </li>
+          </ul>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/ai-manufacturing" className="inline-flex items-center justify-center gap-2 bg-[#0373BA] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#025a94] transition-colors">
               AI Manufacturing <ArrowRight aria-hidden="true" className="w-4 h-4" />
