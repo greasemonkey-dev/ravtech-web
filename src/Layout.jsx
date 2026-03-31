@@ -463,7 +463,7 @@ export default function Layout({ children }) {
                     <div className="pt-8 border-t border-gray-200">
                         <div className="flex flex-col-reverse md:flex-row items-center gap-4 md:gap-6">
                             <p className="text-sm text-gray-600 text-center md:text-left">
-                                © 2025 RavTech. All rights reserved.
+                                © 2026 RavTech. All rights reserved.
                             </p>
                             <div className="flex items-center gap-4">
                                 <a
