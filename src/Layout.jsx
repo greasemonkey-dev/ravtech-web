@@ -428,27 +428,39 @@ export default function Layout({ children }) {
                                     setFormMessage({ show: true, success: false, text: "Oops! Something went wrong. Please try again." });
                                 }
                             }}>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    placeholder="Name"
-                                    required
-                                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
-                                />
-                                <input
-                                    type="email"
-                                    name="email"
-                                    placeholder="Email"
-                                    required
-                                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
-                                />
-                                <textarea
-                                    name="message"
-                                    placeholder="Message"
-                                    required
-                                    rows="3"
-                                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none"
-                                />
+                                <div>
+                                    <label htmlFor="footer-name" className="sr-only">Name</label>
+                                    <input
+                                        id="footer-name"
+                                        type="text"
+                                        name="name"
+                                        placeholder="Name"
+                                        required
+                                        className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
+                                    />
+                                </div>
+                                <div>
+                                    <label htmlFor="footer-email" className="sr-only">Email</label>
+                                    <input
+                                        id="footer-email"
+                                        type="email"
+                                        name="email"
+                                        placeholder="Email"
+                                        required
+                                        className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent"
+                                    />
+                                </div>
+                                <div>
+                                    <label htmlFor="footer-message" className="sr-only">Message</label>
+                                    <textarea
+                                        id="footer-message"
+                                        name="message"
+                                        placeholder="Message"
+                                        required
+                                        rows="3"
+                                        className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#CCE7FA] focus:border-transparent resize-none"
+                                    />
+                                </div>
                                 <Button
                                     type="submit"
                                     className="w-full bg-[#0373BA] text-white hover:bg-[#025a94] transition-colors font-semibold"
