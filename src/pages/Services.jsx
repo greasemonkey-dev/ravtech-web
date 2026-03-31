@@ -9,7 +9,7 @@ import {
   FileText, Code2, Rocket, Wrench,
   Users, Lightbulb, GitBranch, TrendingUp, ClipboardList,
   Smartphone, Globe, Cpu, TestTube, Cog, Brain, Code, Server,
-  Database, Cloud, Wifi, Activity, Radio, CloudCog, Globe2,
+  Database, Cloud, Wifi, Activity, CloudCog, Globe2,
   Gauge, Settings, Eye, Network, HardDrive, DollarSign, Clock,
   Award, Target, ArrowRight, Bot, FileSearch, Layers, Zap
 } from "lucide-react";
@@ -273,7 +273,7 @@ export default function ServicesPage() {
           <h2 className="text-4xl sm:text-5xl font-bold text-black mb-3">Technical Capabilities</h2>
           <div className="bg-[#0373BA] mb-4 w-24 h-1" />
           <p className="text-lg text-gray-700 mb-12 max-w-3xl leading-relaxed">
-            Solution architects across mobile, web, IoT, QA, DevOps, and AI — from small web projects to complex cross-platform cloud deployments.
+            Solution architects across mobile, web, QA, DevOps, and AI — from small web projects to complex cross-platform cloud deployments.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -284,10 +284,6 @@ export default function ServicesPage() {
               {
                 icon: Globe, title: "Web",
                 items: ["React / Angular / Vue", "Node.js / Python / Go", "PostgreSQL / MongoDB", "AWS / GCP / Azure"],
-              },
-              {
-                icon: Radio, title: "IoT",
-                items: ["Sensor Connectivity", "Signal Processing", "Embedded Systems", "Cloud Communication"],
               },
               {
                 icon: TestTube, title: "QA Automation",
