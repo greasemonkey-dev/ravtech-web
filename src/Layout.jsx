@@ -13,7 +13,6 @@ import CookieConsent from "@/components/CookieConsent";
 import FormMessage from "@/components/FormMessage";
 
 const navigationItems = [
-    { title: "Accelerate Startups", url: createPageUrl("AccelerateStartups") },
     { title: "Services", url: createPageUrl("Services") },
     { title: "Industries", url: null, children: [
         { title: "AI Manufacturing", url: "/ai-manufacturing" },
@@ -22,6 +21,7 @@ const navigationItems = [
     { title: "Projects", url: createPageUrl("Projects") },
     { title: "Careers", url: createPageUrl("Careers") },
     { title: "About", url: createPageUrl("About") },
+    { title: "Accelerate Startups", url: createPageUrl("AccelerateStartups") },
     { title: "Contact Us", url: createPageUrl("Contact") },
 ];
 
